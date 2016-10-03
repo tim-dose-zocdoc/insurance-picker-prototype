@@ -1,0 +1,10 @@
+<div>
+  <p class="count">{{count}}</p>
+  <ul>
+    {{#insurances}}
+      <li data-question-id="{{id}}">
+        <p>{{carrier}} - {{plan}} <span class="requests">{{requests}}</span></p>
+      </li>
+    {{/insurances}}
+  </ul>
+</div>

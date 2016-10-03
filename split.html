@@ -1,0 +1,82 @@
+<head>
+  <script data-main="/split.js" src="/require.js"></script>
+
+  <style type="text/css" media="screen">
+
+    body {
+      background-color: #fff;
+      color: #00234B;
+      font-family: 'Kievit Slab Pro';
+      font-size: 16px;
+    }
+
+    a {
+      color: #2076c7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    input{
+      width: 100%;
+      font-size: 20px;
+      padding: 10px;
+      font-family: 'Kievit Slab Pro';
+    }
+
+    #wrap {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  
+
+    .loading {
+      color: #D11c24;
+      font-size: 0.9em;
+      border: 1px solid #D11c24;
+      padding: 10px;
+    }
+
+    .controls {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+    .count {
+      font-size: 10px;
+      float: right;
+    }
+
+    .requests {
+      font-size: 8px;
+      color: #aaa;
+      font-family: Arial;
+    }
+
+    ul {
+      padding-left: 10px;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="wrap">
+
+    <div class="controls">
+      <input type="text" placeholder="search carriers and plans"></input>
+      <!-- <a class="all" href="#">All</a> -->
+    </div>
+
+    <div id='supplementary-insurance-container'></div>
+    <hr>
+    <div id='main-insurance-container'></div>
+  </div>
+</body>
