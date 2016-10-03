@@ -8,7 +8,7 @@ require([
     'text!insurance_data.json'
 ], function (jquery, _, Mustache, lunr, insuranceListTemplate, insuranceListSplitTemplate, insuranceData) {
 
-    var numPopularInsurances = 10;
+    var numPopularInsurances = 3;
 
 
     var renderInsurancesList = function (insurances) {
