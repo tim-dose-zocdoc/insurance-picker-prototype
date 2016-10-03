@@ -10,27 +10,18 @@ require([
 
     var numPopularInsurances = 3;
 
-
     var renderInsurancesList = function (insurances) {
-        // insurances.sort(sortInsurancesAlphabetically);
-        // insurances.sort(sortInsurancesByPopularity);
-        $('#main-insurance-container')
-            .empty()
-            .append(Mustache.to_html(insuranceListTemplate,{insurances:insurances,count:insurances.length,test:['test']}))
-    }
-
-    var renderInsurancesListSplit = function (insurances) {
         insurances.sort(sortInsurancesAlphabetically);
         var all = insurances.slice();
         insurances.sort(sortInsurancesByPopularity);
         var top = insurances.slice(0,numPopularInsurances)
         $('#supplementary-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:top}))
+            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:top,title:'popular'}))
 
         $('#main-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:all,count:all.length}))
+            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:all,title:'all',count:all.length}))
     }
 
     window.profile = function (term) {
@@ -105,10 +96,7 @@ require([
             return insurances.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
         })
 
-        // results.sort(sortInsurancesByPopularity);
-
-        // renderInsurancesList(results);
-        renderInsurancesListSplit(results);
+        renderInsurancesList(results);
     }))
 
 

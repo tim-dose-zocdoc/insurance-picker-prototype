@@ -2,10 +2,14 @@
   {{#count}}
     <p class="count">{{count}}</p>
   {{/count}}
+  {{#title}}
+    <h3>{{title}}</h3>
+  {{/title}}
   <ul>
     {{#insurances}}
       <li data-question-id="{{id}}">
-        <p>{{carrier}} - {{plan}} <span class="requests">{{requests}}</span></p>
+        <p>
+          <span class="carrier">{{carrier}}</span><span class="divider"> - </span><span class="plan">{{plan}}</span> <span class="requests">{{requests}}</span></p>
       </li>
     {{/insurances}}
   </ul>
