@@ -10,18 +10,19 @@ require([
 
     var numPopularInsurances = 3;
 
-    var renderInsurancesList = function (insurances) {
+    var renderInsurancesList = function (insurances, query) {
+        insurances = addQueryMatches(insurances,query);
         insurances.sort(sortInsurancesAlphabetically);
         var all = insurances.slice();
         insurances.sort(sortInsurancesByPopularity);
         var top = insurances.slice(0,numPopularInsurances)
         $('#supplementary-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:top,title:'popular'}))
+            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:top,title:'popular plans',query:query}))
 
         $('#main-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:all,title:'all',count:all.length}))
+            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:all,title:'all plans',query:query,count:all.length}))
     }
 
     window.profile = function (term) {
@@ -44,6 +45,17 @@ require([
         return 0
     }
 
+    var addQueryMatches = function (insurances, query) {
+        if (query === undefined ) return insurances;
+        if (query.length < 2 ) return insurances;
+        var re = new RegExp(query,'gi');
+        _.forEach(insurances, function(insurance) {
+            insurance.carrierDisplay = insurance.carrier.replace(re,'<span class="match">$&</span>');
+            insurance.planDisplay = insurance.plan.replace(re,'<span class="match">$&</span>');
+        });
+        return insurances
+    }
+
     var sortInsurancesByPopularity = function(a, b ) {
         if ( a.requests > b.requests ) return -1;
         if ( a.requests < b.requests ) return 1;
@@ -56,7 +68,9 @@ require([
             return {
                 id: raw.PlanType_ID,
                 carrier: raw.Carrier,
+                carrierDisplay: raw.Carrier,
                 plan: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
+                planDisplay: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
                 requests: raw.Requests
             }
         })
@@ -89,14 +103,18 @@ require([
     }
 
     $('input').bind('keyup', debounce(function () {
-        if ($(this).val() < 2) return
+        console.log($(this).val() + ' - ' + ($(this).val() < 1) )
+        if ($(this).val() < 2) {
+            renderInsurancesList(insurances);
+            return
+        }
         var query = $(this).val()
 
         var results = insurancesIndex.search(query).map(function (result) {
             return insurances.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
         })
 
-        renderInsurancesList(results);
+        renderInsurancesList(results, query);
     }))
 
 

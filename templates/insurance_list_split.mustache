@@ -3,13 +3,18 @@
     <p class="count">{{count}}</p>
   {{/count}}
   {{#title}}
-    <h3>{{title}}</h3>
+    <h3>
+      {{title}}
+      {{#query}}
+        matching <span class="query">{{query}}</span>
+      {{/query}}
+    </h3>
   {{/title}}
   <ul>
     {{#insurances}}
       <li data-question-id="{{id}}">
         <p>
-          <span class="carrier">{{carrier}}</span><span class="divider"> - </span><span class="plan">{{plan}}</span> <span class="requests">{{requests}}</span></p>
+          <span class="carrier">{{{carrierDisplay}}}</span><span class="divider"> - </span><span class="plan">{{{planDisplay}}}</span> <span class="requests">{{requests}}</span></p>
       </li>
     {{/insurances}}
   </ul>
