@@ -1,0 +1,22 @@
+<div>
+    {{#count}}
+        <p class="count">{{count}}</p>
+    {{/count}}
+    {{#title}}
+        <h3>
+            {{title}}
+            {{#query}}
+                matching <span class="query">{{query}}</span>
+            {{/query}}
+        </h3>
+    {{/title}}
+    <ul>
+        {{#item}}
+            <li data-question-id="{{id}}">
+                <p>
+                    <span class="item">{{{itemDisplay}}}<span class="requests">{{requests}}</span>
+                </p>
+            </li>
+        {{/item}}
+    </ul>
+</div>
