@@ -6,8 +6,9 @@
     body {
       background-color: #fff;
       color: #00234B;
-      font-family: 'Kievit Slab Pro';
-      font-size: 16px;
+      /*font-family: 'Sharp Sans No1';*/
+      font-family: 'Helvetica Neue';
+      font-size: 15px;
     }
 
     a {
@@ -19,11 +20,18 @@
       text-decoration: underline;
     }
 
+    h3 {
+      padding-left: 10px;
+      font-size: 15px;
+      color: #aaa;
+    }
+
     input{
       width: 100%;
-      font-size: 20px;
       padding: 10px;
-      font-family: 'Kievit Slab Pro';
+      /*font-family: 'Sharp Sans No1';*/
+      font-family: 'Helvetica Neue';
+      font-size: 15px;
     }
 
     #wrap {
@@ -57,6 +65,10 @@
       font-family: Arial;
     }
 
+    .insurance-list + .insurance-list {
+      border-top: 1px solid #ddd;
+    }
+
     ul {
       padding-left: 10px;
     }
@@ -64,7 +76,20 @@
     li {
       list-style: none;
     }
+
+    .carrier {
+      font-weight: 600;
+    }
+
+    .divider {
+      color: #aaa;
+    }
+
+    .query, .match {
+      color: #FF6473;
+    }
   </style>
+
 
 </head>
 <body>
@@ -75,8 +100,7 @@
       <!-- <a class="all" href="#">All</a> -->
     </div>
 
-    <div id='supplementary-insurance-container'></div>
-    <hr>
-    <div id='main-insurance-container'></div>
+    <div class="insurance-list" id='supplementary-insurance-container'>loading...</div>
+    <div class="insurance-list" id='main-insurance-container'></div>
   </div>
 </body>
