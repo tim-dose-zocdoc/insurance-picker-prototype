@@ -1,9 +1,20 @@
 <div>
-  <p class="count">{{count}}</p>
+  {{#count}}
+    <p class="count">{{count}}</p>
+  {{/count}}
+  {{#title}}
+    <h3>
+      {{title}}
+      {{#query}}
+        matching <span class="query">{{query}}</span>
+      {{/query}}
+    </h3>
+  {{/title}}
   <ul>
     {{#insurances}}
       <li data-question-id="{{id}}">
-        <p>{{carrier}} - {{plan}} <span class="requests">{{requests}}</span></p>
+        <p>
+          <span class="carrier">{{{carrierDisplay}}}</span><span class="divider"> - </span><span class="plan">{{{planDisplay}}}</span> <span class="requests">{{requests}}</span></p>
       </li>
     {{/insurances}}
   </ul>

@@ -4,9 +4,8 @@ require([
     '/mustache.js',
     '/lunr.js',
     'text!templates/insurance_list.mustache',
-    'text!templates/insurance_list_split.mustache',
     'text!insurance_data.json'
-], function (jquery, _, Mustache, lunr, insuranceListTemplate, insuranceListSplitTemplate, insuranceData) {
+], function (jquery, _, Mustache, lunr, insuranceListTemplate, insuranceData) {
 
     var numPopularInsurances = 3;
 
@@ -18,11 +17,11 @@ require([
         var top = insurances.slice(0,numPopularInsurances)
         $('#supplementary-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:top,title:'popular plans',query:query}))
+            .append(Mustache.to_html(insuranceListTemplate,{insurances:top,title:'popular plans',query:query}))
 
         $('#main-insurance-container')
             .empty()
-            .append(Mustache.to_html(insuranceListSplitTemplate,{insurances:all,title:'all plans',query:query,count:all.length}))
+            .append(Mustache.to_html(insuranceListTemplate,{insurances:all,title:'all plans',query:query,count:all.length}))
     }
 
     window.profile = function (term) {
