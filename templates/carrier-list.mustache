@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        {{#carriers}}
+            <li data-question-id="{{id}}">
+                <p onclick="setCarrier(this)">
+                    <span class="item">{{carrier}}</span>
+                </p>
+            </li>
+        {{/carriers}}
+    </ul>
+</div>
