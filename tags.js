@@ -19,10 +19,9 @@ require([
     ///////////////////////////////////////////
     var currentState = 'carriers';
     
-    setCarrier = function( carrier ) {
-        var carrierName = $(carrier).find('.item').text();
+    setCarrier = function( carrierListElement ) {
+        var carrierName = $(carrierListElement).find('.item').text();
         var truncated = carrierName;
-        console.log(truncated);
         if ( truncated.length > 20 ) {
             truncated = carrierName.substr(0,5) + '...' + carrierName.substr(carrierName.length-5)
         }
@@ -35,6 +34,20 @@ require([
         currentState = 'plans';
 
         renderPlans();
+    }
+
+    setPlan = function( planListElement ) {
+        var planName = $(planListElement).find('.item').text();
+        var currentStr = $('#search').val();
+        $('#search').val(currentStr + truncate(planName,20));
+    }
+
+    truncate = function( str, numCharacters ) {
+        if ( numCharacters === undefined ) numCharacters = 20;
+        if ( str.length <= numCharacters ) return str;
+        
+        pieceLength = Math.floor(numCharacters/2);
+        return str.substr(0,pieceLength) + '...' + str.substr(str.length-pieceLength);        
     }
 
     highlightListItem = function(itemNumber) {
@@ -63,6 +76,15 @@ require([
         $('#main-list-container')
             .empty()
             .append(Mustache.to_html(planTemplate,{plans:plans}))
+
+        $('#main-list-container li')
+            .hover(function() {
+                $('#main-list-container li').removeClass('highlight');
+                $(this).addClass('highlight')
+            })
+            .click(function(){
+                setPlan(this);
+            });
     }
 
     renderCarriers = function (carriers) {
@@ -136,13 +158,19 @@ require([
     });
 
     $('#search').mouseup(function() {
-        if (this.selectionStart < $('#carrier-truncated').val().length) {
+        var truncatedLength = $('#carrier-truncated').val().length;
+        if (this.selectionStart < truncatedLength && this.selectionEnd > truncatedLength ) {
             this.setSelectionRange(0,this.selectionEnd);
         }
+        else if ( this.selectionStart < truncatedLength && this.selectionEnd <= truncatedLength ) {
+            this.setSelectionRange(0,truncatedLength);
+        }
+
     });
 
     $('#search').keydown(function(e) {
         // console.log(e);
+
         if (e.keyCode == KEY_DOWN_ARROW ) {
             var $selected = $('#main-list-container .highlight');
             if ( $selected.next().length > 0 ) {
@@ -164,12 +192,14 @@ require([
             setCarrier($('#main-list-container .highlight'));
         }
 
-        if (e.keyCode == KEY_DELETE ) {
+        // if (e.keyCode == KEY_DELETE ) {
             if (this.selectionStart <= $('#carrier-truncated').val().length ) {
                 backToCarrier();
                 return false;
             }
-        }
+        // }
+
+        // if (this.selectionStart )
     });
 
     
