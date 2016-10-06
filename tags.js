@@ -14,15 +14,16 @@ require([
     'text!templates/plan-list.mustache',
     'text!insurance_data.json'
 ], function (jquery, _, Mustache, carrierTemplate, planTemplate, insuranceData ) {
-    ///////////////////////////////////////////
-    // global functions
-    ///////////////////////////////////////////
-    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated = '';
+    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated, selectedCarrierID = '';
     var currentState = 'carriers';
 
     
+    ///////////////////////////////////////////
+    // global functions
+    ///////////////////////////////////////////
     setCarrier = function( carrierListElement ) {
         selectedCarrier = $(carrierListElement).find('.item').text();
+        selectedCarrierID = $(carrierListElement).data('carrier-id');
         selectedCarrierTruncated = truncate(selectedCarrier,20);
         selectedCarrierTruncated += ' - ';
         $('#search').val(selectedCarrierTruncated);
@@ -55,20 +56,16 @@ require([
     backToCarrier = function() {
         $('#search').val(selectedCarrier)                
             .get(0).setSelectionRange(0,selectedCarrier.length);
-
+        
         selectedCarrier = '';
         selectedCarrierTruncated = '';
 
         currentState = 'carriers';
-        renderCarriers(carriers);
+        renderCarriers(carriers, selectedCarrierID);
     }
 
     renderPlans = function() {
-        var plans = [
-            { id: 1, carrier: 'Carrier', carrierDisplay: 'Carrier', plan: 'HMO', planDisplay: 'HMO', requests: 10 },
-            { id: 2, carrier: 'Carrier', carrierDisplay: 'Carrier', plan: 'PPO', planDisplay: 'PPO', requests: 10 },
-            { id: 3, carrier: 'Carrier', carrierDisplay: 'Carrier', plan: 'EPO', planDisplay: 'EPO', requests: 10 }
-        ]
+        var plans = plansGrouped[selectedCarrier];
 
         $('#main-list-container')
             .empty()
@@ -84,9 +81,8 @@ require([
             });
     }
 
-    renderCarriers = function (carriers) {
-        console.log(carriers);
-        // carriers.sort();
+    renderCarriers = function (carriers, highlightID) {
+        if (highlightID === undefined) highlightID = 0;
 
         $('#main-list-container')
             .empty()
@@ -100,6 +96,8 @@ require([
             .click(function(){
                 setCarrier(this);
             });
+
+        $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
     }
 
 
@@ -120,8 +118,8 @@ require([
         })
 
     var plansGrouped = _.groupBy(plans, 'carrier');
-    var carriers = _.keys(plansGrouped).map(function(item){
-        return {carrier: item}
+    var carriers = _.keys(plansGrouped).map(function(item, index){
+        return {id: index, carrier: item}
     });
 
     var logSelection = function (field) {
