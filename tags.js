@@ -158,13 +158,9 @@ require([
 
     $('#search').mouseup(function() {
         var truncatedLength = selectedCarrierTruncated.length;
-        if (this.selectionStart < truncatedLength && this.selectionEnd > truncatedLength ) {
-            this.setSelectionRange(0,this.selectionEnd);
-        }
-        else if ( this.selectionStart < truncatedLength && this.selectionEnd <= truncatedLength ) {
-            this.setSelectionRange(0,truncatedLength);
-        }
+        if ( this.selectionStart >= truncatedLength && this.selectionEnd >= truncatedLength ) return;
 
+        this.select();
     });
 
     document.onkeydown = function(e) {
