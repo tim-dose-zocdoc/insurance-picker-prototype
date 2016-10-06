@@ -21,10 +21,7 @@ require([
     
     setCarrier = function( carrierListElement ) {
         var carrierName = $(carrierListElement).find('.item').text();
-        var truncated = carrierName;
-        if ( truncated.length > 20 ) {
-            truncated = carrierName.substr(0,5) + '...' + carrierName.substr(carrierName.length-5)
-        }
+        var truncated = truncate(carrierName,20);
         truncated += ' - ';
         $('#search').val(truncated);
         $('#carrier-truncated').val(truncated);
