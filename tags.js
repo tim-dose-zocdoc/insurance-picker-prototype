@@ -17,7 +17,7 @@ require([
     ///////////////////////////////////////////
     // global functions
     ///////////////////////////////////////////
-    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated;
+    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated = '';
     var currentState = 'carriers';
 
     
@@ -34,9 +34,9 @@ require([
     }
 
     setPlan = function( planListElement ) {
-        var planName = $(planListElement).find('.item').text();
-        var currentStr = $('#search').val();
-        $('#search').val(currentStr + truncate(planName,20));
+        selectedPlan = $(planListElement).find('.item').text();
+        selectedPlanTruncated = truncate(selectedPlan,20);        
+        $('#search').val(selectedCarrierTruncated + truncate(selectedPlan,20));
     }
 
     truncate = function( str, numCharacters ) {
@@ -174,12 +174,12 @@ require([
             setCarrier($('#main-list-container .highlight'));
         }
 
-        // if (e.keyCode == KEY_DELETE ) {
-            if (this.selectionStart <= selectedCarrier.length ) {
+        if (e.keyCode == KEY_DELETE ) {
+            if (this.selectionStart <= selectedCarrierTruncated.length ) {
                 backToCarrier();
                 return false;
             }
-        // }
+        }
 
         // if (this.selectionStart )
     });
