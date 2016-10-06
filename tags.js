@@ -31,7 +31,7 @@ require([
 
         currentState = 'plans';
 
-        renderPlans();
+        renderPlans(plansGrouped[selectedCarrier]);
     }
 
     setPlan = function( planListElement ) {
@@ -64,8 +64,7 @@ require([
         renderCarriers(carriers, selectedCarrierID);
     }
 
-    renderPlans = function() {
-        var plans = plansGrouped[selectedCarrier];
+    renderPlans = function(plans, highlightID) {
 
         $('#main-list-container')
             .empty()
@@ -79,10 +78,16 @@ require([
             .click(function(){
                 setPlan(this);
             });
+
+        if (highlightID === undefined) {
+            $('#main-list-container li').eq(0).addClass('highlight');
+        } else {
+            $('#main-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
+        }
     }
 
+
     renderCarriers = function (carriers, highlightID) {
-        if (highlightID === undefined) highlightID = 0;
 
         $('#main-list-container')
             .empty()
@@ -97,7 +102,11 @@ require([
                 setCarrier(this);
             });
 
-        $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+        if (highlightID === undefined) {
+            $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+        } else {
+            $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+        }
     }
 
 
@@ -171,8 +180,15 @@ require([
         }
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
-            if (currentState == 'plans') return;
-            setCarrier($('#main-list-container .highlight'));
+            var $highlightedItem = $('#main-list-container .highlight')
+            if (currentState == 'plans') {
+                setPlan($highlightedItem);
+                return;
+            }
+            if (currentState == 'carriers') {
+                setCarrier($highlightedItem);
+                return;
+            }
         }
     }
 
