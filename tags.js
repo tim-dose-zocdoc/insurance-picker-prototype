@@ -136,6 +136,15 @@ require([
         console.log(field.selectionStart + '-' + field.selectionEnd + ': ' + selectedText)
     }
 
+    var isPrintableKey = function (keyCode) {
+        return
+            (keyCode > 47 && keyCode < 58)   || // number keys
+            keyCode == 32                    || // spacebar
+            (keyCode > 64 && keyCode < 91)   || // letter keys
+            (keyCode > 95 && keyCode < 112)  || // numpad keys
+            (keyCode > 185 && keyCode < 193) || // ;=,-./` (in order)
+            (keyCode > 218 && keyCode < 223);   // [\]' (in order)
+    }
 
     ///////////////////////////////////////////
     // event stuff
@@ -159,7 +168,7 @@ require([
     });
 
     document.onkeydown = function(e) {
-        console.log(e.keyCode)
+        // console.log(e.keyCode)
 
 
         if (e.keyCode == KEY_DOWN_ARROW ) {
@@ -193,7 +202,7 @@ require([
     }
 
     $('#search').keydown(function(e) {
-        if (e.keyCode == KEY_DELETE ) {
+        if (e.keyCode == KEY_DELETE ||  isPrintableKey( e.keyCode ) ) {
             if (this.selectionStart <= selectedCarrierTruncated.length ) {
                 backToCarrier();
                 return false;
