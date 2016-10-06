@@ -22,14 +22,10 @@ require([
 
     
     setCarrier = function( carrierListElement ) {
-        // var carrierName = $(carrierListElement).find('.item').text();
         selectedCarrier = $(carrierListElement).find('.item').text();
-        // var truncated = truncate(carrierName,20);
         selectedCarrierTruncated = truncate(selectedCarrier,20);
         selectedCarrierTruncated += ' - ';
         $('#search').val(selectedCarrierTruncated);
-        // $('#carrier-truncated').val(truncated);
-        // $('#carrier').val(carrierName);
         $('#search').focus();
 
         currentState = 'plans';
@@ -57,14 +53,11 @@ require([
     }
 
     backToCarrier = function() {
-        // var carrier =  $('#carrier').val()
-        var carrier =  selectedCarrier;
-        // $('#carrier').val('');
+        $('#search').val(selectedCarrier)                
+            .get(0).setSelectionRange(0,selectedCarrier.length);
+
         selectedCarrier = '';
-        // $('#carrier-truncated').val('');
         selectedCarrierTruncated = '';
-        $('#search').val(carrier)                
-            .get(0).setSelectionRange(0,carrier.length);
 
         currentState = 'carriers';
         renderCarriers(carriers);
@@ -131,16 +124,6 @@ require([
         return {carrier: item}
     });
 
-
-    
-    // var showSelection = function() {
-    //     var truncated = carrierName = $(this).val();
-    //     if ( truncated.length > 20 ) {
-    //         truncated = carrierName.substr(0,5) + '...' + carrierName.substr(carrierName.length-5)
-    //     }
-    //     $('#search').val(truncated);
-    // };
-
     var logSelection = function (field) {
         var selectedText = $(field).val().substring(field.selectionStart, field.selectionEnd)
         console.log(field.selectionStart + '-' + field.selectionEnd + ': ' + selectedText)
@@ -150,12 +133,8 @@ require([
     ///////////////////////////////////////////
     // event stuff
     ///////////////////////////////////////////
-    // $('#carrier')
-    //     .change(showSelection)
-    //     .click(showSelection);
 
     $('#search').keyup(function(e) {
-        // console.log(e);
         if (e.keyCode === KEY_LEFT_ARROW || e.keyCode == KEY_RIGHT_ARROW || e.keyCode == KEY_DELETE ) {
             logSelection(this);
         }
@@ -173,7 +152,6 @@ require([
     });
 
     $('#search').keydown(function(e) {
-        // console.log(e);
 
         if (e.keyCode == KEY_DOWN_ARROW ) {
             var $selected = $('#main-list-container .highlight');
