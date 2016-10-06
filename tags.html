@@ -70,11 +70,12 @@
     }
 
     ul {
-      padding-left: 10px;
+      padding-left: 0;
     }
 
     li {
       list-style: none;
+      padding: 10px
     }
 
     .carrier {
@@ -88,6 +89,10 @@
     .query, .match {
       color: #FF6473;
     }
+
+    .highlight {
+      background-color: #f0f0f0;
+    }
   </style>
 
 
@@ -96,10 +101,16 @@
   <div id="wrap">
 
     <div class="controls">
-      <input type="text" placeholder="search carriers and plans"></input>
+      <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off"></input>
+      <input id="carrier" type="hidden"></input>
+      <input id="carrier-truncated" type="hidden"></input>
+      <input id="plan" type="hidden"></input>
       <!-- <a class="all" href="#">All</a> -->
     </div>
 
-    <div class="list" id='main-list-container'></div>
+    <div class="container-list">
+      <div class="list" id="main-list-container"></div>
+      <div class="list" id="plan-container"></div>
+    </div>
   </div>
 </body>
