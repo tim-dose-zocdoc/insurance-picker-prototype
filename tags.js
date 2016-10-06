@@ -149,7 +149,9 @@ require([
 
     });
 
-    $('#search').keydown(function(e) {
+    document.onkeydown = function(e) {
+        console.log(e.keyCode)
+
 
         if (e.keyCode == KEY_DOWN_ARROW ) {
             var $selected = $('#main-list-container .highlight');
@@ -157,6 +159,7 @@ require([
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
             }
+            // return false;
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
@@ -171,15 +174,15 @@ require([
             if (currentState == 'plans') return;
             setCarrier($('#main-list-container .highlight'));
         }
+    }
 
+    $('#search').keydown(function(e) {
         if (e.keyCode == KEY_DELETE ) {
             if (this.selectionStart <= selectedCarrierTruncated.length ) {
                 backToCarrier();
                 return false;
             }
         }
-
-        // if (this.selectionStart )
     });
 
     
