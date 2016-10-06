@@ -17,15 +17,19 @@ require([
     ///////////////////////////////////////////
     // global functions
     ///////////////////////////////////////////
+    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated;
     var currentState = 'carriers';
+
     
     setCarrier = function( carrierListElement ) {
-        var carrierName = $(carrierListElement).find('.item').text();
-        var truncated = truncate(carrierName,20);
-        truncated += ' - ';
-        $('#search').val(truncated);
-        $('#carrier-truncated').val(truncated);
-        $('#carrier').val(carrierName);
+        // var carrierName = $(carrierListElement).find('.item').text();
+        selectedCarrier = $(carrierListElement).find('.item').text();
+        // var truncated = truncate(carrierName,20);
+        selectedCarrierTruncated = truncate(selectedCarrier,20);
+        selectedCarrierTruncated += ' - ';
+        $('#search').val(selectedCarrierTruncated);
+        // $('#carrier-truncated').val(truncated);
+        // $('#carrier').val(carrierName);
         $('#search').focus();
 
         currentState = 'plans';
@@ -53,9 +57,12 @@ require([
     }
 
     backToCarrier = function() {
-        var carrier =  $('#carrier').val()
-        $('#carrier').val('');
-        $('#carrier-truncated').val('');
+        // var carrier =  $('#carrier').val()
+        var carrier =  selectedCarrier;
+        // $('#carrier').val('');
+        selectedCarrier = '';
+        // $('#carrier-truncated').val('');
+        selectedCarrierTruncated = '';
         $('#search').val(carrier)                
             .get(0).setSelectionRange(0,carrier.length);
 
@@ -126,13 +133,13 @@ require([
 
 
     
-    var showSelection = function() {
-        var truncated = carrierName = $(this).val();
-        if ( truncated.length > 20 ) {
-            truncated = carrierName.substr(0,5) + '...' + carrierName.substr(carrierName.length-5)
-        }
-        $('#search').val(truncated);
-    };
+    // var showSelection = function() {
+    //     var truncated = carrierName = $(this).val();
+    //     if ( truncated.length > 20 ) {
+    //         truncated = carrierName.substr(0,5) + '...' + carrierName.substr(carrierName.length-5)
+    //     }
+    //     $('#search').val(truncated);
+    // };
 
     var logSelection = function (field) {
         var selectedText = $(field).val().substring(field.selectionStart, field.selectionEnd)
@@ -143,9 +150,9 @@ require([
     ///////////////////////////////////////////
     // event stuff
     ///////////////////////////////////////////
-    $('#carrier')
-        .change(showSelection)
-        .click(showSelection);
+    // $('#carrier')
+    //     .change(showSelection)
+    //     .click(showSelection);
 
     $('#search').keyup(function(e) {
         // console.log(e);
@@ -155,7 +162,7 @@ require([
     });
 
     $('#search').mouseup(function() {
-        var truncatedLength = $('#carrier-truncated').val().length;
+        var truncatedLength = selectedCarrierTruncated.length;
         if (this.selectionStart < truncatedLength && this.selectionEnd > truncatedLength ) {
             this.setSelectionRange(0,this.selectionEnd);
         }
@@ -190,7 +197,7 @@ require([
         }
 
         // if (e.keyCode == KEY_DELETE ) {
-            if (this.selectionStart <= $('#carrier-truncated').val().length ) {
+            if (this.selectionStart <= selectedCarrier.length ) {
                 backToCarrier();
                 return false;
             }
