@@ -35,6 +35,7 @@
       margin-right: auto;
     }
 
+
   
 
     .loading {
@@ -46,7 +47,6 @@
 
     .controls {
       padding-top: 30px;
-      padding-bottom: 10px;
     }
 
     .count {
@@ -66,6 +66,7 @@
 
     ul {
       padding-left: 0;
+      margin-top: 0;
     }
 
     li {
@@ -91,8 +92,9 @@
 
     .all-lists {
       width: 100%;
-      overflow: hidden;
+      overflow: scroll;
       position: relative;
+      height: 400px;
     }
 
     .list {
@@ -153,6 +155,8 @@
       margin-top: 8px;
       display: flex;
       flex-direction: row;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .step {
@@ -165,7 +169,7 @@
       content: ' #';
     }
 
-    .step.disabled a {
+    .step.disabled {
       pointer-events: none;
       color: #ccc;
     }
@@ -175,8 +179,9 @@
     }
 
     .selected-display {
-      margin-top: 8px;
-      font-size: 20px;
+      padding: 0 10px;
+      margin: 16px 0;
+      font-size: 18px;
       font-weight: bold;
     }
 </style>
@@ -192,8 +197,8 @@
         <input id="search" type="text" placeholder="search carriers and plans" data-status="" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
       </div>
       <div class="steps">
-        <div class="step step-carrier active"><a href="#">Step 1: Choose carrier</a></div>
-        <div class="step step-plan disabled"><a href="#">Step 2: Choose plan</a></div>
+        <div class="step step-carrier active">Step 1: Choose carrier</div>
+        <div class="step step-plan disabled">Step 2: Choose plan</div>
       </div>
       <div class="selected-display">
         <div class="carrier-display"></div>

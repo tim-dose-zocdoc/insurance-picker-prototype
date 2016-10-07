@@ -60,6 +60,10 @@ require([
         $('.plan-display').text(selectedPlan);
     }
 
+    moveToPlan = function() {
+        
+    }
+
     truncate = function( str, numCharacters ) {
         if ( numCharacters === undefined ) numCharacters = 20;
         if ( str.length <= numCharacters ) return str;
@@ -143,7 +147,7 @@ require([
 
 
     ///////////////////////////////////////////
-    // local functions
+    // setup
     ///////////////////////////////////////////
     var plans = JSON.parse(insuranceData)
         .map(function (raw) {
@@ -227,8 +231,20 @@ require([
                 .addClass('prompt')
                 .data('status', 'needs-plan')
         }
+    });
 
+    $('.step-carrier').click(function() {
+        if ( currentState == 'plans' ) {
+            backToCarrier();
+            return false;
+        }
+    });
 
+    $('.step-plan').click(function() {
+        if ( currentState != 'plans' ) {
+            moveToPlan();
+            return false;
+        }
     });
     
 
