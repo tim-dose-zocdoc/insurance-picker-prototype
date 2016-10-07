@@ -39,6 +39,7 @@ require([
         $('#search')
             .css({width:newWidth})
             .attr('placeholder','search plans')
+            .val('')
             .focus();
 
         currentState = 'plans';
@@ -49,7 +50,11 @@ require([
     setPlan = function( planListElement ) {
         selectedPlan = $(planListElement).find('.item').text();
         selectedPlanTruncated = truncate(selectedPlan,20);        
-        $('#search').val(selectedCarrierTruncated + truncate(selectedPlan,20));
+        $('#search')
+            .val(selectedPlan)
+            .focus()
+            .get(0).setSelectionRange(selectedPlan.length, selectedPlan.length)
+
     }
 
     truncate = function( str, numCharacters ) {
@@ -75,6 +80,8 @@ require([
         
         selectedCarrier = '';
         selectedCarrierTruncated = '';
+        selectedPlan = '';
+        selectedPlanTruncated = '';
 
         currentState = 'carriers';
         renderCarriers(carriers, selectedCarrierID);
@@ -208,7 +215,6 @@ require([
             backToCarrier();
             return false;
         }
-
     });
 
     
