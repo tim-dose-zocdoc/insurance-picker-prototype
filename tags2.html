@@ -121,7 +121,7 @@
     }
     
     #carrier-tag {
-      /*display: none;*/
+      display: none;
       background: #f0f0f0;
       padding: 5px;
       box-sizing: border-box;
@@ -130,7 +130,7 @@
     }
 
     #carrier-tag.active {
-      display: inline-block;
+      display: block;
     }
 
     #carrier-tag.highlight {
@@ -149,7 +149,7 @@
 
     <div class="controls">
       <div class="search-wrapper">
-        <div id="carrier-tag">argle bargle</div>
+        <div id="carrier-tag"></div>
         <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
       </div>
     </div>
