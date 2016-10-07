@@ -24,7 +24,7 @@ require([
     setCarrier = function( carrierListElement ) {
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
-        selectedCarrierTruncated = truncate(selectedCarrier,20);
+        selectedCarrierTruncated = truncate(selectedCarrier,14);
 
         var $tag = $('#carrier-tag');
         var $search = $('#search');
@@ -71,10 +71,12 @@ require([
     }
 
     backToCarrier = function() {
+        var newWidth = $('.search-wrapper').width();
+        console.log(newWidth);
         $('#carrier-tag').removeClass('active').text('');
-        console.log('backToCarrier: ' + selectedCarrier);
         $('#search')
             .attr('placeholder','search carriers and plans')
+            .css({width:newWidth})
             .val(selectedCarrier)
             .get(0).setSelectionRange(0,selectedCarrier.length);
         
