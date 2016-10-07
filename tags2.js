@@ -39,9 +39,7 @@ require([
             .data('carrier-name',selectedCarrier)
             .addClass('active');
 
-        var newWidth = $('.search-wrapper').innerWidth() - $tag.outerWidth() - 20;
         $('#search')
-            .css({width:newWidth})
             .attr('placeholder','search plans')
             .val('')
             .focus();
@@ -75,11 +73,9 @@ require([
     }
 
     backToCarrier = function() {
-        var newWidth = $('.search-wrapper').width();
         $('#carrier-tag').removeClass('active').text('');
         $('#search')
             .attr('placeholder','search carriers and plans')
-            .css({width:newWidth})
             .val(selectedCarrier)
             .get(0).setSelectionRange(0,selectedCarrier.length);
         

@@ -102,6 +102,8 @@
     .search-wrapper {
       border: 1px solid #ddd;
       padding: 5px;
+      display: flex;
+      flex-direction: row;
     }
 
     #search{
@@ -110,9 +112,7 @@
       font-family: 'Helvetica Neue';
       font-size: 15px;
       border: none;
-      display: inline-block;
       box-sizing: border-box;
-
     }
 
     #search.incomplete {
@@ -121,13 +121,16 @@
     }
     
     #carrier-tag {
-      display: inline-block;
+      /*display: none;*/
       background: #f0f0f0;
+      padding: 5px;
       box-sizing: border-box;
+      flex: none;
+      flex-basis: auto;
     }
 
     #carrier-tag.active {
-      padding: 5px;
+      display: inline-block;
     }
 
     #carrier-tag.highlight {
@@ -146,7 +149,7 @@
 
     <div class="controls">
       <div class="search-wrapper">
-        <div id="carrier-tag"></div>
+        <div id="carrier-tag">argle bargle</div>
         <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
       </div>
     </div>
