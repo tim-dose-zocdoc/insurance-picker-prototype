@@ -30,21 +30,19 @@ require([
         selectedCarrierID = $(carrierListElement).data('carrier-id');
         selectedCarrierTruncated = truncate(selectedCarrier,14);
 
-        var $tag = $('#carrier-tag');
         var $search = $('#search');
-
-        $tag
-            .text(selectedCarrierTruncated)
-            .data('carrier-id',selectedCarrierID)
-            .data('carrier-name',selectedCarrier)
-            .addClass('active');
 
         $('#search')
             .attr('placeholder','search plans')
+            .data('selectedCarrier', selectedCarrier)
             .val('')
             .focus();
 
         currentState = 'plans';
+
+        $('.step-carrier').addClass('complete').removeClass('active');
+        $('.step-plan').addClass('active').removeClass('disabled');
+        $('.carrier-display').text(selectedCarrier);
 
         renderPlans(plansGrouped[selectedCarrier]);
     }
@@ -57,7 +55,9 @@ require([
             .focus()
             .get(0).setSelectionRange(selectedPlan.length, selectedPlan.length)
 
+        $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
+        $('.plan-display').text(selectedPlan);
     }
 
     truncate = function( str, numCharacters ) {
@@ -84,6 +84,10 @@ require([
         selectedCarrierTruncated = '';
         selectedPlan = '';
         selectedPlanTruncated = '';
+
+        $('.step').removeClass('complete active');
+
+        $('.step-carrier').addClass('active');
 
         $('.search-wrapper').removeClass('complete');
 
@@ -158,7 +162,6 @@ require([
         return {id: index, carrier: item}
     });
 
-
     ///////////////////////////////////////////
     // event stuff
     ///////////////////////////////////////////
@@ -203,13 +206,6 @@ require([
             }
         }
     }
-
-    $('#search').keydown(function(e) {
-        if (e.keyCode == KEY_DELETE && this.selectionEnd == 0 && this.selectionStart == 0 ) {
-            backToCarrier();
-            return false;
-        }
-    });
 
     $('#search').focus(function() {
         $(this).removeClass('incomplete prompt');
