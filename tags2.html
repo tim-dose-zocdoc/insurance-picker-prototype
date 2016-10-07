@@ -25,11 +25,8 @@
       color: #aaa;
     }
 
-    input{
-      width: 100%;
-      padding: 10px;
-      font-family: 'Helvetica Neue';
-      font-size: 15px;
+    input:focus {
+      outline: none;
     }
 
     #wrap {
@@ -101,6 +98,40 @@
     .list {
       width: 100%;
     }
+
+    .search-wrapper {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    #search{
+      width: 100%;
+      padding: 5px;
+      font-family: 'Helvetica Neue';
+      font-size: 15px;
+      border: none;
+      display: inline-block;
+      box-sizing: border-box;
+
+    }
+    
+    #carrier-tag {
+      display: inline-block;
+      background: #f0f0f0;
+      box-sizing: border-box;
+    }
+
+    #carrier-tag.active {
+      padding: 5px;
+    }
+
+    #carrier-tag.highlight {
+      background: red;
+    }
+
+    #carrier-tag:focus {
+      border: 1px solid cyan;
+    }
   </style>
 
 
@@ -109,7 +140,10 @@
   <div id="wrap">
 
     <div class="controls">
-      <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
+      <div class="search-wrapper">
+        <div id="carrier-tag"></div>
+        <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
+      </div>
     </div>
 
     <div class="all-lists">

@@ -25,9 +25,21 @@ require([
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
         selectedCarrierTruncated = truncate(selectedCarrier,20);
-        selectedCarrierTruncated += ' - ';
-        $('#search').val(selectedCarrierTruncated);
-        $('#search').focus();
+
+        var $tag = $('#carrier-tag');
+        var $search = $('#search');
+
+        $tag
+            .text(selectedCarrierTruncated)
+            .data('carrier-id',selectedCarrierID)
+            .data('carrier-name',selectedCarrier)
+            .addClass('active');
+
+        var newWidth = $('.search-wrapper').innerWidth() - $tag.outerWidth() - 20;
+        $('#search')
+            .css({width:newWidth})
+            .attr('placeholder','search plans')
+            .focus();
 
         currentState = 'plans';
 
@@ -54,7 +66,11 @@ require([
     }
 
     backToCarrier = function() {
-        $('#search').val(selectedCarrier)                
+        $('#carrier-tag').removeClass('active').text('');
+        console.log('backToCarrier: ' + selectedCarrier);
+        $('#search')
+            .attr('placeholder','search carriers and plans')
+            .val(selectedCarrier)
             .get(0).setSelectionRange(0,selectedCarrier.length);
         
         selectedCarrier = '';
@@ -131,10 +147,6 @@ require([
         return {id: index, carrier: item}
     });
 
-    var logSelection = function (field) {
-        var selectedText = $(field).val().substring(field.selectionStart, field.selectionEnd)
-        console.log(field.selectionStart + '-' + field.selectionEnd + ': ' + selectedText)
-    }
 
     var isPrintableKey = function (keyCode) {
         return
@@ -149,12 +161,6 @@ require([
     ///////////////////////////////////////////
     // event stuff
     ///////////////////////////////////////////
-
-    $('#search').keyup(function(e) {
-        if (e.keyCode === KEY_LEFT_ARROW || e.keyCode == KEY_RIGHT_ARROW || e.keyCode == KEY_DELETE ) {
-            logSelection(this);
-        }
-    });
 
     $('#search').mouseup(function() {
         var truncatedLength = selectedCarrierTruncated.length;
@@ -198,12 +204,11 @@ require([
     }
 
     $('#search').keydown(function(e) {
-        if (e.keyCode == KEY_DELETE ||  isPrintableKey( e.keyCode ) ) {
-            if (this.selectionStart <= selectedCarrierTruncated.length ) {
-                backToCarrier();
-                return false;
-            }
+        if (e.keyCode == KEY_DELETE && this.selectionEnd == 0 && this.selectionStart == 0 ) {
+            backToCarrier();
+            return false;
         }
+
     });
 
     
