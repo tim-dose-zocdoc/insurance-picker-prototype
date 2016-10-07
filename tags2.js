@@ -57,6 +57,7 @@ require([
             .focus()
             .get(0).setSelectionRange(selectedPlan.length, selectedPlan.length)
 
+        $('.search-wrapper').addClass('complete');
     }
 
     truncate = function( str, numCharacters ) {
@@ -83,6 +84,8 @@ require([
         selectedCarrierTruncated = '';
         selectedPlan = '';
         selectedPlanTruncated = '';
+
+        $('.search-wrapper').removeClass('complete');
 
         currentState = 'carriers';
         renderCarriers(carriers, selectedCarrierID);
@@ -209,14 +212,26 @@ require([
     });
 
     $('#search').focus(function() {
-        $(this).removeClass('incomplete');
+        $(this).removeClass('incomplete prompt');
+
+        if ( $(this).data('status') == 'needs-plan' ) {
+            $(this).data('status','')
+            $(this).val('');
+        } 
     });
 
     $('#search').blur(function() {
-        console.log(selectedPlan);
         if ( $(this).val().length > 1 && ( selectedCarrier == '' || selectedPlan == '' ) )   {
             $(this).addClass('incomplete');
         }
+
+        if ( $(this).val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
+            $(this)
+                .val('choose plan')
+                .addClass('prompt')
+                .data('status', 'needs-plan')
+        }
+
 
     });
     

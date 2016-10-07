@@ -119,6 +119,10 @@
       color: red;
       text-decoration: underline;
     }
+
+    #search.prompt {
+      color: red;
+    }
     
     #carrier-tag {
       display: none;
@@ -132,6 +136,10 @@
     #carrier-tag.active {
       display: block;
     }
+
+    /*.search-wrapper.complete #carrier-tag {
+      background: none;
+    }*/
 
     #carrier-tag.highlight {
       background: red;
@@ -150,7 +158,7 @@
     <div class="controls">
       <div class="search-wrapper">
         <div id="carrier-tag"></div>
-        <input id="search" type="text" placeholder="search carriers and plans" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
+        <input id="search" type="text" placeholder="search carriers and plans" data-status="" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
       </div>
     </div>
 
