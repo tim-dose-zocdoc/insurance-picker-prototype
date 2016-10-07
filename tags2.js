@@ -213,9 +213,11 @@ require([
     });
 
     $('#search').blur(function() {
-        if ( $('#search').val().length > 1 && selectedCarrier == '' ) {
-            $('#search').addClass('incomplete');
+        console.log(selectedPlan);
+        if ( $(this).val().length > 1 && ( selectedCarrier == '' || selectedPlan == '' ) )   {
+            $(this).addClass('incomplete');
         }
+
     });
     
 
