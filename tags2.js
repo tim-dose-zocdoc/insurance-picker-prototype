@@ -14,7 +14,11 @@ require([
     'text!templates/plan-list.mustache',
     'text!insurance_data.json'
 ], function (jquery, _, Mustache, carrierTemplate, planTemplate, insuranceData ) {
-    var selectedCarrier, selectedCarrierTruncated, selectedPlan, selectedPlanTruncated, selectedCarrierID = '';
+    var selectedCarrier = ''
+    var selectedCarrierTruncated
+    var selectedPlan = ''
+    var selectedPlanTruncated = ''
+    var selectedCarrierID = '';
     var currentState = 'carriers';
 
     
@@ -72,7 +76,6 @@ require([
 
     backToCarrier = function() {
         var newWidth = $('.search-wrapper').width();
-        console.log(newWidth);
         $('#carrier-tag').removeClass('active').text('');
         $('#search')
             .attr('placeholder','search carriers and plans')
@@ -219,6 +222,15 @@ require([
         }
     });
 
+    $('#search').focus(function() {
+        $(this).removeClass('incomplete');
+    });
+
+    $('#search').blur(function() {
+        if ( $('#search').val().length > 1 && selectedCarrier == '' ) {
+            $('#search').addClass('incomplete');
+        }
+    });
     
 
     ///////////////////////////////////////////
@@ -226,5 +238,5 @@ require([
     ///////////////////////////////////////////
 
     renderCarriers(carriers);
-    window.highlightListItem();
+    highlightListItem();
 })
