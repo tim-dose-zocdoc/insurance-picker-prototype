@@ -37,11 +37,10 @@ require([
             .val('')
             .focus();
 
-        currentState = 'plans';
-
         $('.step-carrier').addClass('complete')
         $('.carrier-display').text(selectedCarrier);
         $('.plan-display').text('');
+        selectedPlan = '';
 
         renderPlans(plansGrouped[selectedCarrier]);
 
@@ -233,21 +232,36 @@ require([
     $('#search').keyup(toggleClear);
 
     $('#search').focus(function() {
-        $(this).parents('.picker').addClass('active');
+        $(this)
+            .removeClass('incomplete needs-plan')
+            .parents('.picker').addClass('active');
+
     });
 
-    // $('#search').blur(function() {
-    //     if ( $(this).val().length > 1 && ( selectedCarrier == '' || selectedPlan == '' ) )   {
-    //         $(this).addClass('incomplete');
-    //     }
+    $('body').click(function(e){
+        var $target = $(e.target);
+        var $picker = $('.picker');
+        if ( $target != $picker && $picker.find($target).length === 0 ) {
+            $picker.removeClass('active');
+            validatePicker();
+        }
+    });
 
-    //     if ( $(this).val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
-    //         $(this)
-    //             .val('choose plan')
-    //             .addClass('prompt')
-    //             .data('status', 'needs-plan')
-    //     }
-    // });
+    validatePicker = function() {
+        var $search = $('#search');
+        if ( selectedCarrier == '' || selectedPlan == '' )   {
+            $search.parents('.picker').addClass('incomplete');
+        } else {
+            $search.parents('.picker').removeClass('incomplete');
+        }
+
+        // if ( $search.val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
+        //     $search
+        //         .addClass('prompt')
+        //         .data('status', 'needs-plan')
+        // }
+    }
+
 
     $('.step-carrier').click(function() {
         if ( currentState == 'plans' ) {
