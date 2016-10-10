@@ -1,8 +1,12 @@
 <div>
-    <ul>
+    <ul class="list">
         {{#plans}}
-            <li data-plan-id="{{id}}">
+            <li class="list__item" data-plan-id="{{id}}">
                 <span class="item">{{plan}}</span>
+                <div class="icons">
+	                <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
+	                <span class="icon icon-selected"><i class="fa fa-check"></i></span>
+                </div>
             </li>
         {{/plans}}
     </ul>

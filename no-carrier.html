@@ -86,9 +86,36 @@
       margin-top: 0;
     }
 
-    li {
+    .list__item {
       list-style: none;
-      padding: 10px
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .list__item .icons {
+      flex: none
+    }
+
+    .list__item .item {
+      flex: 1 0;
+    }
+
+    .list__item .icon {
+      display: none;
+      float: right;
+    }
+
+    .list__item.selected .icon-selected {
+      display: block;
+    }
+
+    .list__item.has-next.highlight .icon-next {
+      display: block;
+    }
+
+    .list__item.has-next.highlight .icon-selected {
+      display: none;
     }
 
     .carrier {

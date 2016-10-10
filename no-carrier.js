@@ -17,7 +17,7 @@ require([
     var selectedCarrier = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
-    var currentState = 'carriers';
+    var currentState = 'carrier';
 
     
     ///////////////////////////////////////////
@@ -27,8 +27,10 @@ require([
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
-        var $search = $('.search');
+        $('.list__item').removeClass('selected');
+        $(carrierListElement).addClass('selected')
 
+        var $search = $('.search');
         $('.search')
             .data('selectedCarrier', selectedCarrier)
             .val('')
@@ -48,9 +50,13 @@ require([
     setPlan = function( planListElement ) {
         selectedPlan = $(planListElement).find('.item').text();
 
+        $('.plan-list-container .list__item').removeClass('selected');
+        $(planListElement).addClass('selected')
+
         $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
         $('.plan-display').text(selectedPlan);
+        $('.search').blur();
         hidePicker();
     }
 
@@ -58,11 +64,14 @@ require([
         $('.step').removeClass('active');
         $('.step-plan').addClass('active').removeClass('disabled');
 
-        $('.search').attr('placeholder','search plans')
+        $('.search').attr('placeholder','search "' + truncate(selectedCarrier,16) + '" plans')
+        // $('.search').attr('placeholder','search ' + selectedCarrier + ' plans')
+        // $('.search').attr('placeholder','search plans for ' + selectedCarrier)
+        // $('.search').attr('placeholder','search plans')
 
         $('.frame').addClass('show-plan');
 
-        currentState = 'plans';
+        currentState = 'plan';
     }
 
     moveToCarrier = function() {
@@ -73,7 +82,7 @@ require([
 
         $('.frame').removeClass('show-plan');
 
-        currentState = 'carriers';
+        currentState = 'carrier';
     }
 
 
@@ -238,7 +247,7 @@ require([
     //----------------
     $('.picker').get(0).onkeydown = function(e) {
         if (e.keyCode == KEY_DOWN_ARROW ) {
-            var $selected = $('.carrier-list-container .highlight');
+            var $selected = $('.'+currentState+'-list-container .highlight');
             if ( $selected.next().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
@@ -246,7 +255,7 @@ require([
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
-            var $selected = $('.carrier-list-container .highlight');
+            var $selected = $('.'+currentState+'-list-container .highlight');
             if ( $selected.prev().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.prev().addClass('highlight');
@@ -254,13 +263,12 @@ require([
         }
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
-            var $highlightedItem = $('.carrier-list-container .highlight')
-            if (currentState == 'plans') {
-                setPlan($highlightedItem);
+            if (currentState == 'plan') {
+                setPlan($('.plan-list-container .highlight'));
                 return;
             }
-            if (currentState == 'carriers') {
-                setCarrier($highlightedItem);
+            if (currentState == 'carrier') {
+                setCarrier($('.carrier-list-container .highlight'));
                 return;
             }
         }
@@ -283,14 +291,14 @@ require([
     // steps
     //----------------
     $('.step-carrier').click(function() {
-        if ( currentState == 'plans' ) {
+        if ( currentState == 'plan' ) {
             moveToCarrier();
             return false;
         }
     });
 
     $('.step-plan').click(function() {
-        if ( currentState != 'plans' ) {
+        if ( currentState != 'plan' ) {
             moveToPlan();
             return false;
         }
