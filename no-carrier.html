@@ -3,6 +3,9 @@
 
   <link rel="stylesheet" type="text/css" href="font-awesome-4.6.3/css/font-awesome.min.css">
   <style type="text/css" media="screen">
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       background-color: #e0e0e0;
@@ -100,12 +103,13 @@
 
 
     .search-wrapper {
-      border: 1px solid #ddd;
+      border: 1px solid #aaa;
       padding: 5px;
       display: flex;
       flex-direction: row;
       align-items: center;
       flex: none;
+      height: 48px;
     }
 
     #search{
@@ -138,9 +142,14 @@
       display: block;
     }
 
-    #search.incomplete {
-      color: red;
+    .picker.incomplete #search {
+      color: purple;
       text-decoration: underline;
+    }
+
+    .picker.active #search {
+      color: inherit;
+      text-decoration: none;
     }
 
     #search.prompt {

@@ -51,14 +51,12 @@ require([
     setPlan = function( planListElement ) {
         selectedPlan = $(planListElement).find('.item').text();
         selectedPlanTruncated = truncate(selectedPlan,20);        
-        $('#search')
-            .val(selectedPlan)
-            .focus()
-            .get(0).setSelectionRange(selectedPlan.length, selectedPlan.length)
+        $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
 
         $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
         $('.plan-display').text(selectedPlan);
+        $('.picker').removeClass('active');
     }
 
     moveToPlan = function() {
@@ -180,6 +178,27 @@ require([
     // event stuff
     ///////////////////////////////////////////
 
+    //----------------
+    // clear button 
+    //----------------
+    toggleClear = function () {
+        if ( $('#search').val().length > 0 ) {
+            $('.clear').addClass('active');
+        } else {
+            $('.clear').removeClass('active');
+        }
+    }
+    
+    $('.clear').click(function() {
+        $(this).removeClass('active');
+        $('#search').val('').focus();
+    });
+
+
+
+    //----------------
+    // search field 
+    //----------------
     $('#search').mouseup(function() {
         var truncatedLength = selectedCarrierTruncated.length;
         if ( this.selectionStart >= truncatedLength && this.selectionEnd >= truncatedLength ) return;
@@ -187,7 +206,22 @@ require([
         this.select();
     });
 
-    document.onkeydown = function(e) {
+    $('#search').change(toggleClear);
+    $('#search').keyup(toggleClear);
+
+    $('#search').focus(function() {
+        $(this)
+            .removeClass('incomplete')
+            .parents('.picker').addClass('active');
+
+    });
+
+
+
+    //----------------
+    // picker 
+    //----------------
+    $('.picker').get(0).onkeydown = function(e) {
         if (e.keyCode == KEY_DOWN_ARROW ) {
             var $selected = $('#carrier-list-container .highlight');
             if ( $selected.next().length > 0 ) {
@@ -217,33 +251,6 @@ require([
         }
     }
 
-
-    toggleClear = function () {
-        if ( $('#search').val().length > 0 ) {
-            $('.clear').addClass('active');
-        } else {
-            $('.clear').removeClass('active');
-        }
-    }
-    $('#search').change(toggleClear);
-    $('#search').keyup(toggleClear);
-
-    $('#search').focus(function() {
-        $(this)
-            .removeClass('incomplete needs-plan')
-            .parents('.picker').addClass('active');
-
-    });
-
-    $('body').click(function(e){
-        var $target = $(e.target);
-        var $picker = $('.picker');
-        if ( $target != $picker && $picker.find($target).length === 0 ) {
-            $picker.removeClass('active');
-            validatePicker();
-        }
-    });
-
     validatePicker = function() {
         var $search = $('#search');
         if ( selectedCarrier == '' || selectedPlan == '' )   {
@@ -253,12 +260,21 @@ require([
         }
     }
 
-    $('.clear').click(function() {
-        $(this).removeClass('active');
-        $('#search').val('').focus();
+    // close the picker if anything else gets a click
+    $('body').click(function(e){
+        var $target = $(e.target);
+        var $picker = $('.picker');
+        if ( $target != $picker && $picker.find($target).length === 0 ) {
+            $picker.removeClass('active');
+            validatePicker();
+        }
     });
 
 
+
+    //----------------
+    // steps
+    //----------------
     $('.step-carrier').click(function() {
         if ( currentState == 'plans' ) {
             moveToCarrier();
@@ -273,6 +289,7 @@ require([
         }
     });
     
+
 
     ///////////////////////////////////////////
     // initialize
