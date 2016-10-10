@@ -15,9 +15,7 @@ require([
     'text!insurance_data.json'
 ], function (jquery, _, Mustache, carrierTemplate, planTemplate, insuranceData ) {
     var selectedCarrier = ''
-    var selectedCarrierTruncated
     var selectedPlan = ''
-    var selectedPlanTruncated = ''
     var selectedCarrierID = '';
     var currentState = 'carriers';
 
@@ -28,7 +26,6 @@ require([
     setCarrier = function( carrierListElement ) {
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
-        selectedCarrierTruncated = truncate(selectedCarrier,14);
 
         var $search = $('#search');
 
@@ -50,8 +47,6 @@ require([
 
     setPlan = function( planListElement ) {
         selectedPlan = $(planListElement).find('.item').text();
-        selectedPlanTruncated = truncate(selectedPlan,20);        
-        $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
 
         $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
@@ -155,6 +150,10 @@ require([
     ///////////////////////////////////////////
     showPicker = function() {
         $('.picker').addClass('active');
+        if ( selectedCarrier != '' && selectedCarrier != '' ) {
+            $('#search').val('')
+            // $('#search').val(selectedPlan)
+        }
     }
 
     hidePicker = function() {
@@ -166,9 +165,12 @@ require([
         } else {
             $picker.removeClass('incomplete');
         }
+
+        if ( selectedCarrier != '' && selectedCarrier != '' ) {
+            $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
+        }
     }
     
-
     
 
     ///////////////////////////////////////////
@@ -216,13 +218,6 @@ require([
     //----------------
     // search field 
     //----------------
-    $('#search').mouseup(function() {
-        var truncatedLength = selectedCarrierTruncated.length;
-        if ( this.selectionStart >= truncatedLength && this.selectionEnd >= truncatedLength ) return;
-
-        this.select();
-    });
-
     $('#search').change(toggleClear);
     $('#search').keyup(toggleClear);
 
