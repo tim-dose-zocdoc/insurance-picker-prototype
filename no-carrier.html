@@ -10,10 +10,18 @@
     body {
       background-color: #e0e0e0;
       color: #666;
-      font-family: 'Helvetica Neue';
       font-size: 15px;
     }
 
+    body, .search {
+      font-family: 'Helvetica Neue';
+    }
+
+    body.sans,
+    body.sans .search {
+      font-family: 'Sharp Sans No1';
+    }
+    
     a {
       color: #2076c7;
       text-decoration: none;
@@ -114,7 +122,6 @@
 
     .search{
       padding: 5px;
-      font-family: 'Helvetica Neue';
       font-size: 15px;
       border: none;
       box-sizing: border-box;
@@ -260,7 +267,7 @@
 
 
 </head>
-<body>
+<body class="sans">
   <div class="wrap">
 
     <div class="picker">
