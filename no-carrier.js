@@ -187,16 +187,12 @@ require([
     });
 
     document.onkeydown = function(e) {
-        // console.log(e.keyCode)
-
-
         if (e.keyCode == KEY_DOWN_ARROW ) {
             var $selected = $('#carrier-list-container .highlight');
             if ( $selected.next().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
             }
-            // return false;
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
@@ -254,13 +250,12 @@ require([
         } else {
             $search.parents('.picker').removeClass('incomplete');
         }
-
-        // if ( $search.val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
-        //     $search
-        //         .addClass('prompt')
-        //         .data('status', 'needs-plan')
-        // }
     }
+
+    $('.clear').click(function() {
+        $(this).removeClass('active');
+        $('#search').val('').focus();
+    });
 
 
     $('.step-carrier').click(function() {
