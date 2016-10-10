@@ -221,8 +221,7 @@
       margin-top: 8px;
       position: relative;
       width: 100%;
-      overflow-x: hidden;
-      overflow-y: scroll;
+      overflow: hidden;
       flex: 1 0;
     }
 
@@ -233,9 +232,12 @@
       flex-direction: row;
       left: 0;
       transition: 0.3s;
+      height: 100%;
     }
 
     .list {
+      overflow-y: scroll;
+      flex: 1 1;
       width: 100%;
     }
 
