@@ -56,7 +56,7 @@ require([
         $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
         $('.plan-display').text(selectedPlan);
-        $('.picker').removeClass('active');
+        hidePicker();
     }
 
     moveToPlan = function() {
@@ -133,9 +133,9 @@ require([
 
 
 
-
-    
-
+    ///////////////////////////////////////////
+    // misc
+    ///////////////////////////////////////////
     truncate = function( str, numCharacters ) {
         if ( numCharacters === undefined ) numCharacters = 20;
         if ( str.length <= numCharacters ) return str;
@@ -149,10 +149,27 @@ require([
         $('#carrier-list-container li').eq(itemNumber).addClass('highlight');
     }
 
+
+    ///////////////////////////////////////////
+    // picker utilities
+    ///////////////////////////////////////////
+    showPicker = function() {
+        $('.picker').addClass('active');
+    }
+
+    hidePicker = function() {
+        $picker = $('.picker');
+        $picker.removeClass('active');
+
+        if ( selectedCarrier == '' || selectedPlan == '' )   {
+            $picker.addClass('incomplete');
+        } else {
+            $picker.removeClass('incomplete');
+        }
+    }
     
 
     
-
 
     ///////////////////////////////////////////
     // setup
@@ -210,12 +227,9 @@ require([
     $('#search').keyup(toggleClear);
 
     $('#search').focus(function() {
-        $(this)
-            .removeClass('incomplete')
-            .parents('.picker').addClass('active');
-
+        $(this).removeClass('incomplete')
+        showPicker();
     });
-
 
 
     //----------------
@@ -251,22 +265,14 @@ require([
         }
     }
 
-    validatePicker = function() {
-        var $search = $('#search');
-        if ( selectedCarrier == '' || selectedPlan == '' )   {
-            $search.parents('.picker').addClass('incomplete');
-        } else {
-            $search.parents('.picker').removeClass('incomplete');
-        }
-    }
+    
 
     // close the picker if anything else gets a click
     $('body').click(function(e){
         var $target = $(e.target);
         var $picker = $('.picker');
         if ( $target != $picker && $picker.find($target).length === 0 ) {
-            $picker.removeClass('active');
-            validatePicker();
+            hidePicker();
         }
     });
 
