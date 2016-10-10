@@ -149,16 +149,21 @@ require([
     // picker utilities
     ///////////////////////////////////////////
     showPicker = function() {
+        if ( $('.picker').hasClass('active') ) return;
         $('.picker').addClass('active');
         if ( selectedCarrier != '' && selectedCarrier != '' ) {
             $('#search').val('')
             // $('#search').val(selectedPlan)
+        }
+        if ( $('#search').val().length > 0 ) {
+            $('.clear').addClass('active');
         }
     }
 
     hidePicker = function() {
         $picker = $('.picker');
         $picker.removeClass('active');
+        $('.clear').removeClass('active');
 
         if ( selectedCarrier == '' || selectedPlan == '' )   {
             $picker.addClass('incomplete');
@@ -166,8 +171,9 @@ require([
             $picker.removeClass('incomplete');
         }
 
-        if ( selectedCarrier != '' && selectedCarrier != '' ) {
-            $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
+        if ( selectedCarrier != '' && selectedPlan != '' ) {
+            $('#search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
+            // $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
         }
     }
     
