@@ -27,9 +27,9 @@ require([
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
-        var $search = $('#search');
+        var $search = $('.search');
 
-        $('#search')
+        $('.search')
             .data('selectedCarrier', selectedCarrier)
             .val('')
             .focus();
@@ -58,7 +58,7 @@ require([
         $('.step').removeClass('active');
         $('.step-plan').addClass('active').removeClass('disabled');
 
-        $('#search').attr('placeholder','search plans')
+        $('.search').attr('placeholder','search plans')
 
         $('.frame').addClass('show-plan');
 
@@ -69,7 +69,7 @@ require([
         $('.step').removeClass('active');
         $('.step-carrier').addClass('active');
 
-        $('#search').attr('placeholder','search carriers and plans')
+        $('.search').attr('placeholder','search carriers and plans')
 
         $('.frame').removeClass('show-plan');
 
@@ -83,13 +83,13 @@ require([
 
     renderPlans = function(plans, highlightID) {
 
-        $('#plan-list-container')
+        $('.plan-list-container')
             .empty()
             .append(Mustache.to_html(planTemplate,{plans:plans}))
 
-        $('#plan-list-container li')
+        $('.plan-list-container li')
             .hover(function() {
-                $('#plan-list-container li').removeClass('highlight');
+                $('.plan-list-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -97,22 +97,22 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('#plan-list-container li').eq(0).addClass('highlight');
+            $('.plan-list-container li').eq(0).addClass('highlight');
         } else {
-            $('#plan-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
+            $('.plan-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
 
     renderCarriers = function (carriers, highlightID) {
 
-        $('#carrier-list-container')
+        $('.carrier-list-container')
             .empty()
             .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
 
-        $('#carrier-list-container li')
+        $('.carrier-list-container li')
             .hover(function() {
-                $('#carrier-list-container li').removeClass('highlight');
+                $('.carrier-list-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -120,9 +120,9 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('#carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('.carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
         } else {
-            $('#carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('.carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
@@ -141,7 +141,7 @@ require([
 
     highlightListItem = function(itemNumber) {
         if ( itemNumber === undefined ) itemNumber = 0;
-        $('#carrier-list-container li').eq(itemNumber).addClass('highlight');
+        $('.carrier-list-container li').eq(itemNumber).addClass('highlight');
     }
 
 
@@ -152,10 +152,10 @@ require([
         if ( $('.picker').hasClass('active') ) return;
         $('.picker').addClass('active');
         if ( selectedCarrier != '' && selectedCarrier != '' ) {
-            $('#search').val('')
-            // $('#search').val(selectedPlan)
+            $('.search').val('')
+            // $('.search').val(selectedPlan)
         }
-        if ( $('#search').val().length > 0 ) {
+        if ( $('.search').val().length > 0 ) {
             $('.clear').addClass('active');
         }
     }
@@ -172,8 +172,8 @@ require([
         }
 
         if ( selectedCarrier != '' && selectedPlan != '' ) {
-            $('#search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
-            // $('#search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
+            $('.search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
+            // $('.search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
         }
     }
     
@@ -207,7 +207,7 @@ require([
     // clear button 
     //----------------
     toggleClear = function () {
-        if ( $('#search').val().length > 0 ) {
+        if ( $('.search').val().length > 0 ) {
             $('.clear').addClass('active');
         } else {
             $('.clear').removeClass('active');
@@ -216,7 +216,7 @@ require([
     
     $('.clear').click(function() {
         $(this).removeClass('active');
-        $('#search').val('').focus();
+        $('.search').val('').focus();
     });
 
 
@@ -224,10 +224,10 @@ require([
     //----------------
     // search field 
     //----------------
-    $('#search').change(toggleClear);
-    $('#search').keyup(toggleClear);
+    $('.search').change(toggleClear);
+    $('.search').keyup(toggleClear);
 
-    $('#search').focus(function() {
+    $('.search').focus(function() {
         $(this).removeClass('incomplete')
         showPicker();
     });
@@ -238,7 +238,7 @@ require([
     //----------------
     $('.picker').get(0).onkeydown = function(e) {
         if (e.keyCode == KEY_DOWN_ARROW ) {
-            var $selected = $('#carrier-list-container .highlight');
+            var $selected = $('.carrier-list-container .highlight');
             if ( $selected.next().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
@@ -246,7 +246,7 @@ require([
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
-            var $selected = $('#carrier-list-container .highlight');
+            var $selected = $('.carrier-list-container .highlight');
             if ( $selected.prev().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.prev().addClass('highlight');
@@ -254,7 +254,7 @@ require([
         }
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
-            var $highlightedItem = $('#carrier-list-container .highlight')
+            var $highlightedItem = $('.carrier-list-container .highlight')
             if (currentState == 'plans') {
                 setPlan($highlightedItem);
                 return;
