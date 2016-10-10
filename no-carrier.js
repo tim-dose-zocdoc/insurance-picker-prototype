@@ -44,7 +44,11 @@ require([
         $('.step-plan').addClass('active').removeClass('disabled');
         $('.carrier-display').text(selectedCarrier);
 
+        $('.frame').addClass('show-plan');
+
         renderPlans(plansGrouped[selectedCarrier]);
+
+        
     }
 
     setPlan = function( planListElement ) {
@@ -61,7 +65,7 @@ require([
     }
 
     moveToPlan = function() {
-        
+
     }
 
     truncate = function( str, numCharacters ) {
@@ -74,7 +78,7 @@ require([
 
     highlightListItem = function(itemNumber) {
         if ( itemNumber === undefined ) itemNumber = 0;
-        $('#main-list-container li').eq(itemNumber).addClass('highlight');
+        $('#carrier-list-container li').eq(itemNumber).addClass('highlight');
     }
 
     backToCarrier = function() {
@@ -95,19 +99,21 @@ require([
 
         $('.search-wrapper').removeClass('complete');
 
+        $('.frame').removeClass('show-plan');
+
         currentState = 'carriers';
         renderCarriers(carriers, selectedCarrierID);
     }
 
     renderPlans = function(plans, highlightID) {
 
-        $('#main-list-container')
+        $('#plan-list-container')
             .empty()
             .append(Mustache.to_html(planTemplate,{plans:plans}))
 
-        $('#main-list-container li')
+        $('#plan-list-container li')
             .hover(function() {
-                $('#main-list-container li').removeClass('highlight');
+                $('#plan-list-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -115,22 +121,22 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('#main-list-container li').eq(0).addClass('highlight');
+            $('#plan-list-container li').eq(0).addClass('highlight');
         } else {
-            $('#main-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
+            $('#plan-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
 
     renderCarriers = function (carriers, highlightID) {
 
-        $('#main-list-container')
+        $('#carrier-list-container')
             .empty()
             .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
 
-        $('#main-list-container li')
+        $('#carrier-list-container li')
             .hover(function() {
-                $('#main-list-container li').removeClass('highlight');
+                $('#carrier-list-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -138,9 +144,9 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('#carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
         } else {
-            $('#main-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('#carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
@@ -182,7 +188,7 @@ require([
 
 
         if (e.keyCode == KEY_DOWN_ARROW ) {
-            var $selected = $('#main-list-container .highlight');
+            var $selected = $('#carrier-list-container .highlight');
             if ( $selected.next().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
@@ -191,7 +197,7 @@ require([
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
-            var $selected = $('#main-list-container .highlight');
+            var $selected = $('#carrier-list-container .highlight');
             if ( $selected.prev().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.prev().addClass('highlight');
@@ -199,7 +205,7 @@ require([
         }
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
-            var $highlightedItem = $('#main-list-container .highlight')
+            var $highlightedItem = $('#carrier-list-container .highlight')
             if (currentState == 'plans') {
                 setPlan($highlightedItem);
                 return;

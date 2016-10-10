@@ -90,16 +90,8 @@
       background-color: #f0f0f0;
     }
 
-    .all-lists {
-      width: 100%;
-      overflow: scroll;
-      position: relative;
-      height: 400px;
-    }
+    
 
-    .list {
-      width: 100%;
-    }
 
     .search-wrapper {
       border: 1px solid #ddd;
@@ -138,10 +130,6 @@
     #carrier-tag.active {
       display: block;
     }
-
-    /*.search-wrapper.complete #carrier-tag {
-      background: none;
-    }*/
 
     #carrier-tag.highlight {
       background: red;
@@ -184,6 +172,36 @@
       font-size: 18px;
       font-weight: bold;
     }
+
+
+
+    /* lists & transition */
+
+    .frame {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .all-lists {
+      width: 200%;
+      position: absolute ;
+      display: flex;
+      flex-direction: row;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .list {
+      width: 100%;
+    }
+
+    .frame.show-plan .all-lists {
+      transition: 0.3s ;
+      left: -100%;
+    }
 </style>
 
 
@@ -206,8 +224,11 @@
       </div>
     </div>
 
-    <div class="all-lists">
-      <div class="list" id="main-list-container"></div>
+    <div class="frame">
+      <div class="all-lists">
+        <div class="list" id="carrier-list-container"></div>
+        <div class="list" id="plan-list-container"></div>
+      </div>
     </div>
   </div>
 </body>
