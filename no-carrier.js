@@ -23,7 +23,7 @@ require([
 
     
     ///////////////////////////////////////////
-    // global functions
+    // setting & moving
     ///////////////////////////////////////////
     setCarrier = function( carrierListElement ) {
         selectedCarrier = $(carrierListElement).find('.item').text();
@@ -33,22 +33,19 @@ require([
         var $search = $('#search');
 
         $('#search')
-            .attr('placeholder','search plans')
             .data('selectedCarrier', selectedCarrier)
             .val('')
             .focus();
 
         currentState = 'plans';
 
-        $('.step-carrier').addClass('complete').removeClass('active');
-        $('.step-plan').addClass('active').removeClass('disabled');
+        $('.step-carrier').addClass('complete')
         $('.carrier-display').text(selectedCarrier);
-
-        $('.frame').addClass('show-plan');
+        $('.plan-display').text('');
 
         renderPlans(plansGrouped[selectedCarrier]);
 
-        
+        moveToPlan();
     }
 
     setPlan = function( planListElement ) {
@@ -65,45 +62,31 @@ require([
     }
 
     moveToPlan = function() {
+        $('.step').removeClass('active');
+        $('.step-plan').addClass('active').removeClass('disabled');
 
+        $('#search').attr('placeholder','search plans')
+
+        $('.frame').addClass('show-plan');
+
+        currentState = 'plans';
     }
 
-    truncate = function( str, numCharacters ) {
-        if ( numCharacters === undefined ) numCharacters = 20;
-        if ( str.length <= numCharacters ) return str;
-        
-        pieceLength = Math.floor(numCharacters/2);
-        return str.substr(0,pieceLength) + '...' + str.substr(str.length-pieceLength);        
-    }
-
-    highlightListItem = function(itemNumber) {
-        if ( itemNumber === undefined ) itemNumber = 0;
-        $('#carrier-list-container li').eq(itemNumber).addClass('highlight');
-    }
-
-    backToCarrier = function() {
-        $('#carrier-tag').removeClass('active').text('');
-        $('#search')
-            .attr('placeholder','search carriers and plans')
-            .val(selectedCarrier)
-            .get(0).setSelectionRange(0,selectedCarrier.length);
-        
-        selectedCarrier = '';
-        selectedCarrierTruncated = '';
-        selectedPlan = '';
-        selectedPlanTruncated = '';
-
-        $('.step').removeClass('complete active');
-
+    moveToCarrier = function() {
+        $('.step').removeClass('active');
         $('.step-carrier').addClass('active');
 
-        $('.search-wrapper').removeClass('complete');
+        $('#search').attr('placeholder','search carriers and plans')
 
         $('.frame').removeClass('show-plan');
 
         currentState = 'carriers';
-        renderCarriers(carriers, selectedCarrierID);
     }
+
+
+    ///////////////////////////////////////////
+    // render lists
+    ///////////////////////////////////////////
 
     renderPlans = function(plans, highlightID) {
 
@@ -150,6 +133,27 @@ require([
         }
     }
 
+
+
+
+    
+
+    truncate = function( str, numCharacters ) {
+        if ( numCharacters === undefined ) numCharacters = 20;
+        if ( str.length <= numCharacters ) return str;
+        
+        pieceLength = Math.floor(numCharacters/2);
+        return str.substr(0,pieceLength) + '...' + str.substr(str.length-pieceLength);        
+    }
+
+    highlightListItem = function(itemNumber) {
+        if ( itemNumber === undefined ) itemNumber = 0;
+        $('#carrier-list-container li').eq(itemNumber).addClass('highlight');
+    }
+
+    
+
+    
 
 
     ///////////////////////////////////////////
@@ -226,22 +230,22 @@ require([
         } 
     });
 
-    $('#search').blur(function() {
-        if ( $(this).val().length > 1 && ( selectedCarrier == '' || selectedPlan == '' ) )   {
-            $(this).addClass('incomplete');
-        }
+    // $('#search').blur(function() {
+    //     if ( $(this).val().length > 1 && ( selectedCarrier == '' || selectedPlan == '' ) )   {
+    //         $(this).addClass('incomplete');
+    //     }
 
-        if ( $(this).val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
-            $(this)
-                .val('choose plan')
-                .addClass('prompt')
-                .data('status', 'needs-plan')
-        }
-    });
+    //     if ( $(this).val().length == 0 && selectedCarrier != '' && selectedPlan == '' ) {
+    //         $(this)
+    //             .val('choose plan')
+    //             .addClass('prompt')
+    //             .data('status', 'needs-plan')
+    //     }
+    // });
 
     $('.step-carrier').click(function() {
         if ( currentState == 'plans' ) {
-            backToCarrier();
+            moveToCarrier();
             return false;
         }
     });
