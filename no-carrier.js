@@ -37,7 +37,8 @@ require([
             .val('')
             .focus();
 
-        $('.step-carrier').addClass('complete')
+        $('.step-carrier').addClass('complete');
+        $('.selected-display').addClass('active');
         $('.carrier-display').text(selectedCarrier);
         $('.plan-display').text('');
         selectedPlan = '';

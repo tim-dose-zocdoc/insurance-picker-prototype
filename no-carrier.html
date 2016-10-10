@@ -43,10 +43,12 @@
 
     .picker__contents {
       display: none;
+      height: 400px;
+      flex-direction: column;
     }
 
     .picker.active .picker__contents {
-      display: block;
+      display: flex;
     }
 
     .controls {
@@ -103,6 +105,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      flex: none;
     }
 
     #search{
@@ -166,11 +169,12 @@
     }
 
     .steps {
-      margin-top: 8px;
+      margin: 8px 0;
       display: flex;
       flex-direction: row;
       padding-left: 10px;
       padding-right: 10px;
+      flex: none;
     }
 
     .step {
@@ -200,21 +204,26 @@
 
     .selected-display {
       padding: 0 10px;
-      margin: 16px 0;
+      margin: 8px 0;
       font-size: 18px;
       font-weight: bold;
+      flex: none;
+      display: none;
     }
 
-
+    .selected-display.active {
+      display: block;
+    }
 
     /* lists & transition */
 
     .frame {
+      margin-top: 8px;
       position: relative;
       width: 100%;
-      height: 400px;
       overflow-x: hidden;
       overflow-y: scroll;
+      flex: 1 0;
     }
 
     .all-lists {
