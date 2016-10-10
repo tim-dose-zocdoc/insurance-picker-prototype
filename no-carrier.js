@@ -221,13 +221,19 @@ require([
         }
     }
 
-    $('#search').focus(function() {
-        $(this).removeClass('incomplete prompt');
 
-        if ( $(this).data('status') == 'needs-plan' ) {
-            $(this).data('status','')
-            $(this).val('');
-        } 
+    toggleClear = function () {
+        if ( $('#search').val().length > 0 ) {
+            $('.clear').addClass('active');
+        } else {
+            $('.clear').removeClass('active');
+        }
+    }
+    $('#search').change(toggleClear);
+    $('#search').keyup(toggleClear);
+
+    $('#search').focus(function() {
+        $(this).parents('.picker').addClass('active');
     });
 
     // $('#search').blur(function() {
