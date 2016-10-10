@@ -35,7 +35,7 @@
 
 
     #wrap {
-      width: 50%;
+      width: 320px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -188,19 +188,20 @@
 
     .step {
       flex-grow: 1;
+      width: 50%;
       padding: 8px 0;
       border-bottom: 2px solid #ccc;
+      font-size: 12px;
     }
 
-    .step.complete::after {
-      content: '\f00c';
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      margin:0px 0px 0px 10px;
-      text-decoration:none;
+
+    .step i {
+      display: none;
     }
 
+    .step.complete i {
+      display: inline;
+    }
 
     .step.disabled {
       pointer-events: none;
@@ -208,7 +209,7 @@
     }
 
     .step.active {
-      border-bottom: 2px solid #2076c7;
+      border-bottom: 2px solid #333;
     }
 
     .selected-display {
@@ -271,8 +272,8 @@
       </div>
       <div class="picker__contents">
         <div class="steps">
-          <div class="step step-carrier active">Step 1: Choose carrier</div>
-          <div class="step step-plan disabled">Step 2: Choose plan</div>
+          <div class="step step-carrier active">Step 1: Choose carrier <i class="fa fa-check" aria-hidden="true"></i></div>
+          <div class="step step-plan disabled">Step 2: Choose plan <i class="fa fa-check" aria-hidden="true"></i></div>
         </div>
         <div class="selected-display">
           <div class="carrier-display"></div>
