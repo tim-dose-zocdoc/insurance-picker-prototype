@@ -80,7 +80,8 @@ require([
         $('.step').removeClass('active');
         $('.step-plan').addClass('active').removeClass('disabled');
 
-        $('.search').attr('placeholder','search "' + truncate(selectedCarrier,16) + '" plans')
+        $('.search').attr('placeholder','search ' + truncate(selectedCarrier,18) + ' plans')
+        // $('.search').attr('placeholder','search "' + truncate(selectedCarrier,16) + '" plans')
         // $('.search').attr('placeholder','search ' + selectedCarrier + ' plans')
         // $('.search').attr('placeholder','search plans for ' + selectedCarrier)
         // $('.search').attr('placeholder','search plans')
