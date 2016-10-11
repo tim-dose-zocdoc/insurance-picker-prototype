@@ -121,6 +121,7 @@ require([
         if ( mode === undefined ) mode = 'browse';
 
         var popular = _.sortBy(plans,'requests').reverse().slice(0,5);
+        popular = _.sortBy(popular,'plan');
         var all = _.sortBy(plans,'plan')
 
         $('.plan-container .sublist').not('.' + mode + '-list').removeClass('active');
