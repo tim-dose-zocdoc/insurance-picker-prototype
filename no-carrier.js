@@ -13,7 +13,7 @@ require([
     '/lunr.js',
     'text!templates/carrier-initial.mustache',
     'text!templates/carrier-search.mustache',
-    'text!templates/plan-list.mustache',
+    'text!templates/plan-initial.mustache',
     'text!templates/plan-search.mustache',
     'text!insurance_data.json',
     'text!carriers.json'
@@ -110,11 +110,14 @@ require([
     renderPlans = function(plans, highlightID, mode) {
         if ( mode === undefined ) mode = 'browse';
 
+        var popular = _.sortBy(plans,'requests').reverse().slice(0,5);
+        var all = _.sortBy(plans,'plan')
+
         $('.plan-container .sublist').not('.' + mode + '-list').removeClass('active');
         $('.plan-container .'+mode+'-list')
             .empty()
             .addClass('active')
-            .append(Mustache.to_html(planTemplate,{plans:plans}))
+            .append(Mustache.to_html(planTemplate,{popular:popular,all:all}))
 
 
         setPlanBehavior(highlightID);
