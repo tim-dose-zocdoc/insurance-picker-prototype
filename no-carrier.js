@@ -124,12 +124,12 @@ require([
     }
 
     renderPlanSearch = function(plans, query) {
-        $('.plan-container .browse-list').removeClass('active')
+        $('.plan-container .browse-list').addClass('hidden')
 
         var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
         var all = _.sortBy(plans,'plan')
         $('.plan-container .search-list')
-            .addClass('active')
+            .removeClass('hidden')
             .empty()
             .append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
         setPlanBehavior();
@@ -173,9 +173,9 @@ require([
     renderCarrierSearch = function(carriers, query) {
         var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
         var all = _.sortBy(carriers,'carrier')
-        $('.carrier-container .browse-list').removeClass('active')
+        $('.carrier-container .browse-list').addClass('hidden')
         $('.carrier-container .search-list')
-            .addClass('active')
+            .removeClass('hidden')
             .empty()
             .append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
         setCarrierBehavior();

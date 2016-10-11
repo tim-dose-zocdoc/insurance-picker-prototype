@@ -51,12 +51,16 @@
 
 
     /*------------------------------------
-    carrier initial
+    lists
     --------------------------------------*/
 
     .controls {
       padding-left: 10px;
       padding-bottom: 10px;
+    }
+
+    .message {
+      color: #aaa;
     }
 
 
@@ -303,15 +307,6 @@
       width: 100%;
     }
 
-    .sublist {
-      display: none;
-    }
-
-
-    .sublist.active {
-      display: block;
-    }
-
     .frame.show-plan .all-lists {
       transition: 0.3s ;
       left: -100%;
@@ -344,12 +339,12 @@
         <div class="frame">
           <div class="all-lists">
             <div class="list carrier-container">
-              <div class="sublist search-list"></div>
-              <div class="sublist browse-list active"></div>
+              <div class="sublist search-list hidden"></div>
+              <div class="sublist browse-list"></div>
             </div>
             <div class="list plan-container">
-              <div class="sublist search-list"></div>
-              <div class="sublist browse-list active"></div>
+              <div class="sublist search-list hidden"></div>
+              <div class="sublist browse-list"></div>
             </div>
           </div>
         </div>
