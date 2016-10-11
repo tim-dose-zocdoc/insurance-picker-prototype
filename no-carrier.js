@@ -29,6 +29,7 @@ require([
     noResultsTemplate,
     insuranceData, carrierData ) {
     var selectedCarrier = ''
+    var selectedBCBS = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
     var currentState = 'carrier';
@@ -42,9 +43,12 @@ require([
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
+        $('.step-carrier').addClass('complete');
+
         if ( selectedCarrierID == -1 ) {
             convertStepsToBCBS();
-            renderBCBS();
+            renderBCBS(bcbs);
+            moveToBCBS();
         } else {
             setCarrierDefault(carrierListElement);
         }
@@ -61,7 +65,7 @@ require([
             .val('')
             .focus();
 
-        $('.step-carrier').addClass('complete');
+        
         $('.selected-display').addClass('active');
         $('.carrier-display').text(selectedCarrier);
         $('.plan-display').text('');
@@ -105,6 +109,7 @@ require([
         // $('.search').attr('placeholder','search plans for ' + selectedCarrier)
         // $('.search').attr('placeholder','search plans')
 
+        $('.frame').removeClass('show-bcbs');
         $('.frame').addClass('show-plan');
 
         currentState = 'plan';
@@ -116,7 +121,7 @@ require([
 
         $('.search').attr('placeholder','search carriers and plans')
 
-        $('.frame').removeClass('show-plan');
+        $('.frame').removeClass('show-plan show-bcbs');
 
         currentState = 'carrier';
     }
@@ -188,7 +193,7 @@ require([
         var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular}))
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,alternates:true}))
 
         setCarrierBehavior(highlightID); 
 
@@ -240,17 +245,92 @@ require([
     ///////////////////////////////////////////
     convertStepsToBCBS = function () {
         $('.step-bcbs').removeClass('hidden');
+        $('.bcbs-container').removeClass('hidden');
         $('.picker').addClass('show-bcbs');
         $('.steps').addClass('show-bcbs');
-        $('.frame').addClass('show-bcbs');
     }
 
     convertStepsToDefault = function () {
-
+        console.log('convertStepsToDefault');
     }
 
-    renderBCBS = function() {
+    moveToBCBS = function() {
+        $('.step').removeClass('active');
+        $('.step-bcbs').addClass('active');
 
+        $('.search').attr('placeholder','search BCBS companies')
+        
+        $('.frame').removeClass('show-plan');
+        $('.frame').addClass('show-bcbs');
+
+        currentState = 'bcbs';
+    }
+
+    renderBCBS = function(carriers) {
+        console.log(carriers);
+        var popular = _.sortBy(carriers,'requests').reverse().slice(0,5);
+        popular = _.sortBy(popular,'carrier');
+        var all = _.sortBy(carriers,'carrier')
+        $('.bcbs-container .browse-list')
+            .empty()
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular}))
+
+        setBCBSBehavior(); 
+
+        $('.see-all-link').click(function() {
+            $('.all-container').toggleClass('hidden');
+            $(this).text($('.all-container').hasClass('hidden')? $(this).data('off-text'):$(this).data('on-text'));
+        });      
+    }
+
+    setBCBS = function( listElement ) {
+        selectedBCBS = $(listElement).find('.item').text();
+        selectedCarrierID = $(listElement).data('carrier-id');
+
+        $('.bcbs-container .list__item').removeClass('selected');
+        $(listElement).addClass('selected')
+
+        var $search = $('.search');
+        $('.search')
+            .val('')
+            .focus();
+
+        $('.step-bcbs').addClass('complete');
+        $('.selected-display').addClass('active');
+        $('.carrier-display').text(selectedBCBS);
+        $('.plan-display').text('');
+        selectedPlan = '';
+
+        currentPlans = plansGrouped[selectedBCBS];
+
+        planIndex = lunr(function() {
+            this.field('plan')
+        });
+
+        currentPlans.forEach(function(i) {
+            planIndex.add(i);
+        });
+
+        renderPlans(currentPlans);
+
+        moveToPlan();
+    }
+
+    setBCBSBehavior = function(highlightID) {
+        $('.bcbs-container li')
+            .hover(function() {
+                $('.bcbs-container li').removeClass('highlight');
+                $(this).addClass('highlight')
+            })
+            .click(function(){
+                setBCBS(this);
+            });
+
+        if (highlightID === undefined) {
+            $('.bcbs-container li').first().addClass('highlight');
+        } else {
+            $('.bcbs-container li[data-bcbs-id="'+ highlightID +'"]').addClass('highlight');
+        }
     }
 
     ///////////////////////////////////////////
@@ -432,7 +512,7 @@ require([
     // steps
     //----------------
     $('.step-carrier').click(function() {
-        if ( currentState == 'plan' ) {
+        if ( currentState != 'carrier' ) {
             moveToCarrier();
             return false;
         }
@@ -441,6 +521,13 @@ require([
     $('.step-plan').click(function() {
         if ( currentState != 'plan' ) {
             moveToPlan();
+            return false;
+        }
+    });
+
+    $('.step-bcbs').click(function() {
+        if ( currentState != 'bcbs' ) {
+            moveToBCBS();
             return false;
         }
     });
@@ -468,11 +555,16 @@ require([
                 id: raw.InsuranceID,
                 carrier: raw['Carrier Name'],
                 carrierDisplay: raw['Carrier Name'],
-                requests: raw.Requests
+                requests: raw.Requests,
+                isBCBS: raw.isBCBS
             }
         })
 
     carriers = _.sortedUniqBy(carriers, 'carrier');
+
+    bcbs = _.filter(carriers, function(i) {
+        return i.isBCBS == 1;
+    })
 
     var plansGrouped = _.groupBy(plans, 'carrier');
 
@@ -496,13 +588,19 @@ require([
         carriersIndex.add(i);
     });
     
-    
+    window.bcbsIndex = lunr(function() {
+        this.field('carrier')
+    });
 
+    bcbs.forEach(function(i) {
+        bcbsIndex.add(i);
+    });
 
     ///////////////////////////////////////////
     // initialize
     ///////////////////////////////////////////
+    var initialCarriers = _.filter(carriers,function(i){return i.isBCBS != 1})
 
-    renderCarriers(carriers);
+    renderCarriers(initialCarriers);
     highlightListItem();
 })

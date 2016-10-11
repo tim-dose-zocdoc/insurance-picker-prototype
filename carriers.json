@@ -3,3750 +3,3556 @@
     "InsuranceID": 440,
     "Carrier Name": "1199SEIU",
     "HealthDental": 2,
-    "Requests": 17083
-  },
-  {
-    "InsuranceID": 544,
-    "Carrier Name": "1199SEIU",
-    "HealthDental": 1,
-    "Requests": 4491
-  },
-  {
-    "InsuranceID": 876,
-    "Carrier Name": "20/20 Eyecare Plan",
-    "HealthDental": 1,
-    "Requests": 14
+    "Requests": 17083,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 290,
     "Carrier Name": "AARP",
     "HealthDental": 2,
-    "Requests": 1486
-  },
-  {
-    "InsuranceID": 1239,
-    "Carrier Name": "Absolute Total Care",
-    "HealthDental": 1,
-    "Requests": 34
-  },
-  {
-    "InsuranceID": 1312,
-    "Carrier Name": "Access Dental",
-    "HealthDental": 1,
-    "Requests": 50
+    "Requests": 1486,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1215,
     "Carrier Name": "Access Medicare (NY)",
     "HealthDental": 2,
-    "Requests": 204
-  },
-  {
-    "InsuranceID": 526,
-    "Carrier Name": "Accountable Health Plan of Ohio",
-    "HealthDental": 1,
-    "Requests": 20
+    "Requests": 204,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 480,
     "Carrier Name": "ACE",
     "HealthDental": 2,
-    "Requests": 21
-  },
-  {
-    "InsuranceID": 1219,
-    "Carrier Name": "ADN Administrators",
-    "HealthDental": 1,
-    "Requests": 11
+    "Requests": 21,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 455,
     "Carrier Name": "Advantage Health",
     "HealthDental": 2,
-    "Requests": 28
-  },
-  {
-    "InsuranceID": 772,
-    "Carrier Name": "Advantica",
-    "HealthDental": 1,
-    "Requests": 93
+    "Requests": 28,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 771,
     "Carrier Name": "Advantica",
     "HealthDental": 2,
-    "Requests": 69
+    "Requests": 69,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 533,
     "Carrier Name": "Adventist Health",
     "HealthDental": 2,
-    "Requests": 212
+    "Requests": 212,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1060,
     "Carrier Name": "Advocate Health Care",
     "HealthDental": 2,
-    "Requests": 130
+    "Requests": 130,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 300,
     "Carrier Name": "Aetna",
     "HealthDental": 2,
-    "Requests": 214101
-  },
-  {
-    "InsuranceID": 212,
-    "Carrier Name": "Aetna",
-    "HealthDental": 1,
-    "Requests": 28167
+    "Requests": 214101,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1298,
     "Carrier Name": "Aetna Better Health",
     "HealthDental": 2,
-    "Requests": 555
+    "Requests": 555,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 340,
     "Carrier Name": "Affinity Health Plan",
     "HealthDental": 2,
-    "Requests": 6543
-  },
-  {
-    "InsuranceID": 213,
-    "Carrier Name": "Affinity Health Plan",
-    "HealthDental": 1,
-    "Requests": 1331
-  },
-  {
-    "InsuranceID": 249,
-    "Carrier Name": "Aflac",
-    "HealthDental": 1,
-    "Requests": 311
+    "Requests": 6543,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1291,
     "Carrier Name": "AgeWell New York",
     "HealthDental": 2,
-    "Requests": 7
-  },
-  {
-    "InsuranceID": 1324,
-    "Carrier Name": "Agile Health Insurance",
-    "HealthDental": 1,
-    "Requests": 31
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 291,
     "Carrier Name": "AIG",
     "HealthDental": 2,
-    "Requests": 218
-  },
-  {
-    "InsuranceID": 215,
-    "Carrier Name": "AIG",
-    "HealthDental": 1,
-    "Requests": 68
+    "Requests": 218,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 877,
     "Carrier Name": "Alameda Alliance for Health",
     "HealthDental": 2,
-    "Requests": 96
-  },
-  {
-    "InsuranceID": 878,
-    "Carrier Name": "Alameda Alliance for Health",
-    "HealthDental": 1,
-    "Requests": 47
-  },
-  {
-    "InsuranceID": 1314,
-    "Carrier Name": "All Savers Insurance",
-    "HealthDental": 1,
-    "Requests": 32
+    "Requests": 96,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1187,
     "Carrier Name": "Allegian Health Plans",
     "HealthDental": 2,
-    "Requests": 21
-  },
-  {
-    "InsuranceID": 1085,
-    "Carrier Name": "Allegiance Life and Health",
-    "HealthDental": 1,
-    "Requests": 28
+    "Requests": 21,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1084,
     "Carrier Name": "Alliant Health Plans",
     "HealthDental": 2,
-    "Requests": 26
+    "Requests": 26,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1311,
     "Carrier Name": "Allianz Worldwide Care",
     "HealthDental": 2,
-    "Requests": 80
+    "Requests": 80,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1315,
     "Carrier Name": "Alpha Dental",
     "HealthDental": 2,
-    "Requests": 11
+    "Requests": 11,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1290,
     "Carrier Name": "AlphaCare",
     "HealthDental": 2,
-    "Requests": 7
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 957,
     "Carrier Name": "AltaMed Senior BuenaCare (PACE)",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 325,
     "Carrier Name": "Altius (Coventry Health Care)",
     "HealthDental": 2,
-    "Requests": 38
-  },
-  {
-    "InsuranceID": 656,
-    "Carrier Name": "Altus Dental",
-    "HealthDental": 1,
-    "Requests": 117
-  },
-  {
-    "InsuranceID": 709,
-    "Carrier Name": "AlwaysCare",
-    "HealthDental": 1,
-    "Requests": 178
-  },
-  {
-    "InsuranceID": 708,
-    "Carrier Name": "AlwaysCare",
-    "HealthDental": 1,
-    "Requests": 36
+    "Requests": 38,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1323,
     "Carrier Name": "Ambetter",
     "HealthDental": 2,
-    "Requests": 923
-  },
-  {
-    "InsuranceID": 909,
-    "Carrier Name": "America's 1st Choice",
-    "HealthDental": 1,
-    "Requests": 10
+    "Requests": 923,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1228,
     "Carrier Name": "American Behavioral",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1054,
     "Carrier Name": "American Eldercare",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 711,
     "Carrier Name": "American Republic Insurance Company",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 388,
     "Carrier Name": "AmeriGroup",
     "HealthDental": 2,
-    "Requests": 12617
-  },
-  {
-    "InsuranceID": 389,
-    "Carrier Name": "AmeriGroup",
-    "HealthDental": 1,
-    "Requests": 2111
+    "Requests": 12617,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 326,
     "Carrier Name": "AmeriHealth",
     "HealthDental": 2,
-    "Requests": 1815
+    "Requests": 1815,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 622,
     "Carrier Name": "AmeriHealth Caritas",
     "HealthDental": 2,
-    "Requests": 145
-  },
-  {
-    "InsuranceID": 218,
-    "Carrier Name": "Ameritas",
-    "HealthDental": 1,
-    "Requests": 990
+    "Requests": 145,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 976,
     "Carrier Name": "Amida Care",
     "HealthDental": 2,
-    "Requests": 79
+    "Requests": 79,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 991,
     "Carrier Name": "Amplifon Hearing Health Care",
     "HealthDental": 2,
-    "Requests": 12
+    "Requests": 12,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 550,
+    "Carrier Name": "Anthem Blue Cross",
+    "HealthDental": 2,
+    "Requests": 22314,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 324,
+    "Carrier Name": "Anthem Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 61880,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 391,
     "Carrier Name": "APWU",
     "HealthDental": 2,
-    "Requests": 231
+    "Requests": 231,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1261,
     "Carrier Name": "APWU",
     "HealthDental": 2,
-    "Requests": 40
-  },
-  {
-    "InsuranceID": 1160,
-    "Carrier Name": "Arise Health Plan",
-    "HealthDental": 1,
-    "Requests": 4
+    "Requests": 40,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 678,
     "Carrier Name": "Arizona Foundation for Medical Care",
     "HealthDental": 2,
-    "Requests": 53
+    "Requests": 53,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 1010,
+    "Carrier Name": "Arkansas Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 556,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1011,
+    "Carrier Name": "Arkansas Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 18,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 816,
     "Carrier Name": "Ascension Health",
     "HealthDental": 2,
-    "Requests": 49
-  },
-  {
-    "InsuranceID": 220,
-    "Carrier Name": "Assurant Employee Benefits",
-    "HealthDental": 1,
-    "Requests": 1065
+    "Requests": 49,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1053,
     "Carrier Name": "Assurant Employee Benefits",
     "HealthDental": 2,
-    "Requests": 59
+    "Requests": 59,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 335,
     "Carrier Name": "Assurant Health",
     "HealthDental": 2,
-    "Requests": 196
+    "Requests": 196,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 716,
     "Carrier Name": "Asuris Northwest Health",
     "HealthDental": 2,
-    "Requests": 5
-  },
-  {
-    "InsuranceID": 1130,
-    "Carrier Name": "Aultcare",
-    "HealthDental": 1,
-    "Requests": 48
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1195,
     "Carrier Name": "Avera Health Plans",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 549,
     "Carrier Name": "Avesis",
     "HealthDental": 2,
-    "Requests": 143
-  },
-  {
-    "InsuranceID": 552,
-    "Carrier Name": "Avesis",
-    "HealthDental": 1,
-    "Requests": 56
+    "Requests": 143,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 560,
     "Carrier Name": "AvMed",
     "HealthDental": 2,
-    "Requests": 4002
+    "Requests": 4002,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1352,
     "Carrier Name": "Banker's Life",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 717,
     "Carrier Name": "Banner Health",
     "HealthDental": 2,
-    "Requests": 321
-  },
-  {
-    "InsuranceID": 1318,
-    "Carrier Name": "Baptist Health Plan",
-    "HealthDental": 1,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 1296,
-    "Carrier Name": "Beam",
-    "HealthDental": 1,
-    "Requests": 14
+    "Requests": 321,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 720,
     "Carrier Name": "Beaumont Employee Health Plan",
     "HealthDental": 2,
-    "Requests": 58
+    "Requests": 58,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 303,
     "Carrier Name": "Beech Street",
     "HealthDental": 2,
-    "Requests": 153
+    "Requests": 153,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 721,
     "Carrier Name": "Best Choice Plus",
     "HealthDental": 2,
-    "Requests": 101
+    "Requests": 101,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 992,
     "Carrier Name": "Best Life And Health",
     "HealthDental": 2,
-    "Requests": 28
+    "Requests": 28,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 993,
     "Carrier Name": "Best Life And Health",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 879,
     "Carrier Name": "Better Health (Florida Medicaid)",
     "HealthDental": 2,
-    "Requests": 692
+    "Requests": 692,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 525,
     "Carrier Name": "Block Vision",
     "HealthDental": 2,
-    "Requests": 84
+    "Requests": 84,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1109,
     "Carrier Name": "Blue Choice Health Plan",
     "HealthDental": 2,
-    "Requests": 2228
-  },
-  {
-    "InsuranceID": 1110,
-    "Carrier Name": "Blue Choice Health Plan",
-    "HealthDental": 1,
-    "Requests": 131
+    "Requests": 2228,
+    "isBCBS": 1
   },
   {
     "InsuranceID": -1,
-    "Carrier Name": "Blue Cross Blue Shield",
-    "HealthDental": "",
-    "Requests": 459843
+    "Carrier Name": "Blue Cross Blue Shield (BCBS)",
+    "HealthDental": 2,
+    "Requests": 459843,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 545,
+    "Carrier Name": "Blue Cross Blue Shield Federal Employee Program",
+    "HealthDental": 2,
+    "Requests": 32190,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 793,
+    "Carrier Name": "Blue Cross Blue Shield of Alabama",
+    "HealthDental": 2,
+    "Requests": 3294,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 572,
+    "Carrier Name": "Blue Cross Blue Shield of Arizona",
+    "HealthDental": 2,
+    "Requests": 5930,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1076,
+    "Carrier Name": "Blue Cross Blue Shield of Florida (Florida Blue)",
+    "HealthDental": 2,
+    "Requests": 10207,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 568,
+    "Carrier Name": "Blue Cross Blue Shield of Georgia",
+    "HealthDental": 2,
+    "Requests": 7311,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 253,
+    "Carrier Name": "Blue Cross Blue Shield of Georgia",
+    "HealthDental": 2,
+    "Requests": 400,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 451,
+    "Carrier Name": "Blue Cross Blue Shield of Illinois",
+    "HealthDental": 2,
+    "Requests": 55127,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 810,
+    "Carrier Name": "Blue Cross Blue Shield of Kansas",
+    "HealthDental": 2,
+    "Requests": 679,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 813,
+    "Carrier Name": "Blue Cross Blue Shield of Kansas",
+    "HealthDental": 2,
+    "Requests": 34,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 726,
+    "Carrier Name": "Blue Cross Blue Shield of Kansas City",
+    "HealthDental": 2,
+    "Requests": 1343,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 853,
+    "Carrier Name": "Blue Cross Blue Shield of Louisiana",
+    "HealthDental": 2,
+    "Requests": 704,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1335,
+    "Carrier Name": "Blue Cross Blue Shield of Louisiana",
+    "HealthDental": 2,
+    "Requests": 10,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 573,
+    "Carrier Name": "Blue Cross Blue Shield of Massachusetts",
+    "HealthDental": 2,
+    "Requests": 17656,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 676,
+    "Carrier Name": "Blue Cross Blue Shield of Michigan",
+    "HealthDental": 2,
+    "Requests": 10232,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 698,
+    "Carrier Name": "Blue Cross Blue Shield of Minnesota",
+    "HealthDental": 2,
+    "Requests": 2181,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 758,
+    "Carrier Name": "Blue Cross Blue Shield of Mississippi",
+    "HealthDental": 2,
+    "Requests": 123,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1207,
+    "Carrier Name": "Blue Cross Blue Shield of Montana",
+    "HealthDental": 2,
+    "Requests": 64,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 756,
+    "Carrier Name": "Blue Cross Blue Shield of Nebraska",
+    "HealthDental": 2,
+    "Requests": 370,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 757,
+    "Carrier Name": "Blue Cross Blue Shield of Nebraska",
+    "HealthDental": 2,
+    "Requests": 48,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1096,
+    "Carrier Name": "Blue Cross Blue Shield of New Mexico",
+    "HealthDental": 2,
+    "Requests": 338,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1097,
+    "Carrier Name": "Blue Cross Blue Shield of New Mexico",
+    "HealthDental": 2,
+    "Requests": 25,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 791,
+    "Carrier Name": "Blue Cross Blue Shield of North Carolina",
+    "HealthDental": 2,
+    "Requests": 3404,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 854,
+    "Carrier Name": "Blue Cross Blue Shield of Oklahoma",
+    "HealthDental": 2,
+    "Requests": 589,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 855,
+    "Carrier Name": "Blue Cross Blue Shield of Oklahoma",
+    "HealthDental": 2,
+    "Requests": 40,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 724,
+    "Carrier Name": "Blue Cross Blue Shield of Rhode Island",
+    "HealthDental": 2,
+    "Requests": 1245,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 725,
+    "Carrier Name": "Blue Cross Blue Shield of Rhode Island",
+    "HealthDental": 2,
+    "Requests": 67,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 797,
+    "Carrier Name": "Blue Cross Blue Shield of South Carolina",
+    "HealthDental": 2,
+    "Requests": 1779,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 828,
+    "Carrier Name": "Blue Cross Blue Shield of Tennessee",
+    "HealthDental": 2,
+    "Requests": 4050,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 509,
+    "Carrier Name": "Blue Cross Blue Shield of Texas",
+    "HealthDental": 2,
+    "Requests": 34383,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 996,
+    "Carrier Name": "Blue Cross Blue Shield of Vermont",
+    "HealthDental": 2,
+    "Requests": 261,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 997,
+    "Carrier Name": "Blue Cross Blue Shield of Western New York",
+    "HealthDental": 2,
+    "Requests": 964,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 998,
+    "Carrier Name": "Blue Cross Blue Shield of Western New York",
+    "HealthDental": 2,
+    "Requests": 26,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1073,
+    "Carrier Name": "Blue Cross Blue Shield of Wyoming",
+    "HealthDental": 2,
+    "Requests": 65,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1232,
+    "Carrier Name": "Blue Cross Blue Shield of Wyoming",
+    "HealthDental": 2,
+    "Requests": 6,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 1094,
+    "Carrier Name": "Blue Cross of Idaho",
+    "HealthDental": 2,
+    "Requests": 457,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 808,
+    "Carrier Name": "Blue Cross of Northeastern Pennsylvania",
+    "HealthDental": 2,
+    "Requests": 830,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 438,
     "Carrier Name": "Blue Shield of California",
     "HealthDental": 2,
-    "Requests": 21167
+    "Requests": 21167,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 543,
     "Carrier Name": "Blue Shield of California",
     "HealthDental": 2,
-    "Requests": 691
+    "Requests": 691,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 999,
     "Carrier Name": "Blue Shield of Northeastern New York",
     "HealthDental": 2,
-    "Requests": 2614
-  },
-  {
-    "InsuranceID": 1000,
-    "Carrier Name": "Blue Shield of Northeastern New York",
-    "HealthDental": 1,
-    "Requests": 41
+    "Requests": 2614,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1152,
     "Carrier Name": "Bluegrass Family Health Plan",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 680,
     "Carrier Name": "BMC HealthNet Plan",
     "HealthDental": 2,
-    "Requests": 802
+    "Requests": 802,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 256,
     "Carrier Name": "Boston University",
     "HealthDental": 2,
-    "Requests": 5
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 944,
     "Carrier Name": "Brand New Day",
     "HealthDental": 2,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 1115,
-    "Carrier Name": "BridgeSpan",
-    "HealthDental": 1,
-    "Requests": 12
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 579,
     "Carrier Name": "Bridgeway Health Solutions",
     "HealthDental": 2,
-    "Requests": 13
+    "Requests": 13,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 580,
     "Carrier Name": "Bridgeway Health Solutions",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1131,
     "Carrier Name": "Buckeye Health Plan",
     "HealthDental": 2,
-    "Requests": 279
-  },
-  {
-    "InsuranceID": 1240,
-    "Carrier Name": "Buckeye Health Plan",
-    "HealthDental": 1,
-    "Requests": 15
+    "Requests": 279,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1317,
     "Carrier Name": "California Dental",
     "HealthDental": 2,
-    "Requests": 14
+    "Requests": 14,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1241,
     "Carrier Name": "California Health and Wellness",
     "HealthDental": 2,
-    "Requests": 4
-  },
-  {
-    "InsuranceID": 929,
-    "Carrier Name": "CalOptima",
-    "HealthDental": 1,
-    "Requests": 691
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 989,
     "Carrier Name": "CalPERS",
     "HealthDental": 2,
-    "Requests": 29
+    "Requests": 29,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 1289,
-    "Carrier Name": "CalViva Health",
-    "HealthDental": 1,
-    "Requests": 1
+    "InsuranceID": 566,
+    "Carrier Name": "Capital Blue Cross",
+    "HealthDental": 2,
+    "Requests": 1460,
+    "isBCBS": 1
   },
   {
-    "InsuranceID": 908,
-    "Carrier Name": "Capital Health Plan",
-    "HealthDental": 1,
-    "Requests": 5
+    "InsuranceID": 1238,
+    "Carrier Name": "Capital Blue Cross",
+    "HealthDental": 2,
+    "Requests": 39,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 728,
     "Carrier Name": "Care Access Health Plan",
     "HealthDental": 2,
-    "Requests": 12
+    "Requests": 12,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 527,
     "Carrier Name": "Care Improvement Plus",
     "HealthDental": 2,
-    "Requests": 103
+    "Requests": 103,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1030,
     "Carrier Name": "Care N' Care",
     "HealthDental": 2,
-    "Requests": 43
+    "Requests": 43,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 581,
     "Carrier Name": "Care1st",
     "HealthDental": 2,
-    "Requests": 635
+    "Requests": 635,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1358,
     "Carrier Name": "CareConnect",
     "HealthDental": 2,
-    "Requests": 186
+    "Requests": 186,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 221,
-    "Carrier Name": "Careington",
-    "HealthDental": 1,
-    "Requests": 530
-  },
-  {
-    "InsuranceID": 605,
-    "Carrier Name": "CareMore",
-    "HealthDental": 1,
-    "Requests": 15
+    "InsuranceID": 305,
+    "Carrier Name": "CareFirst Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 28141,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 807,
     "Carrier Name": "CareOregon",
     "HealthDental": 2,
-    "Requests": 166
+    "Requests": 166,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1272,
     "Carrier Name": "CareOregon",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 341,
     "Carrier Name": "CarePlus Health Plans (Florida Medicare)",
     "HealthDental": 2,
-    "Requests": 154
+    "Requests": 154,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1078,
     "Carrier Name": "CareSource",
     "HealthDental": 2,
-    "Requests": 1578
-  },
-  {
-    "InsuranceID": 1079,
-    "Carrier Name": "CareSource",
-    "HealthDental": 1,
-    "Requests": 46
+    "Requests": 1578,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 457,
     "Carrier Name": "Caterpillar",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1017,
     "Carrier Name": "CBA Blue",
     "HealthDental": 2,
-    "Requests": 135
+    "Requests": 135,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1018,
     "Carrier Name": "CBA Blue",
     "HealthDental": 2,
-    "Requests": 14
+    "Requests": 14,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 352,
     "Carrier Name": "CDPHP",
     "HealthDental": 2,
-    "Requests": 246
+    "Requests": 246,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 633,
     "Carrier Name": "CeltiCare Health Plan",
     "HealthDental": 2,
-    "Requests": 312
+    "Requests": 312,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 930,
     "Carrier Name": "CenCal Health",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 729,
     "Carrier Name": "CenterLight Healthcare",
     "HealthDental": 2,
-    "Requests": 8
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 932,
     "Carrier Name": "Central California Alliance for Health",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 933,
     "Carrier Name": "Central Health Plan of California",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 730,
     "Carrier Name": "CHAMPVA",
     "HealthDental": 2,
-    "Requests": 1247
+    "Requests": 1247,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1163,
     "Carrier Name": "Children's Community Health Plan",
     "HealthDental": 2,
-    "Requests": 13
-  },
-  {
-    "InsuranceID": 880,
-    "Carrier Name": "Children's Medical Services (CMS)",
-    "HealthDental": 1,
-    "Requests": 26
-  },
-  {
-    "InsuranceID": 420,
-    "Carrier Name": "Chinese Community Health Plan",
-    "HealthDental": 1,
-    "Requests": 60
+    "Requests": 13,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 394,
     "Carrier Name": "Choice Care Network",
     "HealthDental": 2,
-    "Requests": 65
+    "Requests": 65,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1087,
     "Carrier Name": "CHP Group",
     "HealthDental": 2,
-    "Requests": 135
+    "Requests": 135,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1366,
     "Carrier Name": "Christian Healthcare Ministries",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1303,
     "Carrier Name": "CHRISTUS Health Plan",
     "HealthDental": 2,
-    "Requests": 9
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 307,
     "Carrier Name": "Cigna",
     "HealthDental": 2,
-    "Requests": 144190
-  },
-  {
-    "InsuranceID": 222,
-    "Carrier Name": "Cigna",
-    "HealthDental": 1,
-    "Requests": 27820
+    "Requests": 144190,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 510,
     "Carrier Name": "Cigna-HealthSpring",
     "HealthDental": 2,
-    "Requests": 342
-  },
-  {
-    "InsuranceID": 945,
-    "Carrier Name": "Citizens Choice Health Plan",
-    "HealthDental": 1,
-    "Requests": 11
+    "Requests": 342,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1304,
     "Carrier Name": "Clark County Self-Funded Health",
     "HealthDental": 2,
-    "Requests": 48
+    "Requests": 48,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 546,
     "Carrier Name": "Clements Worldwide",
     "HealthDental": 2,
-    "Requests": 4
-  },
-  {
-    "InsuranceID": 1300,
-    "Carrier Name": "Cleveland Clinic Employee Health Plan",
-    "HealthDental": 1,
-    "Requests": 15
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1306,
     "Carrier Name": "Clover Health",
     "HealthDental": 2,
-    "Requests": 18
+    "Requests": 18,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 679,
     "Carrier Name": "Cofinity",
     "HealthDental": 2,
-    "Requests": 371
-  },
-  {
-    "InsuranceID": 1083,
-    "Carrier Name": "Colorado Access",
-    "HealthDental": 1,
-    "Requests": 26
+    "Requests": 371,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1123,
     "Carrier Name": "Colorado Choice",
     "HealthDental": 2,
-    "Requests": 11
+    "Requests": 11,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1052,
     "Carrier Name": "Columbia United Providers",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1292,
     "Carrier Name": "Common Ground Healthcare Cooperative",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 667,
     "Carrier Name": "Commonwealth Care",
     "HealthDental": 2,
-    "Requests": 8
-  },
-  {
-    "InsuranceID": 1297,
-    "Carrier Name": "Commonwealth Care Alliance",
-    "HealthDental": 1,
-    "Requests": 6
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1223,
     "Carrier Name": "Community Care Behavioral Health Organization",
     "HealthDental": 2,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 1058,
-    "Carrier Name": "Community Eye Care",
-    "HealthDental": 1,
-    "Requests": 6
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 512,
     "Carrier Name": "Community First Health Plans",
     "HealthDental": 2,
-    "Requests": 265
+    "Requests": 265,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 520,
     "Carrier Name": "Community First Health Plans",
     "HealthDental": 2,
-    "Requests": 42
+    "Requests": 42,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 453,
     "Carrier Name": "Community Health Alliance",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 513,
     "Carrier Name": "Community Health Choice",
     "HealthDental": 2,
-    "Requests": 1996
+    "Requests": 1996,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 935,
     "Carrier Name": "Community Health Group",
     "HealthDental": 2,
-    "Requests": 220
+    "Requests": 220,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1266,
     "Carrier Name": "Community Health Options",
     "HealthDental": 2,
-    "Requests": 31
+    "Requests": 31,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 647,
     "Carrier Name": "Community Health Partners",
     "HealthDental": 2,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 677,
-    "Carrier Name": "Community Health Plan of Washington",
-    "HealthDental": 1,
-    "Requests": 52
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1105,
     "Carrier Name": "CommunityCare of Oklahoma",
     "HealthDental": 2,
-    "Requests": 43
-  },
-  {
-    "InsuranceID": 259,
-    "Carrier Name": "CompBenefits",
-    "HealthDental": 1,
-    "Requests": 33
+    "Requests": 43,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 661,
     "Carrier Name": "CompBenefits",
     "HealthDental": 2,
-    "Requests": 8
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 466,
     "Carrier Name": "Comprehensive Health Insurance Plan (CHIP) of Illinois",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 576,
     "Carrier Name": "Comprehensive Medical and Dental Program (CMDP)",
     "HealthDental": 2,
-    "Requests": 22
+    "Requests": 22,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 556,
     "Carrier Name": "Comprehensive Medical and Dental Program (CMDP)",
     "HealthDental": 2,
-    "Requests": 16
+    "Requests": 16,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1180,
     "Carrier Name": "Connect Care",
     "HealthDental": 2,
-    "Requests": 162
-  },
-  {
-    "InsuranceID": 1181,
-    "Carrier Name": "Connect Care",
-    "HealthDental": 1,
-    "Requests": 23
+    "Requests": 162,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 329,
     "Carrier Name": "ConnectiCare",
     "HealthDental": 2,
-    "Requests": 896
+    "Requests": 896,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1218,
     "Carrier Name": "Connecticut Dental Health Partnership",
     "HealthDental": 2,
-    "Requests": 15
-  },
-  {
-    "InsuranceID": 641,
-    "Carrier Name": "Connection Dental",
-    "HealthDental": 1,
-    "Requests": 102
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 536,
     "Carrier Name": "Consolidated Health Plans",
     "HealthDental": 2,
-    "Requests": 446
+    "Requests": 446,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 395,
     "Carrier Name": "Consumer Health Network",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1117,
     "Carrier Name": "Consumers' Choice Health Plan",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 937,
     "Carrier Name": "Contra Costa Health Plan",
     "HealthDental": 2,
-    "Requests": 39
+    "Requests": 39,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 973,
     "Carrier Name": "Cook Children's Health Plan",
     "HealthDental": 2,
-    "Requests": 44
-  },
-  {
-    "InsuranceID": 1067,
-    "Carrier Name": "Coordinated Care Health",
-    "HealthDental": 1,
-    "Requests": 18
+    "Requests": 44,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 396,
     "Carrier Name": "Corvel",
     "HealthDental": 2,
-    "Requests": 14
+    "Requests": 14,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1200,
     "Carrier Name": "CountyCare (Cook County)",
     "HealthDental": 2,
-    "Requests": 271
-  },
-  {
-    "InsuranceID": 370,
-    "Carrier Name": "Coventry Dental",
-    "HealthDental": 1,
-    "Requests": 117
+    "Requests": 271,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 369,
     "Carrier Name": "Coventry Health Care",
     "HealthDental": 2,
-    "Requests": 4639
-  },
-  {
-    "InsuranceID": 736,
-    "Carrier Name": "Cox HealthPlans",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 4639,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1310,
     "Carrier Name": "Crystal Run Healthcare",
     "HealthDental": 2,
-    "Requests": 80
+    "Requests": 80,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 753,
     "Carrier Name": "Culinary Health Fund",
     "HealthDental": 2,
-    "Requests": 1406
-  },
-  {
-    "InsuranceID": 754,
-    "Carrier Name": "Culinary Health Fund",
-    "HealthDental": 1,
-    "Requests": 259
+    "Requests": 1406,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 901,
     "Carrier Name": "DAKOTACARE",
     "HealthDental": 2,
-    "Requests": 6
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 538,
     "Carrier Name": "Davis Vision",
     "HealthDental": 2,
-    "Requests": 5947
+    "Requests": 5947,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1072,
     "Carrier Name": "DC Medicaid",
     "HealthDental": 2,
-    "Requests": 144
+    "Requests": 144,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1159,
     "Carrier Name": "Dean Health Plan",
     "HealthDental": 2,
-    "Requests": 18
-  },
-  {
-    "InsuranceID": 737,
-    "Carrier Name": "Dearborn National",
-    "HealthDental": 1,
-    "Requests": 82
-  },
-  {
-    "InsuranceID": 1220,
-    "Carrier Name": "DeCare Dental",
-    "HealthDental": 1,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 223,
-    "Carrier Name": "Delta Dental",
-    "HealthDental": 1,
-    "Requests": 43725
+    "Requests": 18,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 881,
     "Carrier Name": "DenCap",
     "HealthDental": 2,
-    "Requests": 5
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1221,
     "Carrier Name": "Denex Dental",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 226,
     "Carrier Name": "Dental Benefit Providers",
     "HealthDental": 2,
-    "Requests": 26
-  },
-  {
-    "InsuranceID": 1224,
-    "Carrier Name": "Dental Care Plus",
-    "HealthDental": 1,
-    "Requests": 62
-  },
-  {
-    "InsuranceID": 1313,
-    "Carrier Name": "Dental Health Services",
-    "HealthDental": 1,
-    "Requests": 18
-  },
-  {
-    "InsuranceID": 227,
-    "Carrier Name": "Dental Network of America",
-    "HealthDental": 1,
-    "Requests": 28
-  },
-  {
-    "InsuranceID": 960,
-    "Carrier Name": "Dental Select",
-    "HealthDental": 1,
-    "Requests": 214
-  },
-  {
-    "InsuranceID": 371,
-    "Carrier Name": "DentaQuest",
-    "HealthDental": 1,
-    "Requests": 1982
+    "Requests": 26,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 419,
     "Carrier Name": "Dentegra",
     "HealthDental": 2,
-    "Requests": 60
-  },
-  {
-    "InsuranceID": 229,
-    "Carrier Name": "Dentemax",
-    "HealthDental": 1,
-    "Requests": 359
-  },
-  {
-    "InsuranceID": 690,
-    "Carrier Name": "Denti-Cal",
-    "HealthDental": 1,
-    "Requests": 1323
+    "Requests": 60,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1316,
     "Carrier Name": "Denver Health Medical Plan",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 899,
     "Carrier Name": "Deseret Mutual",
     "HealthDental": 2,
-    "Requests": 48
+    "Requests": 48,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1208,
     "Carrier Name": "Deseret Mutual",
     "HealthDental": 2,
-    "Requests": 12
+    "Requests": 12,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 397,
     "Carrier Name": "Devon Health Services",
     "HealthDental": 2,
-    "Requests": 16
+    "Requests": 16,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 399,
     "Carrier Name": "Devon Health Services",
     "HealthDental": 2,
-    "Requests": 5
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 738,
     "Carrier Name": "DMC Care",
     "HealthDental": 2,
-    "Requests": 401
-  },
-  {
-    "InsuranceID": 425,
-    "Carrier Name": "Dominion National",
-    "HealthDental": 1,
-    "Requests": 518
-  },
-  {
-    "InsuranceID": 938,
-    "Carrier Name": "Easy Choice Health Plan (California)",
-    "HealthDental": 1,
-    "Requests": 6
+    "Requests": 401,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 693,
     "Carrier Name": "Easy Choice Health Plan of New York",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1184,
     "Carrier Name": "El Paso First Health Plans",
     "HealthDental": 2,
-    "Requests": 18
+    "Requests": 18,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 435,
     "Carrier Name": "Elderplan",
     "HealthDental": 2,
-    "Requests": 78
+    "Requests": 78,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 431,
     "Carrier Name": "Elderplan",
     "HealthDental": 2,
-    "Requests": 7
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 349,
     "Carrier Name": "EmblemHealth",
     "HealthDental": 2,
-    "Requests": 14439
+    "Requests": 14439,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 350,
-    "Carrier Name": "EmblemHealth",
-    "HealthDental": 1,
-    "Requests": 2020
-  },
-  {
-    "InsuranceID": 1144,
-    "Carrier Name": "EMI Health",
-    "HealthDental": 1,
-    "Requests": 46
-  },
-  {
-    "InsuranceID": 1143,
-    "Carrier Name": "EMI Health",
-    "HealthDental": 1,
-    "Requests": 40
+    "InsuranceID": 336,
+    "Carrier Name": "Empire Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 54173,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1355,
     "Carrier Name": "Empire BlueCross BlueShield HealthPlus",
     "HealthDental": 2,
-    "Requests": 409
+    "Requests": 409,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 354,
     "Carrier Name": "Empire Plan",
     "HealthDental": 2,
-    "Requests": 10452
+    "Requests": 10452,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 459,
     "Carrier Name": "Encore Health Network",
     "HealthDental": 2,
-    "Requests": 5
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 504,
     "Carrier Name": "ESSENCE Healthcare",
     "HealthDental": 2,
-    "Requests": 78
+    "Requests": 78,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1134,
     "Carrier Name": "Evergreen Health Cooperative",
     "HealthDental": 2,
-    "Requests": 103
+    "Requests": 103,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 596,
     "Carrier Name": "Evolutions Healthcare Systems",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 557,
+    "Carrier Name": "Excellus Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 881,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 278,
+    "Carrier Name": "Excellus Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 119,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 539,
     "Carrier Name": "EyeMed",
     "HealthDental": 2,
-    "Requests": 8501
+    "Requests": 8501,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1059,
     "Carrier Name": "Eyetopia Vision Care",
     "HealthDental": 2,
-    "Requests": 21
+    "Requests": 21,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 618,
     "Carrier Name": "Fallon Community Health Plan (FCHP)",
     "HealthDental": 2,
-    "Requests": 459
+    "Requests": 459,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 620,
     "Carrier Name": "Fallon Community Health Plan (FCHP)",
     "HealthDental": 2,
-    "Requests": 7
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 740,
     "Carrier Name": "Family Health Network",
     "HealthDental": 2,
-    "Requests": 717
-  },
-  {
-    "InsuranceID": 806,
-    "Carrier Name": "FamilyCare Health Plans",
-    "HealthDental": 1,
-    "Requests": 108
+    "Requests": 717,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 524,
     "Carrier Name": "FCL Dental (StarDent)",
     "HealthDental": 2,
-    "Requests": 20
-  },
-  {
-    "InsuranceID": 649,
-    "Carrier Name": "Fidelio Dental",
-    "HealthDental": 1,
-    "Requests": 33
+    "Requests": 20,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 343,
     "Carrier Name": "Fidelis Care (NY)",
     "HealthDental": 2,
-    "Requests": 28066
-  },
-  {
-    "InsuranceID": 245,
-    "Carrier Name": "Fidelis Care (NY)",
-    "HealthDental": 1,
-    "Requests": 5883
+    "Requests": 28066,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 662,
     "Carrier Name": "First Choice Health",
     "HealthDental": 2,
-    "Requests": 426
+    "Requests": 426,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 742,
     "Carrier Name": "First Choice Health",
     "HealthDental": 2,
-    "Requests": 53
-  },
-  {
-    "InsuranceID": 1286,
-    "Carrier Name": "First Choice Health Plan of Mississippi",
-    "HealthDental": 1,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 231,
-    "Carrier Name": "First Dental Health",
-    "HealthDental": 1,
-    "Requests": 87
+    "Requests": 53,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 309,
     "Carrier Name": "First Health (Coventry Health Care)",
     "HealthDental": 2,
-    "Requests": 2071
+    "Requests": 2071,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 745,
     "Carrier Name": "FirstCare Health Plans",
     "HealthDental": 2,
-    "Requests": 57
+    "Requests": 57,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 788,
     "Carrier Name": "FirstCarolinaCare",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 638,
+    "Carrier Name": "Florida Blue: Blue Cross Blue Shield of Florida",
+    "HealthDental": 2,
+    "Requests": 6869,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 911,
     "Carrier Name": "Florida Health Care Plans",
     "HealthDental": 2,
-    "Requests": 20
+    "Requests": 20,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1034,
     "Carrier Name": "Florida Hospital Healthcare System (FHHS)",
     "HealthDental": 2,
-    "Requests": 116
+    "Requests": 116,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 646,
     "Carrier Name": "Florida KidCare",
     "HealthDental": 2,
-    "Requests": 94
+    "Requests": 94,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 692,
     "Carrier Name": "Freedom Health",
     "HealthDental": 2,
-    "Requests": 48
+    "Requests": 48,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 400,
     "Carrier Name": "Galaxy Health",
     "HealthDental": 2,
-    "Requests": 9
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 631,
     "Carrier Name": "Gateway Health",
     "HealthDental": 2,
-    "Requests": 61
+    "Requests": 61,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 310,
     "Carrier Name": "GEHA",
     "HealthDental": 2,
-    "Requests": 2483
-  },
-  {
-    "InsuranceID": 233,
-    "Carrier Name": "GEHA",
-    "HealthDental": 1,
-    "Requests": 1008
+    "Requests": 2483,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 904,
     "Carrier Name": "Geisinger Health Plan",
     "HealthDental": 2,
-    "Requests": 353
-  },
-  {
-    "InsuranceID": 1032,
-    "Carrier Name": "General Vision Services (GVS)",
-    "HealthDental": 1,
-    "Requests": 42
+    "Requests": 353,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1025,
     "Carrier Name": "GeoBlue",
     "HealthDental": 2,
-    "Requests": 645
+    "Requests": 645,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 338,
     "Carrier Name": "GHI",
     "HealthDental": 2,
-    "Requests": 50117
-  },
-  {
-    "InsuranceID": 234,
-    "Carrier Name": "GHI",
-    "HealthDental": 1,
-    "Requests": 1273
-  },
-  {
-    "InsuranceID": 768,
-    "Carrier Name": "Gilsbar 360 Alliance",
-    "HealthDental": 1,
-    "Requests": 39
+    "Requests": 50117,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 963,
     "Carrier Name": "Global Health",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 849,
     "Carrier Name": "Golden State Medicare Health Plan",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1071,
     "Carrier Name": "Golden West Dental",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 671,
     "Carrier Name": "Group Health Cooperative",
     "HealthDental": 2,
-    "Requests": 168
+    "Requests": 168,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1172,
     "Carrier Name": "Group Health Cooperative of Eau Claire",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1179,
     "Carrier Name": "Group Health Cooperative of Eau Claire",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1162,
     "Carrier Name": "Group Health Cooperative of South Central Wisconsin",
     "HealthDental": 2,
-    "Requests": 9
-  },
-  {
-    "InsuranceID": 235,
-    "Carrier Name": "Guardian",
-    "HealthDental": 1,
-    "Requests": 16401
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 312,
     "Carrier Name": "Guardian",
     "HealthDental": 2,
-    "Requests": 2440
+    "Requests": 2440,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 313,
     "Carrier Name": "GWH-Cigna (formerly Great West Healthcare)",
     "HealthDental": 2,
-    "Requests": 143
+    "Requests": 143,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 282,
     "Carrier Name": "GWH-Cigna (formerly Great West Healthcare)",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 301,
     "Carrier Name": "HAP (Health Alliance Plan)",
     "HealthDental": 2,
-    "Requests": 750
+    "Requests": 750,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1055,
     "Carrier Name": "HAP Midwest Health Plan",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1302,
     "Carrier Name": "Harbor Health Plan",
     "HealthDental": 2,
-    "Requests": 46
+    "Requests": 46,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1326,
     "Carrier Name": "Harken Health",
     "HealthDental": 2,
-    "Requests": 211
+    "Requests": 211,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 470,
     "Carrier Name": "Harmony Health Plan",
     "HealthDental": 2,
-    "Requests": 558
+    "Requests": 558,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 615,
     "Carrier Name": "Harvard Pilgrim Health Care",
     "HealthDental": 2,
-    "Requests": 3519
+    "Requests": 3519,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 837,
     "Carrier Name": "Hawaii Dental Service (Delta Dental)",
     "HealthDental": 2,
-    "Requests": 12
-  },
-  {
-    "InsuranceID": 1206,
-    "Carrier Name": "Hawaii Medical Assurance Association (HMAA)",
-    "HealthDental": 1,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 1234,
-    "Carrier Name": "Hawaii Medical Assurance Association (HMAA)",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 12,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1198,
     "Carrier Name": "Hawaii Medical Service Association (HMSA)",
     "HealthDental": 2,
-    "Requests": 95
+    "Requests": 95,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1233,
     "Carrier Name": "Hawaii Medical Service Association (HMSA)",
     "HealthDental": 2,
-    "Requests": 6
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1122,
     "Carrier Name": "Health Alliance",
     "HealthDental": 2,
-    "Requests": 73
+    "Requests": 73,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 688,
     "Carrier Name": "Health Care District of Palm Beach County",
     "HealthDental": 2,
-    "Requests": 38
+    "Requests": 38,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 586,
     "Carrier Name": "Health Choice",
     "HealthDental": 2,
-    "Requests": 128
+    "Requests": 128,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 587,
     "Carrier Name": "Health Choice",
     "HealthDental": 2,
-    "Requests": 108
-  },
-  {
-    "InsuranceID": 1136,
-    "Carrier Name": "Health Choice Arizona",
-    "HealthDental": 1,
-    "Requests": 330
+    "Requests": 108,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1210,
     "Carrier Name": "Health Choice Utah",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1322,
     "Carrier Name": "Health First (FL)",
     "HealthDental": 2,
-    "Requests": 105
+    "Requests": 105,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 910,
     "Carrier Name": "Health First Health Plans (Florida)",
     "HealthDental": 2,
-    "Requests": 144
+    "Requests": 144,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 295,
     "Carrier Name": "Health Net",
     "HealthDental": 2,
-    "Requests": 3256
-  },
-  {
-    "InsuranceID": 248,
-    "Carrier Name": "Health Net",
-    "HealthDental": 1,
-    "Requests": 416
-  },
-  {
-    "InsuranceID": 628,
-    "Carrier Name": "Health New England",
-    "HealthDental": 1,
-    "Requests": 61
+    "Requests": 3256,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 761,
     "Carrier Name": "Health Plan of Nevada",
     "HealthDental": 2,
-    "Requests": 1456
-  },
-  {
-    "InsuranceID": 760,
-    "Carrier Name": "Health Plan of Nevada",
-    "HealthDental": 1,
-    "Requests": 343
-  },
-  {
-    "InsuranceID": 942,
-    "Carrier Name": "Health Plan of San Joaquin",
-    "HealthDental": 1,
-    "Requests": 67
+    "Requests": 1456,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 943,
     "Carrier Name": "Health Plan of San Mateo",
     "HealthDental": 2,
-    "Requests": 30
+    "Requests": 30,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1236,
     "Carrier Name": "Health Plan of San Mateo",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 429,
     "Carrier Name": "Health Plus",
     "HealthDental": 2,
-    "Requests": 2145
-  },
-  {
-    "InsuranceID": 1028,
-    "Carrier Name": "Health Plus",
-    "HealthDental": 1,
-    "Requests": 231
+    "Requests": 2145,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1125,
     "Carrier Name": "Health Republic of New Jersey",
     "HealthDental": 2,
-    "Requests": 241
+    "Requests": 241,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 858,
     "Carrier Name": "Health Sun",
     "HealthDental": 2,
-    "Requests": 8
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1106,
     "Carrier Name": "HealthChoice Oklahoma",
     "HealthDental": 2,
-    "Requests": 37
+    "Requests": 37,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 366,
     "Carrier Name": "HealthFirst (NY-NJ)",
     "HealthDental": 2,
-    "Requests": 33247
-  },
-  {
-    "InsuranceID": 434,
-    "Carrier Name": "HealthFirst (NY-NJ)",
-    "HealthDental": 1,
-    "Requests": 8250
+    "Requests": 33247,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 461,
     "Carrier Name": "Healthlink",
     "HealthDental": 2,
-    "Requests": 209
+    "Requests": 209,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1111,
     "Carrier Name": "HealthNow",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 570,
     "Carrier Name": "HealthPartners",
     "HealthDental": 2,
-    "Requests": 1491
-  },
-  {
-    "InsuranceID": 702,
-    "Carrier Name": "HealthPartners",
-    "HealthDental": 1,
-    "Requests": 484
-  },
-  {
-    "InsuranceID": 236,
-    "Carrier Name": "Healthplex",
-    "HealthDental": 1,
-    "Requests": 1537
+    "Requests": 1491,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1169,
     "Carrier Name": "HealthPlus of Michigan",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 452,
     "Carrier Name": "HealthSmart",
     "HealthDental": 2,
-    "Requests": 139
+    "Requests": 139,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1132,
     "Carrier Name": "HealthSpan",
     "HealthDental": 2,
-    "Requests": 114
+    "Requests": 114,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1139,
     "Carrier Name": "HealthyCT",
     "HealthDental": 2,
-    "Requests": 151
+    "Requests": 151,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 990,
     "Carrier Name": "Hear In America",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 961,
     "Carrier Name": "Heritage Vision Plans",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 454,
     "Carrier Name": "HFN",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 503,
     "Carrier Name": "HFS Medical Benefits",
     "HealthDental": 2,
-    "Requests": 81
+    "Requests": 81,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 564,
+    "Carrier Name": "HighMark Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 3575,
+    "isBCBS": 1
+  },
+  {
+    "InsuranceID": 640,
+    "Carrier Name": "Highmark Blue Cross Blue Shield of Delaware",
+    "HealthDental": 2,
+    "Requests": 786,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 565,
     "Carrier Name": "HighMark Blue Shield",
     "HealthDental": 2,
-    "Requests": 1111
+    "Requests": 1111,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1260,
     "Carrier Name": "Highmark Blue Shield",
     "HealthDental": 2,
-    "Requests": 32
+    "Requests": 32,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1153,
     "Carrier Name": "Highmark BlueCross BlueShield of West Virginia",
     "HealthDental": 2,
-    "Requests": 70
+    "Requests": 70,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1212,
     "Carrier Name": "Hillsborough Health Care Plan",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 337,
     "Carrier Name": "HIP",
     "HealthDental": 2,
-    "Requests": 4528
+    "Requests": 4528,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 246,
     "Carrier Name": "HIP",
     "HealthDental": 2,
-    "Requests": 330
+    "Requests": 330,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1226,
     "Carrier Name": "Home State Health Plan",
     "HealthDental": 2,
-    "Requests": 62
+    "Requests": 62,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 713,
     "Carrier Name": "Hometown Health",
     "HealthDental": 2,
-    "Requests": 11
+    "Requests": 11,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 314,
+    "Carrier Name": "Horizon Blue Cross Blue Shield of New Jersey",
+    "HealthDental": 2,
+    "Requests": 25309,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 673,
     "Carrier Name": "Horizon NJ Health",
     "HealthDental": 2,
-    "Requests": 3998
-  },
-  {
-    "InsuranceID": 1214,
-    "Carrier Name": "Horizon NJ Health",
-    "HealthDental": 1,
-    "Requests": 856
+    "Requests": 3998,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 351,
     "Carrier Name": "Hudson Health Plan",
     "HealthDental": 2,
-    "Requests": 108
+    "Requests": 108,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 315,
     "Carrier Name": "Humana",
     "HealthDental": 2,
-    "Requests": 18392
-  },
-  {
-    "InsuranceID": 283,
-    "Carrier Name": "Humana",
-    "HealthDental": 1,
-    "Requests": 5052
+    "Requests": 18392,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 972,
     "Carrier Name": "HUSKY Health",
     "HealthDental": 2,
-    "Requests": 436
+    "Requests": 436,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 632,
     "Carrier Name": "Illinicare Health",
     "HealthDental": 2,
-    "Requests": 873
+    "Requests": 873,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 1299,
-    "Carrier Name": "Illinicare Health",
-    "HealthDental": 1,
-    "Requests": 207
+    "InsuranceID": 563,
+    "Carrier Name": "Independence Blue Cross",
+    "HealthDental": 2,
+    "Requests": 13089,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1099,
     "Carrier Name": "Independence Care System",
     "HealthDental": 2,
-    "Requests": 21
+    "Requests": 21,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 403,
     "Carrier Name": "Independent Health",
     "HealthDental": 2,
-    "Requests": 78
+    "Requests": 78,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1328,
     "Carrier Name": "Indiana University Health",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 946,
     "Carrier Name": "Inland Empire Health Plan",
     "HealthDental": 2,
-    "Requests": 143
+    "Requests": 143,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1142,
     "Carrier Name": "Innovation Health",
     "HealthDental": 2,
-    "Requests": 799
+    "Requests": 799,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1340,
     "Carrier Name": "Integra",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1199,
     "Carrier Name": "INTotal Health",
     "HealthDental": 2,
-    "Requests": 182
+    "Requests": 182,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1189,
     "Carrier Name": "Iowa MediPASS",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 860,
     "Carrier Name": "J.J. Stanis and Company, Inc.",
     "HealthDental": 2,
-    "Requests": 53
+    "Requests": 53,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 624,
     "Carrier Name": "Johns Hopkins Employer Health Programs",
     "HealthDental": 2,
-    "Requests": 294
+    "Requests": 294,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 385,
     "Carrier Name": "Kaiser Permanente",
     "HealthDental": 2,
-    "Requests": 1086
+    "Requests": 1086,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 375,
     "Carrier Name": "Kaiser Permanente",
     "HealthDental": 2,
-    "Requests": 524
+    "Requests": 524,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1186,
     "Carrier Name": "KelseyCare Advantage",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 569,
     "Carrier Name": "Keystone First",
     "HealthDental": 2,
-    "Requests": 1567
-  },
-  {
-    "InsuranceID": 994,
-    "Carrier Name": "Keystone First",
-    "HealthDental": 1,
-    "Requests": 591
-  },
-  {
-    "InsuranceID": 773,
-    "Carrier Name": "KPS Health Plans",
-    "HealthDental": 1,
-    "Requests": 22
+    "Requests": 1567,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 949,
     "Carrier Name": "L.A. Care Health Plan",
     "HealthDental": 2,
-    "Requests": 723
+    "Requests": 723,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1128,
     "Carrier Name": "Land of Lincoln Health",
     "HealthDental": 2,
-    "Requests": 456
-  },
-  {
-    "InsuranceID": 432,
-    "Carrier Name": "Liberty Dental",
-    "HealthDental": 1,
-    "Requests": 199
+    "Requests": 456,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 427,
     "Carrier Name": "Liberty Health Advantage",
     "HealthDental": 2,
-    "Requests": 17
+    "Requests": 17,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 484,
     "Carrier Name": "Liberty Mutual",
     "HealthDental": 2,
-    "Requests": 35
+    "Requests": 35,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 888,
     "Carrier Name": "LifeMap",
     "HealthDental": 2,
-    "Requests": 33
+    "Requests": 33,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 659,
     "Carrier Name": "LifeWise",
     "HealthDental": 2,
-    "Requests": 121
-  },
-  {
-    "InsuranceID": 660,
-    "Carrier Name": "LifeWise",
-    "HealthDental": 1,
-    "Requests": 52
-  },
-  {
-    "InsuranceID": 762,
-    "Carrier Name": "Lincoln Financial Group",
-    "HealthDental": 1,
-    "Requests": 683
+    "Requests": 121,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1066,
     "Carrier Name": "Lincoln Financial Group",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1244,
     "Carrier Name": "Louisiana Healthcare Connections",
     "HealthDental": 2,
-    "Requests": 19
-  },
-  {
-    "InsuranceID": 465,
-    "Carrier Name": "Lutheran Preferred",
-    "HealthDental": 1,
-    "Requests": 7
+    "Requests": 19,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 592,
     "Carrier Name": "Magellan Health",
     "HealthDental": 2,
-    "Requests": 157
+    "Requests": 157,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1345,
     "Carrier Name": "Magellan Health",
     "HealthDental": 2,
-    "Requests": 11
+    "Requests": 11,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1348,
     "Carrier Name": "Magellan Health",
     "HealthDental": 2,
-    "Requests": 9
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 339,
     "Carrier Name": "MagnaCare",
     "HealthDental": 2,
-    "Requests": 7219
+    "Requests": 7219,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1245,
     "Carrier Name": "Magnolia Health Plan",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 445,
     "Carrier Name": "Mail Handlers Benefit Plan",
     "HealthDental": 2,
-    "Requests": 102
-  },
-  {
-    "InsuranceID": 1192,
-    "Carrier Name": "MaineCare",
-    "HealthDental": 1,
-    "Requests": 4
-  },
-  {
-    "InsuranceID": 1193,
-    "Carrier Name": "MaineCare",
-    "HealthDental": 1,
-    "Requests": 4
+    "Requests": 102,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 558,
     "Carrier Name": "Managed Health Network (MHN)",
     "HealthDental": 2,
-    "Requests": 13
+    "Requests": 13,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1246,
     "Carrier Name": "Managed Health Services (Indiana)",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1247,
     "Carrier Name": "Managed Health Services (Wisconsin)",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 774,
     "Carrier Name": "March Vision Care",
     "HealthDental": 2,
-    "Requests": 45
+    "Requests": 45,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 584,
     "Carrier Name": "Maricopa Health Plan",
     "HealthDental": 2,
-    "Requests": 629
-  },
-  {
-    "InsuranceID": 585,
-    "Carrier Name": "Maricopa Health Plan",
-    "HealthDental": 1,
-    "Requests": 113
+    "Requests": 629,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1268,
     "Carrier Name": "Martin's Point HealthCare",
     "HealthDental": 2,
-    "Requests": 13
+    "Requests": 13,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 642,
     "Carrier Name": "Maryland Medical Assistance (Medicaid)",
     "HealthDental": 2,
-    "Requests": 974
+    "Requests": 974,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 559,
     "Carrier Name": "Maryland Physicians Care",
     "HealthDental": 2,
-    "Requests": 1172
+    "Requests": 1172,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 669,
     "Carrier Name": "MassHealth",
     "HealthDental": 2,
-    "Requests": 3460
-  },
-  {
-    "InsuranceID": 670,
-    "Carrier Name": "MassHealth",
-    "HealthDental": 1,
-    "Requests": 1577
+    "Requests": 3460,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1102,
     "Carrier Name": "Mayo Medical Plan",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1135,
     "Carrier Name": "McLaren Health Plan",
     "HealthDental": 2,
-    "Requests": 823
-  },
-  {
-    "InsuranceID": 776,
-    "Carrier Name": "MCNA Dental",
-    "HealthDental": 1,
-    "Requests": 253
+    "Requests": 823,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1114,
     "Carrier Name": "MDwise",
     "HealthDental": 2,
-    "Requests": 18
+    "Requests": 18,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 450,
     "Carrier Name": "Medi-Cal",
     "HealthDental": 2,
-    "Requests": 7917
-  },
-  {
-    "InsuranceID": 704,
-    "Carrier Name": "Medica",
-    "HealthDental": 1,
-    "Requests": 400
+    "Requests": 7917,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 766,
     "Carrier Name": "Medica",
     "HealthDental": 2,
-    "Requests": 71
+    "Requests": 71,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 664,
     "Carrier Name": "Medica HealthCare Plans (Florida)",
     "HealthDental": 2,
-    "Requests": 76
+    "Requests": 76,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 358,
     "Carrier Name": "Medicaid",
     "HealthDental": 2,
-    "Requests": 58809
-  },
-  {
-    "InsuranceID": 357,
-    "Carrier Name": "Medicaid",
-    "HealthDental": 1,
-    "Requests": 16717
-  },
-  {
-    "InsuranceID": 683,
-    "Carrier Name": "Medical Eye Services (MES Vision)",
-    "HealthDental": 1,
-    "Requests": 99
+    "Requests": 58809,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 600,
     "Carrier Name": "Medical Mutual",
     "HealthDental": 2,
-    "Requests": 1687
-  },
-  {
-    "InsuranceID": 975,
-    "Carrier Name": "Medical Mutual",
-    "HealthDental": 1,
-    "Requests": 136
+    "Requests": 1687,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 356,
     "Carrier Name": "Medicare",
     "HealthDental": 2,
-    "Requests": 45311
+    "Requests": 45311,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1068,
     "Carrier Name": "MediGold",
     "HealthDental": 2,
-    "Requests": 8
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 966,
     "Carrier Name": "MediPass",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1176,
     "Carrier Name": "MediPass",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 775,
     "Carrier Name": "MedStar Family Choice",
     "HealthDental": 2,
-    "Requests": 2582
+    "Requests": 2582,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1231,
     "Carrier Name": "MedStar Medicare Choice",
     "HealthDental": 2,
-    "Requests": 70
+    "Requests": 70,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1230,
     "Carrier Name": "MedStar Select",
     "HealthDental": 2,
-    "Requests": 807
+    "Requests": 807,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 779,
     "Carrier Name": "Memorial Hermann",
     "HealthDental": 2,
-    "Requests": 620
+    "Requests": 620,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 578,
     "Carrier Name": "Mercy Care",
     "HealthDental": 2,
-    "Requests": 2123
-  },
-  {
-    "InsuranceID": 636,
-    "Carrier Name": "Mercy Care",
-    "HealthDental": 1,
-    "Requests": 281
+    "Requests": 2123,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 965,
     "Carrier Name": "Meridian Health Plan",
     "HealthDental": 2,
-    "Requests": 1724
-  },
-  {
-    "InsuranceID": 239,
-    "Carrier Name": "MetLife",
-    "HealthDental": 1,
-    "Requests": 28296
+    "Requests": 1724,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 883,
     "Carrier Name": "MetLife",
     "HealthDental": 2,
-    "Requests": 645
+    "Requests": 645,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 409,
     "Carrier Name": "MetroPlus Health Plan",
     "HealthDental": 2,
-    "Requests": 15268
-  },
-  {
-    "InsuranceID": 1026,
-    "Carrier Name": "MetroPlus Health Plan",
-    "HealthDental": 1,
-    "Requests": 2602
-  },
-  {
-    "InsuranceID": 850,
-    "Carrier Name": "Metropolitan Health Plan",
-    "HealthDental": 1,
-    "Requests": 5
+    "Requests": 15268,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1061,
     "Carrier Name": "MHNet Behavioral Health",
     "HealthDental": 2,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 1262,
-    "Carrier Name": "Minuteman Health",
-    "HealthDental": 1,
-    "Requests": 71
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1263,
     "Carrier Name": "Minuteman Health",
     "HealthDental": 2,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 780,
-    "Carrier Name": "Missouri Care",
-    "HealthDental": 1,
-    "Requests": 53
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1031,
     "Carrier Name": "MO HealthNet",
     "HealthDental": 2,
-    "Requests": 324
-  },
-  {
-    "InsuranceID": 706,
-    "Carrier Name": "Moda Health",
-    "HealthDental": 1,
-    "Requests": 524
-  },
-  {
-    "InsuranceID": 705,
-    "Carrier Name": "Moda Health",
-    "HealthDental": 1,
-    "Requests": 258
+    "Requests": 324,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 675,
     "Carrier Name": "Molina Healthcare",
     "HealthDental": 2,
-    "Requests": 6166
-  },
-  {
-    "InsuranceID": 985,
-    "Carrier Name": "Molina Healthcare",
-    "HealthDental": 1,
-    "Requests": 925
+    "Requests": 6166,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 360,
     "Carrier Name": "Multiplan PHCS",
     "HealthDental": 2,
-    "Requests": 3712
-  },
-  {
-    "InsuranceID": 284,
-    "Carrier Name": "Mutual of Omaha",
-    "HealthDental": 1,
-    "Requests": 125
+    "Requests": 3712,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 353,
     "Carrier Name": "MVP Health Care",
     "HealthDental": 2,
-    "Requests": 678
+    "Requests": 678,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1343,
     "Carrier Name": "MVP Health Care",
     "HealthDental": 2,
-    "Requests": 20
+    "Requests": 20,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 547,
     "Carrier Name": "National Vision Administrators",
     "HealthDental": 2,
-    "Requests": 191
+    "Requests": 191,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 906,
     "Carrier Name": "Nationwide",
     "HealthDental": 2,
-    "Requests": 99
-  },
-  {
-    "InsuranceID": 296,
-    "Carrier Name": "Nationwide",
-    "HealthDental": 1,
-    "Requests": 25
+    "Requests": 99,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 617,
     "Carrier Name": "Neighborhood Health Plan (Massachusetts)",
     "HealthDental": 2,
-    "Requests": 1422
-  },
-  {
-    "InsuranceID": 1023,
-    "Carrier Name": "Neighborhood Health Plan of Rhode Island",
-    "HealthDental": 1,
-    "Requests": 12
-  },
-  {
-    "InsuranceID": 1321,
-    "Carrier Name": "Network Health Plan",
-    "HealthDental": 1,
-    "Requests": 7
+    "Requests": 1422,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1274,
     "Carrier Name": "Nevada Health CO-OP",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1126,
     "Carrier Name": "Nevada Health CO-OP",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 787,
     "Carrier Name": "Nevada Preferred",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1267,
     "Carrier Name": "New Hampshire Healthy Families",
     "HealthDental": 2,
-    "Requests": 58
+    "Requests": 58,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1119,
     "Carrier Name": "New Mexico Health Connections",
     "HealthDental": 2,
-    "Requests": 47
+    "Requests": 47,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 834,
     "Carrier Name": "North Carolina Health Choice (NCHC) for Children",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1138,
     "Carrier Name": "North Shore LIJ CareConnect",
     "HealthDental": 2,
-    "Requests": 2155
-  },
-  {
-    "InsuranceID": 1248,
-    "Carrier Name": "NovaSys Health",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 2155,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 502,
     "Carrier Name": "NY State No-Fault",
     "HealthDental": 2,
-    "Requests": 1140
+    "Requests": 1140,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 367,
     "Carrier Name": "OneNet PPO",
     "HealthDental": 2,
-    "Requests": 72
+    "Requests": 72,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 368,
     "Carrier Name": "OneNet PPO",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1056,
     "Carrier Name": "OptiCare Managed Vision",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 783,
     "Carrier Name": "Opticare of Utah",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 320,
     "Carrier Name": "OptimaHealth",
     "HealthDental": 2,
-    "Requests": 148
-  },
-  {
-    "InsuranceID": 884,
-    "Carrier Name": "Optimum HealthCare",
-    "HealthDental": 1,
-    "Requests": 53
-  },
-  {
-    "InsuranceID": 1120,
-    "Carrier Name": "Oregon's Health Co-Op",
-    "HealthDental": 1,
-    "Requests": 91
+    "Requests": 148,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1127,
     "Carrier Name": "Oscar Health Insurance Co.",
     "HealthDental": 2,
-    "Requests": 7886
-  },
-  {
-    "InsuranceID": 1342,
-    "Carrier Name": "Oscar Health Insurance Co.",
-    "HealthDental": 1,
-    "Requests": 12
+    "Requests": 7886,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1088,
     "Carrier Name": "OSU Health Plan",
     "HealthDental": 2,
-    "Requests": 66
+    "Requests": 66,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1075,
     "Carrier Name": "Oxford (UnitedHealthcare)",
     "HealthDental": 2,
-    "Requests": 20447
-  },
-  {
-    "InsuranceID": 1074,
-    "Carrier Name": "Oxford (UnitedHealthcare)",
-    "HealthDental": 1,
-    "Requests": 775
+    "Requests": 20447,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 697,
     "Carrier Name": "PacificSource Health Plans",
     "HealthDental": 2,
-    "Requests": 111
+    "Requests": 111,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1091,
     "Carrier Name": "PacificSource Health Plans",
     "HealthDental": 2,
-    "Requests": 17
+    "Requests": 17,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 430,
     "Carrier Name": "Palmetto GBA (Railroad Medicare)",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1092,
     "Carrier Name": "Paramount Healthcare",
     "HealthDental": 2,
-    "Requests": 144
+    "Requests": 144,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 514,
     "Carrier Name": "Parkland Community Health Plan",
     "HealthDental": 2,
-    "Requests": 273
+    "Requests": 273,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 951,
     "Carrier Name": "Partnership HealthPlan of California",
     "HealthDental": 2,
-    "Requests": 12
+    "Requests": 12,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1174,
     "Carrier Name": "Passport Health Plan (Kentucky)",
     "HealthDental": 2,
-    "Requests": 6
-  },
-  {
-    "InsuranceID": 1175,
-    "Carrier Name": "Passport Health Plan (Kentucky)",
-    "HealthDental": 1,
-    "Requests": 4
-  },
-  {
-    "InsuranceID": 1112,
-    "Carrier Name": "Patient 1st (Alabama Medicaid)",
-    "HealthDental": 1,
-    "Requests": 3
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 534,
     "Carrier Name": "PBA (Patrolmen's Benefit Association)",
     "HealthDental": 2,
-    "Requests": 80
+    "Requests": 80,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1353,
     "Carrier Name": "PBA (Patrolmen's Benefit Association)",
     "HealthDental": 2,
-    "Requests": 61
+    "Requests": 61,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 599,
     "Carrier Name": "Peach State Health Plan",
     "HealthDental": 2,
-    "Requests": 1964
-  },
-  {
-    "InsuranceID": 1057,
-    "Carrier Name": "Peach State Health Plan",
-    "HealthDental": 1,
-    "Requests": 462
+    "Requests": 1964,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 571,
     "Carrier Name": "PeachCare for Kids",
     "HealthDental": 2,
-    "Requests": 552
-  },
-  {
-    "InsuranceID": 696,
-    "Carrier Name": "PeachCare for Kids",
-    "HealthDental": 1,
-    "Requests": 252
+    "Requests": 552,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1305,
     "Carrier Name": "PennCare",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1165,
     "Carrier Name": "Peoples Health",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 582,
     "Carrier Name": "Phoenix Health Plan",
     "HealthDental": 2,
-    "Requests": 496
+    "Requests": 496,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 583,
     "Carrier Name": "Phoenix Health Plan",
     "HealthDental": 2,
-    "Requests": 9
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1222,
     "Carrier Name": "Physicians Health Plan",
     "HealthDental": 2,
-    "Requests": 69
+    "Requests": 69,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1276,
     "Carrier Name": "Physicians Health Plan of Northern Indiana, Inc.",
     "HealthDental": 2,
-    "Requests": 5
+    "Requests": 5,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1148,
     "Carrier Name": "Physicians Health Plan of Northern Indiana, Inc.",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1167,
     "Carrier Name": "Physicians Plus Insurance Corporation",
     "HealthDental": 2,
-    "Requests": 7
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1149,
     "Carrier Name": "Piedmont Community Health Plan",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1211,
     "Carrier Name": "Piedmont WellStar Health Plans",
     "HealthDental": 2,
-    "Requests": 17
+    "Requests": 17,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 344,
     "Carrier Name": "POMCO",
     "HealthDental": 2,
-    "Requests": 656
-  },
-  {
-    "InsuranceID": 1308,
-    "Carrier Name": "POMCO",
-    "HealthDental": 1,
-    "Requests": 50
-  },
-  {
-    "InsuranceID": 784,
-    "Carrier Name": "Positive Health Care",
-    "HealthDental": 1,
-    "Requests": 4
+    "Requests": 656,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1347,
     "Carrier Name": "Preferential Care Network",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 681,
     "Carrier Name": "Preferred Care Partners",
     "HealthDental": 2,
-    "Requests": 170
+    "Requests": 170,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 977,
-    "Carrier Name": "Preferred Health Systems",
-    "HealthDental": 1,
-    "Requests": 6
-  },
-  {
-    "InsuranceID": 682,
-    "Carrier Name": "Preferred Medical Plan",
-    "HealthDental": 1,
-    "Requests": 17
-  },
-  {
-    "InsuranceID": 456,
-    "Carrier Name": "Preferred Network Access (PNA)",
-    "HealthDental": 1,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 699,
-    "Carrier Name": "PreferredOne",
-    "HealthDental": 1,
-    "Requests": 119
-  },
-  {
-    "InsuranceID": 785,
-    "Carrier Name": "Premier Access",
-    "HealthDental": 1,
-    "Requests": 203
+    "InsuranceID": 601,
+    "Carrier Name": "Premera Blue Cross",
+    "HealthDental": 2,
+    "Requests": 5716,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1329,
     "Carrier Name": "Premier Health Plan",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 604,
     "Carrier Name": "Presbyterian Health Plan/Presbyterian Insurance Company",
     "HealthDental": 2,
-    "Requests": 118
+    "Requests": 118,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 887,
     "Carrier Name": "Prestige Health Choice",
     "HealthDental": 2,
-    "Requests": 599
+    "Requests": 599,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1204,
     "Carrier Name": "Primary Care Case Management (North Dakota Medicaid)",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 748,
     "Carrier Name": "Prime Health Services, Inc",
     "HealthDental": 2,
-    "Requests": 15
-  },
-  {
-    "InsuranceID": 240,
-    "Carrier Name": "Principal Financial Group",
-    "HealthDental": 1,
-    "Requests": 2537
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 321,
     "Carrier Name": "Principal Financial Group",
     "HealthDental": 2,
-    "Requests": 338
+    "Requests": 338,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 786,
     "Carrier Name": "Priority Health",
     "HealthDental": 2,
-    "Requests": 211
+    "Requests": 211,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 799,
     "Carrier Name": "Priority Health",
     "HealthDental": 2,
-    "Requests": 52
+    "Requests": 52,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 447,
     "Carrier Name": "Priority Partners",
     "HealthDental": 2,
-    "Requests": 1377
+    "Requests": 1377,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 714,
     "Carrier Name": "Prominence Health Plan",
     "HealthDental": 2,
-    "Requests": 66
+    "Requests": 66,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 896,
     "Carrier Name": "Prominence Health Plan",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 331,
     "Carrier Name": "Providence Health Plans",
     "HealthDental": 2,
-    "Requests": 889
+    "Requests": 889,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 500,
     "Carrier Name": "Public Aid (Illinois Medicaid)",
     "HealthDental": 2,
-    "Requests": 2267
+    "Requests": 2267,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1157,
     "Carrier Name": "Public Employees Health Program (PEHP)",
     "HealthDental": 2,
-    "Requests": 57
-  },
-  {
-    "InsuranceID": 1158,
-    "Carrier Name": "Public Employees Health Program (PEHP)",
-    "HealthDental": 1,
-    "Requests": 15
+    "Requests": 57,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 347,
     "Carrier Name": "QualCare",
     "HealthDental": 2,
-    "Requests": 1509
+    "Requests": 1509,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1188,
     "Carrier Name": "QualChoice Arkansas",
     "HealthDental": 2,
-    "Requests": 15
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 912,
     "Carrier Name": "Quality Health Plans of New York",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 289,
-    "Carrier Name": "Reliance Standard",
-    "HealthDental": 1,
-    "Requests": 120
+    "InsuranceID": 602,
+    "Carrier Name": "Regence Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 3108,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1277,
     "Carrier Name": "Renaissance Dental",
     "HealthDental": 2,
-    "Requests": 91
+    "Requests": 91,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1357,
     "Carrier Name": "RiverLink Health",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1264,
     "Carrier Name": "Riverside Health",
     "HealthDental": 2,
-    "Requests": 115
+    "Requests": 115,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 695,
     "Carrier Name": "Rocky Mountain Health Plans",
     "HealthDental": 2,
-    "Requests": 81
+    "Requests": 81,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 468,
     "Carrier Name": "Sagamore Health Network",
     "HealthDental": 2,
-    "Requests": 22
+    "Requests": 22,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1209,
     "Carrier Name": "Salubris (Florida Medicaid)",
     "HealthDental": 2,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 918,
-    "Carrier Name": "Samaritan Health Plan Operations",
-    "HealthDental": 1,
-    "Requests": 5
-  },
-  {
-    "InsuranceID": 421,
-    "Carrier Name": "San Francisco Health Plan",
-    "HealthDental": 1,
-    "Requests": 40
-  },
-  {
-    "InsuranceID": 1256,
-    "Carrier Name": "Sanford Health Plan",
-    "HealthDental": 1,
-    "Requests": 9
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 952,
     "Carrier Name": "Santa Clara Family Health Plan",
     "HealthDental": 2,
-    "Requests": 23
+    "Requests": 23,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 593,
     "Carrier Name": "SCAN Health Plan",
     "HealthDental": 2,
-    "Requests": 16
+    "Requests": 16,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 516,
     "Carrier Name": "Scott & White Health Plan",
     "HealthDental": 2,
-    "Requests": 416
+    "Requests": 416,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1161,
     "Carrier Name": "Security Health Plan of Wisconsin, Inc.",
     "HealthDental": 2,
-    "Requests": 19
-  },
-  {
-    "InsuranceID": 907,
-    "Carrier Name": "Security Life",
-    "HealthDental": 1,
-    "Requests": 54
-  },
-  {
-    "InsuranceID": 247,
-    "Carrier Name": "Sele-Dent",
-    "HealthDental": 1,
-    "Requests": 275
+    "Requests": 19,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 700,
     "Carrier Name": "Select Care",
     "HealthDental": 2,
-    "Requests": 27
+    "Requests": 27,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 469,
     "Carrier Name": "Select Health Network",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 332,
     "Carrier Name": "SelectHealth",
     "HealthDental": 2,
-    "Requests": 409
+    "Requests": 409,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1146,
     "Carrier Name": "SelectHealth",
     "HealthDental": 2,
-    "Requests": 31
+    "Requests": 31,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 800,
     "Carrier Name": "Sendero Health Plans",
     "HealthDental": 2,
-    "Requests": 340
+    "Requests": 340,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 629,
     "Carrier Name": "Senior Whole Health",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 765,
     "Carrier Name": "Seton Health Plan",
     "HealthDental": 2,
-    "Requests": 122
+    "Requests": 122,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 953,
     "Carrier Name": "Sharp Health Plan",
     "HealthDental": 2,
-    "Requests": 92
+    "Requests": 92,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 755,
     "Carrier Name": "Sierra Health and Life",
     "HealthDental": 2,
-    "Requests": 923
+    "Requests": 923,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1275,
     "Carrier Name": "Sierra Health and Life",
     "HealthDental": 2,
-    "Requests": 36
+    "Requests": 36,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 801,
     "Carrier Name": "SightCare",
     "HealthDental": 2,
-    "Requests": 1
-  },
-  {
-    "InsuranceID": 1147,
-    "Carrier Name": "SIHO Insurance Services",
-    "HealthDental": 1,
-    "Requests": 5
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 955,
     "Carrier Name": "SIMNSA Health Plan",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 803,
     "Carrier Name": "Simply Healthcare",
     "HealthDental": 2,
-    "Requests": 376
-  },
-  {
-    "InsuranceID": 970,
-    "Carrier Name": "Solstice",
-    "HealthDental": 1,
-    "Requests": 275
+    "Requests": 376,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 971,
     "Carrier Name": "Solstice",
     "HealthDental": 2,
-    "Requests": 6
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1103,
     "Carrier Name": "SoonerCare (Oklahoma Medicaid)",
     "HealthDental": 2,
-    "Requests": 108
+    "Requests": 108,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1104,
     "Carrier Name": "SoonerCare (Oklahoma Medicaid)",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1024,
     "Carrier Name": "Soundpath Health",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 767,
     "Carrier Name": "South Florida Community Care Network",
     "HealthDental": 2,
-    "Requests": 161
+    "Requests": 161,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 650,
     "Carrier Name": "Spectera",
     "HealthDental": 2,
-    "Requests": 755
+    "Requests": 755,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1065,
     "Carrier Name": "SSM Health Care",
     "HealthDental": 2,
-    "Requests": 12
+    "Requests": 12,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1022,
     "Carrier Name": "Standard Life and Accident Insurance Company",
     "HealthDental": 2,
-    "Requests": 49
-  },
-  {
-    "InsuranceID": 846,
-    "Carrier Name": "Stratose",
-    "HealthDental": 1,
-    "Requests": 2
-  },
-  {
-    "InsuranceID": 847,
-    "Carrier Name": "Stratose",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 49,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 334,
     "Carrier Name": "SummaCare",
     "HealthDental": 2,
-    "Requests": 149
+    "Requests": 149,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 281,
     "Carrier Name": "Sun Life Financial",
     "HealthDental": 2,
-    "Requests": 269
+    "Requests": 269,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 769,
     "Carrier Name": "Sunshine Health",
     "HealthDental": 2,
-    "Requests": 1458
-  },
-  {
-    "InsuranceID": 1015,
-    "Carrier Name": "Superior Dental Care",
-    "HealthDental": 1,
-    "Requests": 56
+    "Requests": 1458,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 517,
     "Carrier Name": "Superior HealthPlan",
     "HealthDental": 2,
-    "Requests": 599
+    "Requests": 599,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 553,
     "Carrier Name": "Superior Vision",
     "HealthDental": 2,
-    "Requests": 947
+    "Requests": 947,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 554,
     "Carrier Name": "SutterSelect",
     "HealthDental": 2,
-    "Requests": 70
-  },
-  {
-    "InsuranceID": 821,
-    "Carrier Name": "TDA (Total Dental Administrators)",
-    "HealthDental": 1,
-    "Requests": 181
+    "Requests": 70,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1100,
     "Carrier Name": "Teachers Health Trust",
     "HealthDental": 2,
-    "Requests": 272
-  },
-  {
-    "InsuranceID": 1101,
-    "Carrier Name": "Teachers Health Trust",
-    "HealthDental": 1,
-    "Requests": 46
+    "Requests": 272,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 567,
     "Carrier Name": "TexanPlus",
     "HealthDental": 2,
-    "Requests": 148
+    "Requests": 148,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 518,
     "Carrier Name": "Texas Children's Health Plan",
     "HealthDental": 2,
-    "Requests": 789
-  },
-  {
-    "InsuranceID": 689,
-    "Carrier Name": "Texas Children's Health Plan",
-    "HealthDental": 1,
-    "Requests": 92
+    "Requests": 789,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 851,
     "Carrier Name": "Texas Women's Health Program",
     "HealthDental": 2,
-    "Requests": 482
+    "Requests": 482,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 483,
     "Carrier Name": "The Hartford",
     "HealthDental": 2,
-    "Requests": 8
-  },
-  {
-    "InsuranceID": 1183,
-    "Carrier Name": "The Health Plan of the Upper Ohio Valley, Inc.",
-    "HealthDental": 1,
-    "Requests": 3
-  },
-  {
-    "InsuranceID": 1013,
-    "Carrier Name": "The Standard",
-    "HealthDental": 1,
-    "Requests": 114
+    "Requests": 8,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 842,
     "Carrier Name": "Total Health Care",
     "HealthDental": 2,
-    "Requests": 432
+    "Requests": 432,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 535,
     "Carrier Name": "Touchstone",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 487,
     "Carrier Name": "Travelers",
     "HealthDental": 2,
-    "Requests": 38
+    "Requests": 38,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 377,
     "Carrier Name": "Tricare",
     "HealthDental": 2,
-    "Requests": 12305
-  },
-  {
-    "InsuranceID": 378,
-    "Carrier Name": "Tricare Dental Program",
-    "HealthDental": 1,
-    "Requests": 1937
+    "Requests": 12305,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 919,
     "Carrier Name": "Trillium Community Health Plan",
     "HealthDental": 2,
-    "Requests": 2
-  },
-  {
-    "InsuranceID": 1338,
-    "Carrier Name": "Trillium Community Health Plan",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1293,
     "Carrier Name": "Trilogy Health Insurance",
     "HealthDental": 2,
-    "Requests": 4
+    "Requests": 4,
+    "isBCBS": ""
+  },
+  {
+    "InsuranceID": 1080,
+    "Carrier Name": "Triple-S Salud: Blue Cross Blue Shield of Puerto Rico",
+    "HealthDental": 2,
+    "Requests": 141,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1269,
     "Carrier Name": "TruAssure",
     "HealthDental": 2,
-    "Requests": 14
+    "Requests": 14,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1177,
     "Carrier Name": "Trusted Health Plan",
     "HealthDental": 2,
-    "Requests": 121
+    "Requests": 121,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 923,
     "Carrier Name": "Tuality Health Alliance",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1344,
     "Carrier Name": "Tufts Health Freedom Plan",
     "HealthDental": 2,
-    "Requests": 35
+    "Requests": 35,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 616,
     "Carrier Name": "Tufts Health Plan",
     "HealthDental": 2,
-    "Requests": 2361
+    "Requests": 2361,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 626,
     "Carrier Name": "Tufts Health Plan-Network Health",
     "HealthDental": 2,
-    "Requests": 813
+    "Requests": 813,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 701,
     "Carrier Name": "UCare",
     "HealthDental": 2,
-    "Requests": 31
+    "Requests": 31,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1178,
     "Carrier Name": "UHA Health Insurance",
     "HealthDental": 2,
-    "Requests": 81
+    "Requests": 81,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 322,
     "Carrier Name": "UniCare",
     "HealthDental": 2,
-    "Requests": 316
-  },
-  {
-    "InsuranceID": 241,
-    "Carrier Name": "UniCare",
-    "HealthDental": 1,
-    "Requests": 30
+    "Requests": 316,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 623,
     "Carrier Name": "Uniform Medical Plan",
     "HealthDental": 2,
-    "Requests": 97
-  },
-  {
-    "InsuranceID": 475,
-    "Carrier Name": "Union Health Services, Inc",
-    "HealthDental": 1,
-    "Requests": 33
-  },
-  {
-    "InsuranceID": 242,
-    "Carrier Name": "Union Plans",
-    "HealthDental": 1,
-    "Requests": 1984
+    "Requests": 97,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 346,
     "Carrier Name": "Union Plans",
     "HealthDental": 2,
-    "Requests": 221
+    "Requests": 221,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 449,
     "Carrier Name": "United Behavioral Health",
     "HealthDental": 2,
-    "Requests": 294
-  },
-  {
-    "InsuranceID": 244,
-    "Carrier Name": "United Concordia",
-    "HealthDental": 1,
-    "Requests": 2266
+    "Requests": 294,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 323,
     "Carrier Name": "UnitedHealthcare",
     "HealthDental": 2,
-    "Requests": 264658
-  },
-  {
-    "InsuranceID": 243,
-    "Carrier Name": "UnitedHealthcare",
-    "HealthDental": 1,
-    "Requests": 19505
+    "Requests": 264658,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 644,
     "Carrier Name": "UnitedHealthcare Community Plan",
     "HealthDental": 2,
-    "Requests": 16125
+    "Requests": 16125,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1182,
     "Carrier Name": "UnitedHealthcare Community Plan",
     "HealthDental": 2,
-    "Requests": 86
+    "Requests": 86,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 330,
     "Carrier Name": "UnitedHealthcare Oxford",
     "HealthDental": 2,
-    "Requests": 40306
-  },
-  {
-    "InsuranceID": 286,
-    "Carrier Name": "UnitedHealthcare Oxford",
-    "HealthDental": 1,
-    "Requests": 953
+    "Requests": 40306,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 995,
     "Carrier Name": "UnitedHealthOne",
     "HealthDental": 2,
-    "Requests": 1433
+    "Requests": 1433,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1170,
     "Carrier Name": "Unity Health Insurance",
     "HealthDental": 2,
-    "Requests": 77
+    "Requests": 77,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 542,
     "Carrier Name": "Univera Healthcare",
     "HealthDental": 2,
-    "Requests": 62
+    "Requests": 62,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 531,
     "Carrier Name": "Universal American",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 540,
     "Carrier Name": "Universal Healthcare",
     "HealthDental": 2,
-    "Requests": 24
+    "Requests": 24,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1287,
     "Carrier Name": "University Hospitals (Apex)",
     "HealthDental": 2,
-    "Requests": 563
+    "Requests": 563,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1082,
     "Carrier Name": "University of Arizona Health Plans",
     "HealthDental": 2,
-    "Requests": 25
+    "Requests": 25,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 467,
     "Carrier Name": "University of Chicago Health Plan",
     "HealthDental": 2,
-    "Requests": 7
+    "Requests": 7,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 621,
     "Carrier Name": "UPMC Health Plan",
     "HealthDental": 2,
-    "Requests": 237
-  },
-  {
-    "InsuranceID": 900,
-    "Carrier Name": "UPMC Health Plan",
-    "HealthDental": 1,
-    "Requests": 150
+    "Requests": 237,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 414,
     "Carrier Name": "US Family Health Plan",
     "HealthDental": 2,
-    "Requests": 90
+    "Requests": 90,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 974,
     "Carrier Name": "US Health Group",
     "HealthDental": 2,
-    "Requests": 144
+    "Requests": 144,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 384,
     "Carrier Name": "USA Managed Care Organization",
     "HealthDental": 2,
-    "Requests": 9
+    "Requests": 9,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1331,
     "Carrier Name": "USAble Mutual Insurance Company",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 861,
     "Carrier Name": "Valley Health Plan",
     "HealthDental": 2,
-    "Requests": 20
-  },
-  {
-    "InsuranceID": 519,
-    "Carrier Name": "ValueOptions",
-    "HealthDental": 1,
-    "Requests": 269
+    "Requests": 20,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1166,
     "Carrier Name": "Vantage Health Plan, Inc.",
     "HealthDental": 2,
-    "Requests": 16
+    "Requests": 16,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 958,
     "Carrier Name": "Ventura County Health Care Plan",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1098,
     "Carrier Name": "VillageCareMax",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 479,
     "Carrier Name": "Virginia Health Network",
     "HealthDental": 2,
-    "Requests": 10
+    "Requests": 10,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 426,
     "Carrier Name": "Virginia Premier Health Plan",
     "HealthDental": 2,
-    "Requests": 86
+    "Requests": 86,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 548,
     "Carrier Name": "Vision Benefits of America",
     "HealthDental": 2,
-    "Requests": 149
+    "Requests": 149,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 778,
     "Carrier Name": "Vision Care Direct",
     "HealthDental": 2,
-    "Requests": 15
-  },
-  {
-    "InsuranceID": 839,
-    "Carrier Name": "Vision Plan of America",
-    "HealthDental": 1,
-    "Requests": 14
+    "Requests": 15,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 838,
     "Carrier Name": "Vision Plan of America",
     "HealthDental": 2,
-    "Requests": 6
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1113,
     "Carrier Name": "Viva Health Plan",
     "HealthDental": 2,
-    "Requests": 20
+    "Requests": 20,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 416,
     "Carrier Name": "VNS Choice Health Plans",
     "HealthDental": 2,
-    "Requests": 129
-  },
-  {
-    "InsuranceID": 857,
-    "Carrier Name": "Volusia Health Network",
-    "HealthDental": 1,
-    "Requests": 2
+    "Requests": 129,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 441,
     "Carrier Name": "VSP",
     "HealthDental": 2,
-    "Requests": 20316
+    "Requests": 20316,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 417,
     "Carrier Name": "Vytra",
     "HealthDental": 2,
-    "Requests": 38
-  },
-  {
-    "InsuranceID": 1294,
-    "Carrier Name": "WEA Trust",
-    "HealthDental": 1,
-    "Requests": 20
+    "Requests": 38,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1295,
     "Carrier Name": "WEA Trust",
     "HealthDental": 2,
-    "Requests": 2
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 418,
     "Carrier Name": "Wellcare",
     "HealthDental": 2,
-    "Requests": 4645
+    "Requests": 4645,
+    "isBCBS": ""
   },
   {
-    "InsuranceID": 1029,
-    "Carrier Name": "Wellcare",
-    "HealthDental": 1,
-    "Requests": 977
+    "InsuranceID": 856,
+    "Carrier Name": "Wellmark Blue Cross Blue Shield",
+    "HealthDental": 2,
+    "Requests": 547,
+    "isBCBS": 1
   },
   {
     "InsuranceID": 1361,
     "Carrier Name": "Western Dental & Orthodontics",
     "HealthDental": 2,
-    "Requests": 6
-  },
-  {
-    "InsuranceID": 422,
-    "Carrier Name": "Western Health Advantage",
-    "HealthDental": 1,
-    "Requests": 10
-  },
-  {
-    "InsuranceID": 1320,
-    "Carrier Name": "Willamette Dental Group",
-    "HealthDental": 1,
-    "Requests": 1
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 501,
     "Carrier Name": "Workers' Compensation",
     "HealthDental": 2,
-    "Requests": 2089
+    "Requests": 2089,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1333,
     "Carrier Name": "WPS Health Plan",
     "HealthDental": 2,
-    "Requests": 1
+    "Requests": 1,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1309,
     "Carrier Name": "YourCare Health Plan",
     "HealthDental": 2,
-    "Requests": 6
-  },
-  {
-    "InsuranceID": 486,
-    "Carrier Name": "Zenith",
-    "HealthDental": 1,
-    "Requests": 14
+    "Requests": 6,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1133,
     "Carrier Name": "zz Colorado Health Cooperative",
     "HealthDental": 2,
-    "Requests": 2
-  },
-  {
-    "InsuranceID": 1121,
-    "Carrier Name": "zz Health Republic of New York",
-    "HealthDental": 1,
-    "Requests": 10
+    "Requests": 2,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 1137,
     "Carrier Name": "zz Meritus Arizona",
     "HealthDental": 2,
-    "Requests": 3
+    "Requests": 3,
+    "isBCBS": ""
   },
   {
     "InsuranceID": 292,
     "Carrier Name": "zzAllied Insurance Group",
     "HealthDental": 2,
-    "Requests": 229
+    "Requests": 229,
+    "isBCBS": ""
   }
 ]
