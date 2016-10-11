@@ -26,6 +26,7 @@ require([
     // setting & moving
     ///////////////////////////////////////////
     setCarrier = function( carrierListElement ) {
+        console.log('setCarrier: ' + carrierListElement);
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
@@ -282,7 +283,9 @@ require([
         $('.' + currentState + '-container .browse-list').addClass('active');
     }
 
-    $('.search').bind('keyup', debounce(function () {
+    $('.search').bind('keyup', debounce(function (e) {
+        if ([KEY_TAB, KEY_RETURN, KEY_DOWN_ARROW, KEY_UP_ARROW].indexOf(e.keyCode) > -1 ) return;
+
         if ($(this).val() < 2) {
             clearSearchList();
             return
@@ -328,11 +331,11 @@ require([
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
             if (currentState == 'plan') {
-                setPlan($('.plan-container .highlight'));
+                setPlan($('.plan-container .highlight').eq(0));
                 return;
             }
             if (currentState == 'carrier') {
-                setCarrier($('.carrier-container .highlight'));
+                setCarrier($('.carrier-container .highlight').eq(0));
                 return;
             }
         }
