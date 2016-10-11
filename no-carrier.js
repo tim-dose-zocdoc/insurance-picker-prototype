@@ -39,10 +39,19 @@ require([
     // setting & moving
     ///////////////////////////////////////////
     setCarrier = function( carrierListElement ) {
-        console.log('setCarrier: ' + carrierListElement);
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
+        if ( selectedCarrierID == -1 ) {
+            convertStepsToBCBS();
+            renderBCBS();
+        } else {
+            setCarrierDefault(carrierListElement);
+        }
+
+    }
+
+    setCarrierDefault = function (carrierListElement) {
         $('.list__item').removeClass('selected');
         $(carrierListElement).addClass('selected')
 
@@ -226,7 +235,23 @@ require([
         }
     }
 
+    ///////////////////////////////////////////
+    // BCBS
+    ///////////////////////////////////////////
+    convertStepsToBCBS = function () {
+        $('.step-bcbs').removeClass('hidden');
+        $('.picker').addClass('show-bcbs');
+        $('.steps').addClass('show-bcbs');
+        $('.frame').addClass('show-bcbs');
+    }
 
+    convertStepsToDefault = function () {
+
+    }
+
+    renderBCBS = function() {
+
+    }
 
     ///////////////////////////////////////////
     // misc

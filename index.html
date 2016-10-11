@@ -235,14 +235,23 @@
       border: 1px solid cyan;
     }
 
+
+    /*------------------------------------
+    steps
+    --------------------------------------*/
+    .steps-wrapper {
+      overflow: hidden;
+      margin: 8px 10px;
+    }
+
     .steps {
-      margin: 8px 0;
       display: flex;
       flex-direction: row;
-      padding-left: 10px;
-      padding-right: 10px;
       flex: none;
+      transition: 0.3s;
+      position: relative;
     }
+
 
     .step {
       flex-grow: 1;
@@ -313,6 +322,16 @@
       transition: 0.3s ;
       left: -100%;
     }
+
+    .picker.show-bcbs .frame.show-bcbs .all-lists {
+      transition: 0.3s ;
+      left: -100%;
+    }
+
+    .picker.show-bcbs .frame.show-plan .all-lists {
+      transition: 0.3s ;
+      left: -200%;
+    }
 </style>
 
 
@@ -329,10 +348,14 @@
         <div class="clear"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
       </div>
       <div class="picker__contents">
-        <div class="steps">
-          <div class="step step-carrier active">Step 1: Choose carrier <i class="fa fa-check" aria-hidden="true"></i></div>
-          <div class="step step-plan disabled">Step 2: Choose plan <i class="fa fa-check" aria-hidden="true"></i></div>
+        <div class="steps-wrapper">
+          <div class="steps">
+            <div class="step step-carrier active">Step 1: Choose carrier <i class="fa fa-check" aria-hidden="true"></i></div>
+            <div class="step step-bcbs hidden">Step 2: Choose BCBS <i class="fa fa-check" aria-hidden="true"></i></div>
+            <div class="step step-plan disabled" data-alt-text="Step 3: Choose plan">Step 2: Choose plan <i class="fa fa-check" aria-hidden="true"></i></div>
+          </div>
         </div>
+        
         <div class="selected-display">
           <div class="carrier-display"></div>
           <div class="plan-display"></div>
@@ -341,6 +364,10 @@
         <div class="frame">
           <div class="all-lists">
             <div class="list carrier-container">
+              <div class="sublist search-list hidden"></div>
+              <div class="sublist browse-list"></div>
+            </div>
+            <div class="list bcbs-container hidden">
               <div class="sublist search-list hidden"></div>
               <div class="sublist browse-list"></div>
             </div>
