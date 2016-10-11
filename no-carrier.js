@@ -11,7 +11,7 @@ require([
     '/lodash.js',
     '/mustache.js',
     '/lunr.js',
-    'text!templates/carrier-list.mustache',
+    'text!templates/carrier-initial.mustache',
     'text!templates/carrier-search.mustache',
     'text!templates/plan-list.mustache',
     'text!templates/plan-search.mustache',
@@ -152,13 +152,19 @@ require([
 
     renderCarriers = function (carriers, highlightID, mode) {
 
-        var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
+        var popular = _.sortBy(carriers,'requests').reverse().slice(0,5);
+        popular = _.sortBy(popular,'carrier');
         var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular}))
 
-        setCarrierBehavior(highlightID);        
+        setCarrierBehavior(highlightID); 
+
+        $('.see-all-link').click(function() {
+            $('.all-container').toggleClass('hidden');
+            $(this).text($('.all-container').hasClass('hidden')? $(this).data('off-text'):$(this).data('on-text'));
+        });      
     }
 
     renderCarrierSearch = function(carriers, query) {
@@ -382,6 +388,8 @@ require([
             return false;
         }
     });
+
+
 
     ///////////////////////////////////////////
     // setup
