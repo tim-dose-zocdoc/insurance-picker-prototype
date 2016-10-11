@@ -11,13 +11,21 @@ require([
     '/lodash.js',
     '/mustache.js',
     '/lunr.js',
+
     'text!templates/carrier-initial.mustache',
     'text!templates/carrier-search.mustache',
+    'text!templates/carrier-no-results.mustache',
+
     'text!templates/plan-initial.mustache',
     'text!templates/plan-search.mustache',
+    
     'text!insurance_data.json',
     'text!carriers.json'
-], function (jquery, _, Mustache, lunr, carrierTemplate, carrierSearchTemplate, planTemplate, planSearchTemplate, insuranceData, carrierData ) {
+], function (
+    jquery, _, Mustache, lunr, 
+    carrierTemplate, carrierSearchTemplate, carrierNoResultsTemplate,
+    planTemplate, planSearchTemplate, 
+    insuranceData, carrierData ) {
     var selectedCarrier = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
@@ -171,13 +179,22 @@ require([
     }
 
     renderCarrierSearch = function(carriers, query) {
-        var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
-        var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list').addClass('hidden')
-        $('.carrier-container .search-list')
+
+        var $list = $('.carrier-container .search-list');
+
+        $list
             .removeClass('hidden')
             .empty()
-            .append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
+
+        if ( carriers.length == 0 ) {
+            $list.append(Mustache.to_html(carrierNoResultsTemplate,{query:query}))
+            return;
+        }
+
+        var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
+        var all = _.sortBy(carriers,'carrier')
+        $list.append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
         setCarrierBehavior();
     }
 
@@ -307,7 +324,7 @@ require([
     $('.search').bind('keyup', debounce(function (e) {
         if ([KEY_TAB, KEY_RETURN, KEY_DOWN_ARROW, KEY_UP_ARROW].indexOf(e.keyCode) > -1 ) return;
 
-        if ($(this).val() < 2) {
+        if ($(this).val() < 1) {
             clearSearchList();
             return
         }
