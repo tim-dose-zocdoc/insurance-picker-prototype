@@ -19,6 +19,8 @@ require([
     var selectedPlan = ''
     var selectedCarrierID = '';
     var currentState = 'carrier';
+    var planIndex;
+    var currentPlans;
 
     ///////////////////////////////////////////
     // setting & moving
@@ -42,7 +44,17 @@ require([
         $('.plan-display').text('');
         selectedPlan = '';
 
-        renderPlans(plansGrouped[selectedCarrier]);
+        currentPlans = plansGrouped[selectedCarrier];
+
+        planIndex = lunr(function() {
+            this.field('plan')
+        });
+
+        currentPlans.forEach(function(i) {
+            planIndex.add(i);
+        });
+
+        renderPlans(currentPlans);
 
         moveToPlan();
     }
@@ -100,6 +112,19 @@ require([
             .append(Mustache.to_html(planTemplate,{plans:plans}))
 
 
+        setPlanBehavior(highlightID);
+    }
+
+    renderPlanSearch = function(plans, query) {
+        $('.plan-container .browse-list').removeClass('active')
+        $('.plan-container .search-list')
+            .addClass('active')
+            .empty()
+            .append(Mustache.to_html(planTemplate,{plans:plans}))
+        setPlanBehavior();
+    }
+
+    setPlanBehavior = function(highlightID) {
         $('.plan-container li')
             .hover(function() {
                 $('.plan-container li').removeClass('highlight');
@@ -131,7 +156,7 @@ require([
             .addClass('active')
             .empty()
             .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
-        setCarrierBehavior();     
+        setCarrierBehavior();
     }
 
     setCarrierBehavior = function(highlightID) {
@@ -236,6 +261,7 @@ require([
     $('.clear').click(function() {
         $(this).removeClass('active');
         $('.search').val('').focus();
+        clearSearchList();
     });
 
 
@@ -257,18 +283,27 @@ require([
     }
 
     $('.search').bind('keyup', debounce(function () {
-        // console.log($(this).val() + ' - ' + ($(this).val() < 1) )
         if ($(this).val() < 2) {
             clearSearchList();
             return
         }
         var query = $(this).val()
 
-        var results = carriersIndex.search(query).map(function (result) {
-            return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
-        })
+        if ( currentState == 'carrier' ) {
+            var results = carriersIndex.search(query).map(function (result) {
+                return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+            })
 
-        renderCarrierSearch(results, query);
+            renderCarrierSearch(results, query);
+        }
+        
+        if ( currentState == 'plan' ) {
+            var results = planIndex.search(query).map(function (result) {
+                return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+            })
+
+            renderPlanSearch(results, query);
+        }
     }))
 
     //----------------
@@ -358,13 +393,13 @@ require([
     ///////////////////////////////////////////
     // set up search
     ///////////////////////////////////////////
-    window.plansIndex = lunr(function() {
+    window.insurancesIndex = lunr(function() {
         this.field('carrier',{boost:10})
         this.field('plan')
     });
 
     plans.forEach(function(i) {
-        plansIndex.add(i);
+        insurancesIndex.add(i);
     });
 
     window.carriersIndex = lunr(function() {
