@@ -1,5 +1,5 @@
 <div>
-    <h3>popular carriers</h3>
+    <h3>popular {{entityType}}</h3>
     <ul class="list popular-list">
         {{#popular}}
             <li class="list__item has-next" data-carrier-id="{{id}}">
@@ -13,10 +13,10 @@
     </ul>
 
     <div class="controls">
-        <a href="#" class="see-all-link" data-on-text="hide all carriers" data-off-text="see all carriers">see all carriers</a>
+        <a href="#" class="see-all-link" data-on-text="hide all {{entityType}}" data-off-text="see all {{entityType}}">see all {{entityType}}</a>
     </div>
     <div class="all-container hidden">
-        <h3>all carriers</h3>
+        <h3>all {{entityType}}</h3>
         <ul class="list all-list">
             {{#all}}
                 <li class="list__item has-next" data-carrier-id="{{id}}">

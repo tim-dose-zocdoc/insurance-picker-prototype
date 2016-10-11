@@ -194,7 +194,7 @@ require([
         var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,alternates:true}))
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,alternates:true,entityType:'carriers'}))
 
         setCarrierBehavior(highlightID); 
 
@@ -277,7 +277,7 @@ require([
         var all = _.sortBy(carriers,'carrier')
         $('.bcbs-container .browse-list')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular}))
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,entityType:'companies'}))
 
         setBCBSBehavior(); 
 
