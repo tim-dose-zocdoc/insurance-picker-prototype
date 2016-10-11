@@ -10,16 +10,16 @@ require([
     '/jquery.js',
     '/lodash.js',
     '/mustache.js',
+    '/lunr.js',
     'text!templates/carrier-list.mustache',
     'text!templates/plan-list.mustache',
     'text!insurance_data.json'
-], function (jquery, _, Mustache, carrierTemplate, planTemplate, insuranceData ) {
+], function (jquery, _, Mustache, lunr, carrierTemplate, planTemplate, insuranceData ) {
     var selectedCarrier = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
     var currentState = 'carrier';
 
-    
     ///////////////////////////////////////////
     // setting & moving
     ///////////////////////////////////////////
@@ -50,7 +50,7 @@ require([
     setPlan = function( planListElement ) {
         selectedPlan = $(planListElement).find('.item').text();
 
-        $('.plan-list-container .list__item').removeClass('selected');
+        $('.plan-container .list__item').removeClass('selected');
         $(planListElement).addClass('selected')
 
         $('.step-plan').addClass('complete');
@@ -90,15 +90,19 @@ require([
     // render lists
     ///////////////////////////////////////////
 
-    renderPlans = function(plans, highlightID) {
+    renderPlans = function(plans, highlightID, mode) {
+        if ( mode === undefined ) mode = 'browse';
 
-        $('.plan-list-container')
+        $('.plan-container .sublist').not('.' + mode + '-list').removeClass('active');
+        $('.plan-container .'+mode+'-list')
             .empty()
+            .addClass('active')
             .append(Mustache.to_html(planTemplate,{plans:plans}))
 
-        $('.plan-list-container li')
+
+        $('.plan-container li')
             .hover(function() {
-                $('.plan-list-container li').removeClass('highlight');
+                $('.plan-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -106,22 +110,34 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('.plan-list-container li').eq(0).addClass('highlight');
+            $('.plan-container li').eq(0).addClass('highlight');
         } else {
-            $('.plan-list-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
+            $('.plan-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
 
-    renderCarriers = function (carriers, highlightID) {
-
-        $('.carrier-list-container')
+    renderCarriers = function (carriers, highlightID, mode) {
+        $('.carrier-container .browse-list')
             .empty()
             .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
 
-        $('.carrier-list-container li')
+        setCarrierBehavior(highlightID);        
+    }
+
+    renderCarrierSearch = function(carriers, query) {
+        $('.carrier-container .browse-list').removeClass('active')
+        $('.carrier-container .search-list')
+            .addClass('active')
+            .empty()
+            .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
+        setCarrierBehavior();     
+    }
+
+    setCarrierBehavior = function(highlightID) {
+        $('.carrier-container li')
             .hover(function() {
-                $('.carrier-list-container li').removeClass('highlight');
+                $('.carrier-container li').removeClass('highlight');
                 $(this).addClass('highlight')
             })
             .click(function(){
@@ -129,9 +145,9 @@ require([
             });
 
         if (highlightID === undefined) {
-            $('.carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('.carrier-container li').first().addClass('highlight');
         } else {
-            $('.carrier-list-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
+            $('.carrier-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
         }
     }
 
@@ -150,9 +166,21 @@ require([
 
     highlightListItem = function(itemNumber) {
         if ( itemNumber === undefined ) itemNumber = 0;
-        $('.carrier-list-container li').eq(itemNumber).addClass('highlight');
+        $('.carrier-container li').eq(itemNumber).addClass('highlight');
     }
 
+    var debounce = function (fn) {
+        var timeout
+        return function () {
+            var args = Array.prototype.slice.call(arguments),
+                    ctx = this
+
+            clearTimeout(timeout)
+            timeout = setTimeout(function () {
+                fn.apply(ctx, args)
+            }, 100)
+        }
+    }
 
     ///////////////////////////////////////////
     // picker utilities
@@ -188,25 +216,7 @@ require([
     
     
 
-    ///////////////////////////////////////////
-    // setup
-    ///////////////////////////////////////////
-    var plans = JSON.parse(insuranceData)
-        .map(function (raw) {
-            return {
-                id: raw.PlanType_ID,
-                carrier: raw.Carrier,
-                carrierDisplay: raw.Carrier,
-                plan: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
-                planDisplay: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
-                requests: raw.Requests
-            }
-        })
-
-    var plansGrouped = _.groupBy(plans, 'carrier');
-    var carriers = _.keys(plansGrouped).map(function(item, index){
-        return {id: index, carrier: item}
-    });
+    
 
     ///////////////////////////////////////////
     // event stuff
@@ -241,13 +251,32 @@ require([
         showPicker();
     });
 
+    clearSearchList = function() {
+        $('.' + currentState + '-container .search-list').removeClass('active');
+        $('.' + currentState + '-container .browse-list').addClass('active');
+    }
+
+    $('.search').bind('keyup', debounce(function () {
+        // console.log($(this).val() + ' - ' + ($(this).val() < 1) )
+        if ($(this).val() < 2) {
+            clearSearchList();
+            return
+        }
+        var query = $(this).val()
+
+        var results = carriersIndex.search(query).map(function (result) {
+            return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+        })
+
+        renderCarrierSearch(results, query);
+    }))
 
     //----------------
     // picker 
     //----------------
     $('.picker').get(0).onkeydown = function(e) {
         if (e.keyCode == KEY_DOWN_ARROW ) {
-            var $selected = $('.'+currentState+'-list-container .highlight');
+            var $selected = $('.'+currentState+'-container .highlight');
             if ( $selected.next().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.next().addClass('highlight');
@@ -255,7 +284,7 @@ require([
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
-            var $selected = $('.'+currentState+'-list-container .highlight');
+            var $selected = $('.'+currentState+'-container .highlight');
             if ( $selected.prev().length > 0 ) {
                 $selected.removeClass('highlight');
                 $selected.prev().addClass('highlight');
@@ -264,11 +293,11 @@ require([
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
             if (currentState == 'plan') {
-                setPlan($('.plan-list-container .highlight'));
+                setPlan($('.plan-container .highlight'));
                 return;
             }
             if (currentState == 'carrier') {
-                setCarrier($('.carrier-list-container .highlight'));
+                setCarrier($('.carrier-container .highlight'));
                 return;
             }
         }
@@ -303,6 +332,49 @@ require([
             return false;
         }
     });
+
+    ///////////////////////////////////////////
+    // setup
+    ///////////////////////////////////////////
+    var plans = JSON.parse(insuranceData)
+        .map(function (raw) {
+            return {
+                id: raw.PlanType_ID,
+                carrier: raw.Carrier,
+                carrierDisplay: raw.Carrier,
+                plan: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
+                planDisplay: raw.Plan.toString().replace(raw.Carrier + ' ', ''),
+                requests: raw.Requests
+            }
+        })
+
+    var plansGrouped = _.groupBy(plans, 'carrier');
+    var carriers = _.keys(plansGrouped).map(function(item, index){
+        return {id: index, carrier: item}
+    });
+
+
+
+    ///////////////////////////////////////////
+    // set up search
+    ///////////////////////////////////////////
+    window.plansIndex = lunr(function() {
+        this.field('carrier',{boost:10})
+        this.field('plan')
+    });
+
+    plans.forEach(function(i) {
+        plansIndex.add(i);
+    });
+
+    window.carriersIndex = lunr(function() {
+        this.field('carrier')
+    });
+
+    carriers.forEach(function(i) {
+        carriersIndex.add(i);
+    });
+    
     
 
 
