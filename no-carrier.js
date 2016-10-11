@@ -249,6 +249,14 @@ require([
         $('.bcbs-container').removeClass('hidden');
         $('.picker').addClass('show-bcbs');
         $('.steps').addClass('show-bcbs');
+        swapPlanText();
+    }
+
+    swapPlanText = function() {
+        var currentText = $('.step-plan').text();
+        var altText = $('.step-plan').data('alt-text');
+        $('.step-plan').data('alt-text',currentText);
+        $('.step-plan').text(altText);
     }
 
     convertStepsToDefault = function () {
@@ -256,6 +264,7 @@ require([
         $('.bcbs-container').addClass('hidden');
         $('.picker').removeClass('show-bcbs');
         $('.steps').removeClass('show-bcbs');
+        swapPlanText();
     }
 
     moveToBCBS = function() {
