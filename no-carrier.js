@@ -50,6 +50,7 @@ require([
             renderBCBS(bcbs);
             moveToBCBS();
         } else {
+            convertStepsToDefault();
             setCarrierDefault(carrierListElement);
         }
 
@@ -251,7 +252,10 @@ require([
     }
 
     convertStepsToDefault = function () {
-        console.log('convertStepsToDefault');
+        $('.step-bcbs').addClass('hidden');
+        $('.bcbs-container').addClass('hidden');
+        $('.picker').removeClass('show-bcbs');
+        $('.steps').removeClass('show-bcbs');
     }
 
     moveToBCBS = function() {
