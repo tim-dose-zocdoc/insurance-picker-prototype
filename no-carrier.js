@@ -12,10 +12,12 @@ require([
     '/mustache.js',
     '/lunr.js',
     'text!templates/carrier-list.mustache',
+    'text!templates/carrier-search.mustache',
     'text!templates/plan-list.mustache',
     'text!templates/plan-search.mustache',
-    'text!insurance_data.json'
-], function (jquery, _, Mustache, lunr, carrierTemplate, planTemplate, planSearchTemplate, insuranceData ) {
+    'text!insurance_data.json',
+    'text!carriers.json'
+], function (jquery, _, Mustache, lunr, carrierTemplate, carrierSearchTemplate, planTemplate, planSearchTemplate, insuranceData, carrierData ) {
     var selectedCarrier = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
@@ -148,6 +150,9 @@ require([
 
 
     renderCarriers = function (carriers, highlightID, mode) {
+
+        var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
+        var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list')
             .empty()
             .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
@@ -156,13 +161,13 @@ require([
     }
 
     renderCarrierSearch = function(carriers, query) {
-        var popular = _.sortBy(carriers,'requests').slice(0,3);
+        var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
         var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list').removeClass('active')
         $('.carrier-container .search-list')
             .addClass('active')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{carriers:carriers}))
+            .append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
         setCarrierBehavior();
     }
 
@@ -392,12 +397,19 @@ require([
             }
         })
 
+    var carriers = JSON.parse(carrierData)
+        .map(function (raw) {
+            return {
+                id: raw.InsuranceID,
+                carrier: raw['Carrier Name'],
+                carrierDisplay: raw['Carrier Name'],
+                requests: raw.Requests
+            }
+        })
+
+    carriers = _.sortedUniqBy(carriers, 'carrier');
+
     var plansGrouped = _.groupBy(plans, 'carrier');
-    var carriers = _.keys(plansGrouped).map(function(item, index){
-        return {id: index, carrier: item }
-    });
-
-
 
     ///////////////////////////////////////////
     // set up search

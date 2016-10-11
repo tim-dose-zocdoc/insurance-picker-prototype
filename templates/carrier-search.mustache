@@ -1,5 +1,5 @@
 <div>
-    popular carriers like {{query}}
+    <h3>popular carriers like <span class="query">{{query}}</span></h3>
     <ul class="list">
         {{#popular}}
             <li class="list__item has-next" data-carrier-id="{{id}}">
@@ -12,7 +12,7 @@
         {{/popular}}
     </ul>
 
-    all carriers like {{query}}
+    <h3>all carriers like <span class="query">{{query}}</span></h3>
     <ul class="list">
         {{#all}}
             <li class="list__item has-next" data-carrier-id="{{id}}">
