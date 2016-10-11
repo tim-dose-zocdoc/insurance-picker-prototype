@@ -1,0 +1,27 @@
+<div>
+    popular carriers like {{query}}
+    <ul class="list">
+        {{#popular}}
+            <li class="list__item has-next" data-carrier-id="{{id}}">
+                <span class="item">{{carrier}}</span>
+                <div class="icons">
+	                <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
+	                <span class="icon icon-selected"><i class="fa fa-check"></i></span>
+                </div>
+            </li>
+        {{/popular}}
+    </ul>
+
+    all carriers like {{query}}
+    <ul class="list">
+        {{#all}}
+            <li class="list__item has-next" data-carrier-id="{{id}}">
+                <span class="item">{{carrier}}</span>
+                <div class="icons">
+                    <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
+                    <span class="icon icon-selected"><i class="fa fa-check"></i></span>
+                </div>
+            </li>
+        {{/all}}
+    </ul>
+</div>

@@ -13,8 +13,9 @@ require([
     '/lunr.js',
     'text!templates/carrier-list.mustache',
     'text!templates/plan-list.mustache',
+    'text!templates/plan-search.mustache',
     'text!insurance_data.json'
-], function (jquery, _, Mustache, lunr, carrierTemplate, planTemplate, insuranceData ) {
+], function (jquery, _, Mustache, lunr, carrierTemplate, planTemplate, planSearchTemplate, insuranceData ) {
     var selectedCarrier = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
@@ -118,10 +119,13 @@ require([
 
     renderPlanSearch = function(plans, query) {
         $('.plan-container .browse-list').removeClass('active')
+
+        var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
+        var all = _.sortBy(plans,'plan')
         $('.plan-container .search-list')
             .addClass('active')
             .empty()
-            .append(Mustache.to_html(planTemplate,{plans:plans}))
+            .append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
         setPlanBehavior();
     }
 
@@ -152,6 +156,8 @@ require([
     }
 
     renderCarrierSearch = function(carriers, query) {
+        var popular = _.sortBy(carriers,'requests').slice(0,3);
+        var all = _.sortBy(carriers,'carrier')
         $('.carrier-container .browse-list').removeClass('active')
         $('.carrier-container .search-list')
             .addClass('active')
@@ -388,7 +394,7 @@ require([
 
     var plansGrouped = _.groupBy(plans, 'carrier');
     var carriers = _.keys(plansGrouped).map(function(item, index){
-        return {id: index, carrier: item}
+        return {id: index, carrier: item }
     });
 
 
