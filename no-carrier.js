@@ -14,16 +14,17 @@ require([
 
     'text!templates/carrier-initial.mustache',
     'text!templates/carrier-search.mustache',
-    'text!templates/carrier-no-results.mustache',
 
     'text!templates/plan-initial.mustache',
     'text!templates/plan-search.mustache',
-    
+
+    'text!templates/no-results.mustache',
+
     'text!insurance_data.json',
     'text!carriers.json'
 ], function (
     jquery, _, Mustache, lunr, 
-    carrierTemplate, carrierSearchTemplate, carrierNoResultsTemplate,
+    carrierTemplate, carrierSearchTemplate, noResultsTemplate,
     planTemplate, planSearchTemplate, 
     insuranceData, carrierData ) {
     var selectedCarrier = ''
@@ -134,12 +135,20 @@ require([
     renderPlanSearch = function(plans, query) {
         $('.plan-container .browse-list').addClass('hidden')
 
-        var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
-        var all = _.sortBy(plans,'plan')
-        $('.plan-container .search-list')
+        var $list = $('.plan-container .search-list');
+
+        $list
             .removeClass('hidden')
             .empty()
-            .append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
+
+        if ( plans.length == 0 ) {
+            $list.append(Mustache.to_html(noResultsTemplate,{type:'plans',query:query}))
+            return;
+        }
+        
+        var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
+        var all = _.sortBy(plans,'plan')
+        $list.append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
         setPlanBehavior();
     }
 
@@ -188,7 +197,7 @@ require([
             .empty()
 
         if ( carriers.length == 0 ) {
-            $list.append(Mustache.to_html(carrierNoResultsTemplate,{query:query}))
+            $list.append(Mustache.to_html(noResultsTemplate,{type:'carriers',query:query}))
             return;
         }
 
