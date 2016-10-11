@@ -24,8 +24,9 @@ require([
     'text!carriers.json'
 ], function (
     jquery, _, Mustache, lunr, 
-    carrierTemplate, carrierSearchTemplate, noResultsTemplate,
+    carrierTemplate, carrierSearchTemplate, 
     planTemplate, planSearchTemplate, 
+    noResultsTemplate,
     insuranceData, carrierData ) {
     var selectedCarrier = ''
     var selectedPlan = ''
@@ -326,8 +327,8 @@ require([
     });
 
     clearSearchList = function() {
-        $('.' + currentState + '-container .search-list').removeClass('active');
-        $('.' + currentState + '-container .browse-list').addClass('active');
+        $('.' + currentState + '-container .search-list').addClass('hidden');
+        $('.' + currentState + '-container .browse-list').removeClass('hidden');
     }
 
     $('.search').bind('keyup', debounce(function (e) {
