@@ -32,6 +32,7 @@ require([
     var selectedBCBS = ''
     var selectedPlan = ''
     var selectedCarrierID = '';
+    var payingForSelfOrChoosingLater = false;
     var currentState = 'carrier';
     var planIndex;
     var currentPlans;
@@ -45,10 +46,16 @@ require([
 
         $('.step-carrier').addClass('complete');
 
+
+
         if ( selectedCarrierID == -1 ) {
             convertStepsToBCBS();
             renderBCBS(bcbs);
             moveToBCBS();
+        } else if ( selectedCarrierID == -2 ) {
+            chooseLater();
+        } else if ( selectedCarrierID == -3 ) {
+            payingForMyself();
         } else {
             convertStepsToDefault();
             setCarrierDefault(carrierListElement);
@@ -71,6 +78,7 @@ require([
         $('.carrier-display').text(selectedCarrier);
         $('.plan-display').text('');
         selectedPlan = '';
+        payingForSelfOrChoosingLater = false;
 
         currentPlans = plansGrouped[selectedCarrier];
 
@@ -127,6 +135,22 @@ require([
         currentState = 'carrier';
     }
 
+
+    ///////////////////////////////////////////
+    // not using insurance 
+    ///////////////////////////////////////////
+
+    payingForMyself = function () {
+        $('.search').val("I'm paying for myself")
+        payingForSelfOrChoosingLater = true;
+        hidePicker();
+    }
+
+    chooseLater = function () {
+        $('.search').val("I'll choose my insurance later")
+        payingForSelfOrChoosingLater = true;
+        hidePicker();
+    }
 
     ///////////////////////////////////////////
     // render lists
@@ -395,7 +419,7 @@ require([
         $picker.removeClass('active');
         $('.clear').removeClass('active');
 
-        if ( selectedCarrier == '' || selectedPlan == '' )   {
+        if ( !isComplete() )   {
             $picker.addClass('incomplete');
         } else {
             $picker.removeClass('incomplete');
@@ -408,7 +432,9 @@ require([
     }
     
     
-
+    isComplete = function() {
+        return (selectedCarrier != ''  && selectedPlan != '') || payingForSelfOrChoosingLater;
+    }
     
 
     ///////////////////////////////////////////
