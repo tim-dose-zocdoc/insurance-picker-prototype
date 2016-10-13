@@ -65,6 +65,87 @@
       padding: 10px;
     }
 
+    /*------------------------------------
+    highlighting options
+    --------------------------------------*/
+
+    /* 
+    option 1 -- hover -- selected --
+                pink     gray
+    */
+
+    .list__item.selected{
+      background: #F3F3F4;
+    }
+
+
+    .list__item.highlight {
+      background-color: #FFECF1;
+    }
+
+    .list__item:active {
+      background-color: #FFDAE4;
+    }
+
+
+    /* 
+    option 2 -- hover -- selected --
+                pink     light pink
+    */
+    
+    .option2 .list__item.selected{
+      background: #FFF8FA;
+    }
+
+
+    .option2 .list__item.highlight {
+      background-color: #FFECF1;
+    }
+
+    .option2 .list__item:active {
+      background-color: #FFDAE4;
+    }
+
+
+    /* 
+    option 3 -- hover -- selected --
+                pink     pink
+    */
+    
+    .option3 .list__item.selected{
+      background: #FFECF1;
+    }
+
+
+    .option3 .list__item.highlight {
+      background-color: #FFECF1;
+    }
+
+    .option3 .list__item:active {
+      background-color: #FFDAE4;
+    }
+    
+
+
+    /* `
+    option 4 -- hover -- selected --
+                pink     nothing
+    */
+
+    .option4 .list__item.selected{
+      background: #fff;
+    }
+
+
+    .option4 .list__item.highlight {
+      background-color: #FFECF1;
+    }
+
+    .option4 .list__item:active {
+      background-color: #FFDAE4;
+    }
+    
+    
 
     /*------------------------------------
     spaghetti
@@ -130,6 +211,7 @@
       float: right;
     }
 
+
     .list__item.selected .icon-selected {
       display: block;
     }
@@ -153,13 +235,6 @@
     .query, .match {
       color: #FF6473;
     }
-
-    .highlight {
-      background-color: #f0f0f0;
-    }
-
-    
-
 
     .search-wrapper {
       border: 1px solid #aaa;
@@ -214,27 +289,6 @@
       color: red;
     }
     
-    .carrier-tag {
-      display: none;
-      background: #f0f0f0;
-      padding: 5px;
-      box-sizing: border-box;
-      flex: none;
-      flex-basis: auto;
-    }
-
-    .carrier-tag.active {
-      display: block;
-    }
-
-    .carrier-tag.highlight {
-      background: red;
-    }
-
-    .carrier-tag:focus {
-      border: 1px solid cyan;
-    }
-
 
     /*------------------------------------
     steps
