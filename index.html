@@ -65,6 +65,10 @@
       padding: 10px;
     }
 
+    .list__item {
+      cursor: pointer;
+    }
+
     /*------------------------------------
     highlighting options
     --------------------------------------*/
@@ -133,7 +137,7 @@
     */
 
     .option4 .list__item.selected{
-      background: #fff;
+      background: #fff; 
     }
 
 
@@ -142,6 +146,27 @@
     }
 
     .option4 .list__item:active {
+      background-color: #FFDAE4;
+    }
+    
+    
+
+
+    /* `
+    option 5 -- hover -- selected --
+                pink     darker pink
+    */
+
+    .option5 .list__item.selected{
+      background: #FFDAE4; 
+    }
+
+
+    .option5 .list__item.highlight {
+      background-color: #FFECF1;
+    }
+
+    .option5 .list__item:active {
       background-color: #FFDAE4;
     }
     
@@ -395,7 +420,7 @@
 
 
 </head>
-<body class="unbranded">
+<body class="unbranded option3">
   <div class="wrap">
 
     <div class="picker">
