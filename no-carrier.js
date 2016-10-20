@@ -57,16 +57,19 @@ require([
         setComplete: function(complete) {
             if ( complete === undefined ) complete = true;
             $('.search-wrapper').toggleClass('complete', complete);
+        },
+        setPlaceholder: function(text) {
+            $('.search').attr('placeholder',text)
         }
     }
 
     display = {
         setCarrier: function(value) {
-
+            $('.selected-display__carrier').text(value);
         },
 
         setPlan: function(value) {
-
+            $('.selected-display__plan').text(value);
         },
 
         setVisibility: function(makeVisible) {
@@ -158,8 +161,8 @@ require([
 
         
         display.setVisibility(true);
-        $('.selected-display__carrier').text(selectedCarrier);
-        $('.selected-display__plan').text('');
+        display.setCarrier(selectedCarrier)
+        display.setPlan('');
         selectedPlan = '';
         payingForSelfOrChoosingLater = false;
 
@@ -197,7 +200,7 @@ require([
         steps.setEnabled('plan');
         steps.setActive('plan');
 
-        $('.search').attr('placeholder','insurance plan')
+        search.setPlaceholder('insurance plan')
 
         lists.showList('plan');
 
@@ -205,10 +208,9 @@ require([
     }
 
     moveToCarrier = function() {
-        $('.step').removeClass('active');
-        $('.step-carrier').addClass('active');
+        steps.setActive('carrier');
 
-        $('.search').attr('placeholder','search carriers and plans')
+        search.setPlaceholder('insurance carrier and plan');
 
         lists.showList('carrier');
 
@@ -374,7 +376,7 @@ require([
     moveToBCBS = function() {        
         steps.showBCBS();
 
-        $('.search').attr('placeholder','insurance carrier')
+        search.setPlaceholder('insurance carrier');
         
         lists.showList('bcbs');
 
@@ -413,8 +415,8 @@ require([
         $('.step-bcbs').addClass('complete');
         $('.picker').removeClass('complete');
         display.setVisibility(true);
-        $('.selected-display__carrier').text(selectedBCBS);
-        $('.selected-display__plan').text('');
+        display.setCarrier(selectedBCBS)
+        display.setPlan('')
         selectedPlan = '';
 
         currentPlans = plansGrouped[selectedBCBS];
