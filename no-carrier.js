@@ -41,6 +41,25 @@ require([
     // display component experiment
     ///////////////////////////////////////////
 
+    picker = {
+        setComplete: function(complete) {
+            if ( complete === undefined ) complete = true;
+            $('.picker').toggleClass('complete', complete);
+        },
+
+        setVisibility: function(makeVisible) {
+            if ( makeVisible === undefined ) makeVisible = true;
+            $('.picker').toggleClass('active', makeVisible);
+        }
+    }
+
+    search = {
+        setComplete: function(complete) {
+            if ( complete === undefined ) complete = true;
+            $('.search-wrapper').toggleClass('complete', complete);
+        }
+    }
+
     display = {
         setCarrier: function(value) {
 
@@ -51,17 +70,38 @@ require([
         },
 
         setVisibility: function(makeVisible) {
-            if ( makeVisible ) {
-                $('.selected-display').addClass('active');    
-            } else {
-                $('.selected-display').removeClass('active');    
-            }
+            $('.selected-display').toggleClass('active', makeVisible);    
         }
     }
 
     steps = {
-        setComplete: function(step, complete) {
+        setComplete: function(stepName, complete) {
+            if ( complete === undefined ) complete = true;
 
+            $('.step-'+stepName).toggleClass('complete');
+        },
+        setActive: function(stepName) {
+            $('.step').removeClass('active');
+            $('.step-'+stepName).addClass('active');
+        },
+        setEnabled: function(stepName, makeEnabled) {
+            if ( makeEnabled === undefined ) makeEnabled = true;
+
+            $('.step-'+stepName).toggleClass('disabled', !makeEnabled);
+        },
+        showBCBS: function(makeVisible) {
+            if ( makeVisible === undefined ) makeVisible = true;
+
+            
+        }
+    }
+
+    lists = {
+        showList: function(listName) {
+            $('.lists-wrapper')
+                .toggleClass('show-bcbs', listName == 'bcbs')
+                .toggleClass('show-plan', listName == 'plan')
+                // carrier happens by default when the other two classes are removed
         }
     }
 
@@ -87,7 +127,7 @@ require([
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
-        $('.step-carrier').addClass('complete');
+        steps.setComplete('carrier')
         $('.picker').removeClass('complete');
 
 
@@ -117,7 +157,6 @@ require([
             .focus();
 
         
-        // $('.selected-display').addClass('active');
         display.setVisibility(true);
         $('.selected-display__carrier').text(selectedCarrier);
         $('.selected-display__plan').text('');
@@ -145,9 +184,9 @@ require([
         $('.plan-container .list__item').removeClass('selected');
         $(planListElement).addClass('selected')
 
-        $('.step-plan').addClass('complete');
-        $('.search-wrapper').addClass('complete');
-        $('.picker').addClass('complete');
+        steps.setComplete('plan');
+        search.setComplete();
+        picker.setComplete();
         $('.selected-display__plan').text(selectedPlan);
         $('.search').blur();
         hidePicker();
@@ -155,16 +194,12 @@ require([
 
     moveToPlan = function() {
         $('.step').removeClass('active');
-        $('.step-plan').addClass('active').removeClass('disabled');
+        steps.setEnabled('plan');
+        steps.setActive('plan');
 
-        // $('.search').attr('placeholder','search ' + truncate(selectedCarrier,18) + ' plans')
-        // $('.search').attr('placeholder','search "' + truncate(selectedCarrier,16) + '" plans')
-        // $('.search').attr('placeholder','search ' + selectedCarrier + ' plans')
-        // $('.search').attr('placeholder','search plans for ' + selectedCarrier)
-        $('.search').attr('placeholder','search plans')
+        $('.search').attr('placeholder','insurance plan')
 
-        $('.lists-wrapper').removeClass('show-bcbs');
-        $('.lists-wrapper').addClass('show-plan');
+        lists.showList('plan');
 
         currentState = 'plan';
     }
@@ -175,7 +210,7 @@ require([
 
         $('.search').attr('placeholder','search carriers and plans')
 
-        $('.lists-wrapper').removeClass('show-plan show-bcbs');
+        lists.showList('carrier');
 
         currentState = 'carrier';
     }
@@ -336,14 +371,12 @@ require([
         swapPlanText();
     }
 
-    moveToBCBS = function() {
-        $('.step').removeClass('active');
-        $('.step-bcbs').addClass('active');
+    moveToBCBS = function() {        
+        steps.showBCBS();
 
-        $('.search').attr('placeholder','search BCBS companies')
+        $('.search').attr('placeholder','insurance carrier')
         
-        $('.lists-wrapper').removeClass('show-plan');
-        $('.lists-wrapper').addClass('show-bcbs');
+        lists.showList('bcbs');
 
         currentState = 'bcbs';
     }
@@ -450,10 +483,9 @@ require([
     ///////////////////////////////////////////
     showPicker = function() {
         if ( $('.picker').hasClass('active') ) return;
-        $('.picker').addClass('active');
+        picker.setVisibility(true);
         if ( selectedCarrier != '' && selectedCarrier != '' ) {
             $('.search').val('')
-            // $('.search').val(selectedPlan)
         }
         if ( $('.search').val().length > 0 ) {
             $('.clear').addClass('active');
@@ -462,18 +494,13 @@ require([
 
     hidePicker = function() {
         $picker = $('.picker');
-        $picker.removeClass('active');
+        picker.setVisibility(false);
         $('.clear').removeClass('active');
 
-        if ( !isComplete() )   {
-            $picker.addClass('incomplete');
-        } else {
-            $picker.removeClass('incomplete');
-        }
+        $picker.toggleClass('incomplete', !isComplete() )
 
         if ( selectedCarrier != '' && selectedPlan != '' ) {
             $('.search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
-            // $('.search').val(truncate(selectedCarrier,14) + ' - ' + selectedPlan)
         }
     }
     
