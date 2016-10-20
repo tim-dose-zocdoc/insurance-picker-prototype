@@ -209,14 +209,6 @@
       display: block;
     }
 
-    .clear {
-      flex: none;
-      display: none;
-    }
-
-    .clear.active {
-      display: block;
-    }
 
 
 
@@ -255,7 +247,20 @@
     .search.prompt {
       color: red;
     }
-    
+
+
+    .clear {
+      flex: none;
+      display: none;
+    }
+
+    .picker.complete .clear {
+      display: block;
+    }
+
+
+
+  
 
 
 
@@ -340,6 +345,7 @@
 
     .selected-display__clear {
       font-size: 12px;
+      display: none;
     }
 
     .selected-display__plan:empty + .selected-display__clear {

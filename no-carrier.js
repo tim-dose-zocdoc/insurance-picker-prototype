@@ -6,6 +6,14 @@ const KEY_RETURN = 13;
 const KEY_TAB = 9;
 const KEY_DELETE = 8;
 
+const STRINGS = {
+    PLACEHOLDER: {
+        CARRIER: 'insurance carrier and plan',
+        BCBS:    'insurance carrier',
+        PLAN:    'insurance plan'
+    }
+}
+
 require([
     '/jquery.js',
     '/lodash.js',
@@ -46,7 +54,10 @@ require([
             if ( complete === undefined ) complete = true;
             $('.picker').toggleClass('complete', complete);
         },
-
+        setIncomplete: function(incomplete) {
+            if ( incomplete === undefined ) incomplete = true;
+            $('.picker').toggleClass('incomplete', incomplete);
+        },
         setVisibility: function(makeVisible) {
             if ( makeVisible === undefined ) makeVisible = true;
             $('.picker').toggleClass('active', makeVisible);
@@ -137,9 +148,11 @@ require([
         lists.clearAllHighlights();
 
         picker.setComplete(false);
+        picker.setVisibility(true);
 
         search.setValue('');
         search.setComplete(false);
+        search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
     }
 
     setCarrier = function( carrierListElement ) {
@@ -216,7 +229,7 @@ require([
         steps.setEnabled('plan');
         steps.setActive('plan');
 
-        search.setPlaceholder('insurance plan')
+        search.setPlaceholder(STRINGS.PLACEHOLDER.PLAN)
 
         lists.showList('plan');
 
@@ -226,7 +239,7 @@ require([
     moveToCarrier = function() {
         steps.setActive('carrier');
 
-        search.setPlaceholder('insurance carrier and plan');
+        search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
 
         lists.showList('carrier');
 
@@ -392,7 +405,7 @@ require([
     moveToBCBS = function() {        
         steps.showBCBS();
 
-        search.setPlaceholder('insurance carrier');
+        search.setPlaceholder(STRINGS.PLACEHOLDER.BCBS);
         
         lists.showList('bcbs');
 
@@ -502,20 +515,17 @@ require([
     showPicker = function() {
         if ( $('.picker').hasClass('active') ) return;
         picker.setVisibility(true);
-        // if ( selectedCarrier != '' && selectedCarrier != '' ) {
-        //     $('.search').val('')
+        // if ( $('.search').val().length > 0 ) {
+        //     $('.clear').addClass('active');
         // }
-        if ( $('.search').val().length > 0 ) {
-            $('.clear').addClass('active');
-        }
     }
 
     hidePicker = function() {
         $picker = $('.picker');
         picker.setVisibility(false);
-        $('.clear').removeClass('active');
+        // $('.clear').removeClass('active');
 
-        $picker.toggleClass('incomplete', !isComplete() )
+        picker.setIncomplete(!isComplete());
 
         if ( selectedCarrier != '' && selectedPlan != '' ) {
             $('.search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
@@ -535,18 +545,19 @@ require([
     //----------------
     // clear button 
     //----------------
-    toggleClear = function () {
-        if ( $('.search').val().length > 0 ) {
-            $('.clear').addClass('active');
-        } else {
-            $('.clear').removeClass('active');
-        }
-    }
+    // toggleClear = function () {
+    //     if ( $('.search').val().length > 0 ) {
+    //         $('.clear').addClass('active');
+    //     } else {
+    //         $('.clear').removeClass('active');
+    //     }
+    // }
     
     $('.clear').click(function() {
-        $(this).removeClass('active');
-        $('.search').val('').focus();
-        clearSearchList();
+        // $(this).removeClass('active');
+        // $('.search').val('').focus();
+        // clearSearchList();
+        startOver();
     });
 
 
@@ -559,8 +570,8 @@ require([
     //----------------
     // search field 
     //----------------
-    $('.search').change(toggleClear);
-    $('.search').keyup(toggleClear);
+    // $('.search').change(toggleClear);
+    // $('.search').keyup(toggleClear);
 
     $('.search').focus(function() {
         $(this).removeClass('incomplete')
