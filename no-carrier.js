@@ -105,6 +105,9 @@ require([
                 .toggleClass('show-bcbs', listName == 'bcbs')
                 .toggleClass('show-plan', listName == 'plan')
                 // carrier happens by default when the other two classes are removed
+        },
+        clearAllHighlights: function() {
+            $('.all-lists li').removeClass('highlight selected');
         }
     }
 
@@ -124,6 +127,12 @@ require([
         steps.setComplete('carrier', false);
         steps.setComplete('bcbs', false);
         steps.setComplete('plan', false);
+        steps.setActive('carrier');
+
+        lists.showList('carrier');
+        lists.clearAllHighlights();
+
+        picker.setComplete(false);
     }
 
     setCarrier = function( carrierListElement ) {
@@ -535,7 +544,7 @@ require([
 
 
     $('.selected-display__clear').click(function() {
-
+        startOver();
     });
 
 
