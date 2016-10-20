@@ -57,9 +57,13 @@ require([
         setComplete: function(complete) {
             if ( complete === undefined ) complete = true;
             $('.search-wrapper').toggleClass('complete', complete);
+            $('.search').attr('readonly',complete);
         },
         setPlaceholder: function(text) {
             $('.search').attr('placeholder',text)
+        },
+        setValue: function(value) {
+            $('.search').val(value);
         }
     }
 
@@ -133,6 +137,9 @@ require([
         lists.clearAllHighlights();
 
         picker.setComplete(false);
+
+        search.setValue('');
+        search.setComplete(false);
     }
 
     setCarrier = function( carrierListElement ) {
@@ -495,9 +502,9 @@ require([
     showPicker = function() {
         if ( $('.picker').hasClass('active') ) return;
         picker.setVisibility(true);
-        if ( selectedCarrier != '' && selectedCarrier != '' ) {
-            $('.search').val('')
-        }
+        // if ( selectedCarrier != '' && selectedCarrier != '' ) {
+        //     $('.search').val('')
+        // }
         if ( $('.search').val().length > 0 ) {
             $('.clear').addClass('active');
         }
