@@ -38,14 +38,57 @@ require([
     var currentPlans;
 
     ///////////////////////////////////////////
+    // display component experiment
+    ///////////////////////////////////////////
+
+    display = {
+        setCarrier: function(value) {
+
+        },
+
+        setPlan: function(value) {
+
+        },
+
+        setVisibility: function(makeVisible) {
+            if ( makeVisible ) {
+                $('.selected-display').addClass('active');    
+            } else {
+                $('.selected-display').removeClass('active');    
+            }
+        }
+    }
+
+    steps = {
+        setComplete: function(step, complete) {
+
+        }
+    }
+
+    ///////////////////////////////////////////
     // setting & moving
     ///////////////////////////////////////////
+
+    startOver = function() {
+        selectedCarrier = '';
+        selectedCarrierID = '';
+
+        currentState = 'carrier';
+
+        display.setCarrier('');
+        display.setPlan('');
+
+        steps.setComplete('carrier', false);
+        steps.setComplete('bcbs', false);
+        steps.setComplete('plan', false);
+    }
+
     setCarrier = function( carrierListElement ) {
         selectedCarrier = $(carrierListElement).find('.item').text();
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
         $('.step-carrier').addClass('complete');
-
+        $('.picker').removeClass('complete');
 
 
         if ( selectedCarrierID == -1 ) {
@@ -74,9 +117,10 @@ require([
             .focus();
 
         
-        $('.selected-display').addClass('active');
-        $('.carrier-display').text(selectedCarrier);
-        $('.plan-display').text('');
+        // $('.selected-display').addClass('active');
+        display.setVisibility(true);
+        $('.selected-display__carrier').text(selectedCarrier);
+        $('.selected-display__plan').text('');
         selectedPlan = '';
         payingForSelfOrChoosingLater = false;
 
@@ -103,7 +147,8 @@ require([
 
         $('.step-plan').addClass('complete');
         $('.search-wrapper').addClass('complete');
-        $('.plan-display').text(selectedPlan);
+        $('.picker').addClass('complete');
+        $('.selected-display__plan').text(selectedPlan);
         $('.search').blur();
         hidePicker();
     }
@@ -118,8 +163,8 @@ require([
         // $('.search').attr('placeholder','search plans for ' + selectedCarrier)
         $('.search').attr('placeholder','search plans')
 
-        $('.frame').removeClass('show-bcbs');
-        $('.frame').addClass('show-plan');
+        $('.lists-wrapper').removeClass('show-bcbs');
+        $('.lists-wrapper').addClass('show-plan');
 
         currentState = 'plan';
     }
@@ -130,7 +175,7 @@ require([
 
         $('.search').attr('placeholder','search carriers and plans')
 
-        $('.frame').removeClass('show-plan show-bcbs');
+        $('.lists-wrapper').removeClass('show-plan show-bcbs');
 
         currentState = 'carrier';
     }
@@ -297,8 +342,8 @@ require([
 
         $('.search').attr('placeholder','search BCBS companies')
         
-        $('.frame').removeClass('show-plan');
-        $('.frame').addClass('show-bcbs');
+        $('.lists-wrapper').removeClass('show-plan');
+        $('.lists-wrapper').addClass('show-bcbs');
 
         currentState = 'bcbs';
     }
@@ -333,9 +378,10 @@ require([
             .focus();
 
         $('.step-bcbs').addClass('complete');
-        $('.selected-display').addClass('active');
-        $('.carrier-display').text(selectedBCBS);
-        $('.plan-display').text('');
+        $('.picker').removeClass('complete');
+        display.setVisibility(true);
+        $('.selected-display__carrier').text(selectedBCBS);
+        $('.selected-display__plan').text('');
         selectedPlan = '';
 
         currentPlans = plansGrouped[selectedBCBS];
@@ -456,6 +502,11 @@ require([
         $(this).removeClass('active');
         $('.search').val('').focus();
         clearSearchList();
+    });
+
+
+    $('.selected-display__clear').click(function() {
+
     });
 
 
