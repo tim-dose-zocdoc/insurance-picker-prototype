@@ -224,6 +224,14 @@ require([
         hidePicker();
     }
 
+    clearPlan = function() {
+        selectedPlan = '';
+        display.setPlan('')
+        steps.setEnabled('plan', false );
+        picker.setComplete(false);
+        moveToCarrier();
+    }
+
     moveToPlan = function() {
         $('.step').removeClass('active');
         steps.setEnabled('plan');
@@ -543,8 +551,9 @@ require([
     ///////////////////////////////////////////
 
     //----------------
-    // clear button 
+    // clear buttons
     //----------------
+
     // toggleClear = function () {
     //     if ( $('.search').val().length > 0 ) {
     //         $('.clear').addClass('active');
@@ -565,7 +574,14 @@ require([
         startOver();
     });
 
-
+    $('.selected-display i').click(function() {
+        var target = $(this).data('target');
+        if (target == 'carrier') {
+            startOver();
+        } else {
+            clearPlan();
+        }
+    });
 
     //----------------
     // search field 
