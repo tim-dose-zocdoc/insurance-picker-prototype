@@ -109,8 +109,23 @@ require([
         },
         showBCBS: function(makeVisible) {
             if ( makeVisible === undefined ) makeVisible = true;
+        },
+        convertToBCBS: function () {
+            $('.step-bcbs').removeClass('hidden');
+            $('.bcbs-container').removeClass('hidden');
+            $('.picker').addClass('show-bcbs');
+            $('.steps').addClass('show-bcbs');
+            var planStepText = $('.step-plan').text();
+            $('.step-plan').text(planStepText.replace('2', '3'));
+        },
 
-            
+        convertToDefault: function () {
+            $('.step-bcbs').addClass('hidden');
+            $('.bcbs-container').addClass('hidden');
+            $('.picker').removeClass('show-bcbs');
+            $('.steps').removeClass('show-bcbs');
+            var planStepText = $('.step-plan').text();
+            $('.step-plan').text(planStepText.replace('3', '2'));
         }
     }
 
@@ -164,7 +179,7 @@ require([
 
 
         if ( selectedCarrierID == -1 ) {
-            convertStepsToBCBS();
+            steps.convertToBCBS();
             renderBCBS(bcbs);
             moveToBCBS();
         } else if ( selectedCarrierID == -2 ) {
@@ -172,7 +187,7 @@ require([
         } else if ( selectedCarrierID == -3 ) {
             payingForMyself();
         } else {
-            convertStepsToDefault();
+            steps.convertToDefault();
             setCarrierDefault(carrierListElement);
         }
 
@@ -387,28 +402,6 @@ require([
     ///////////////////////////////////////////
     // BCBS
     ///////////////////////////////////////////
-    convertStepsToBCBS = function () {
-        $('.step-bcbs').removeClass('hidden');
-        $('.bcbs-container').removeClass('hidden');
-        $('.picker').addClass('show-bcbs');
-        $('.steps').addClass('show-bcbs');
-        swapPlanText();
-    }
-
-    swapPlanText = function() {
-        var currentText = $('.step-plan').text();
-        var altText = $('.step-plan').data('alt-text');
-        $('.step-plan').data('alt-text',currentText);
-        $('.step-plan').text(altText);
-    }
-
-    convertStepsToDefault = function () {
-        $('.step-bcbs').addClass('hidden');
-        $('.bcbs-container').addClass('hidden');
-        $('.picker').removeClass('show-bcbs');
-        $('.steps').removeClass('show-bcbs');
-        swapPlanText();
-    }
 
     moveToBCBS = function() {        
         steps.showBCBS();
