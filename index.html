@@ -107,11 +107,16 @@
     }
 
     .picker__contents {
-      display: none;
-      height: 480px;
-      flex-direction: column;
+        display: none;
+        height: 480px;
+        flex-direction: column;
+        width: 532px;
+        left: -214px;
+        position: relative;
+        background: #fff;
+        padding: 8px 6px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2);
     }
-
 
     .picker.active .picker__contents {
       display: flex;
@@ -344,6 +349,8 @@
     .selected-display__plan {
       font-size: 18px;
       font-weight: bold;
+      line-height: 20px;
+      margin-bottom: 4px;
     }
 
     .selected-display__carrier:empty + i,
@@ -428,7 +435,7 @@
         <div class="selected-display">
           <div class="selected-display__carrier"></div>
           <div class="selected-display__plan"></div>
-          <a href="#" class="selected-display__clear">change</a>
+          <a class="selected-display__clear">change</a>
         </div>
 
 
