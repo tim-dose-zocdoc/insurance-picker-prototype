@@ -420,7 +420,7 @@ require([
         var all = _.sortBy(carriers,'carrier')
         $('.bcbs-container .browse-list')
             .empty()
-            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,entityType:'companies'}))
+            .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,entityType:'carriers'}))
 
         setBCBSBehavior(); 
 
