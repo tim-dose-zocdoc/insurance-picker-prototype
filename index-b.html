@@ -324,8 +324,19 @@
       display: block;
     }
 
+    .selected-display__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .selected-display__item {
+      flex: 1 0;
+    }
+
     .selected-display i {
       color: #aaa;
+      flex: none;
     }
 
     .selected-display i:hover {
@@ -419,8 +430,8 @@
       </div>
       <div class="picker__contents">
         <div class="selected-display">
-          <div><span class="selected-display__carrier"></span> <i class="fa fa-times" data-target="carrier" aria-hidden="true"></i></div>
-          <div><span class="selected-display__plan"></span> <i class="fa fa-times" data-target="plan" aria-hidden="true"></i></div>
+          <div class="selected-display__row"><span class="selected-display__item selected-display__carrier"></span> <i class="fa fa-times" data-target="carrier" aria-hidden="true"></i></div>
+          <div class="selected-display__row"><span class="selected-display__item selected-display__plan"></span> <i class="fa fa-times" data-target="plan" aria-hidden="true"></i></div>
           <a href="#" class="selected-display__clear">change</a>
         </div>
 
