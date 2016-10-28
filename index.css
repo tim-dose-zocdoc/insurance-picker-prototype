@@ -156,6 +156,34 @@ picker
     height: auto;
 }
 
+.picker__header {
+    display: none;
+    position: relative;
+}
+
+.picker__header h4 {
+    text-align: center;
+}
+
+.picker__header i {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.picker__header i:hover {
+    color: #00234B;
+}
+
+
+@media screen and (max-width: 767px) {
+    .picker.active .picker__header {
+        display: block;
+    }
+}
+
 /*------------------------------------
 spaghetti
 --------------------------------------*/
@@ -238,6 +266,12 @@ ul {
 .query, .match {
     color: #FF6473;
 }
+
+
+
+/*------------------------------------
+tooltip
+--------------------------------------*/
 
 .tooltip {
     flex: none;
