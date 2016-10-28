@@ -13,12 +13,12 @@ body {
 }
 
 body, .search {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body.branded,
 body.branded .search {
-    font-family: 'Sharp Sans No1';
+    font-family: 'Sharp Sans No1', Arial, sans-serif;
     color: #00234B;
 }
 
