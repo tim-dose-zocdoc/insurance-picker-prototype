@@ -661,6 +661,10 @@ require([
         }
     });
 
+    $('.picker__close').click(function(){
+        hidePicker();
+    });
+
 
 
     //----------------
