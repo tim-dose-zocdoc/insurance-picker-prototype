@@ -32,8 +32,8 @@ require([
 
     'text!templates/no-results.mustache',
 
-    'text!insurance_data.json',
-    'text!carriers.json'
+    'text!data/insurance_data.json',
+    'text!data/carriers.json'
 ], function (
     jquery, _, Mustache, lunr, 
     carrierTemplate, carrierSearchTemplate, 
