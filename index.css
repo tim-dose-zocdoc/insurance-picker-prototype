@@ -199,6 +199,10 @@ picker
 
 .picker.complete .picker__contents {
     height: auto;
+    min-height: 48px;
+    position: absolute;
+    top: 0;
+    transition: width 0.3s ease;
 }
 
 .picker__header {
@@ -231,6 +235,10 @@ picker
         flex: none;
         opacity: 1;
         transition: opacity 0.6s ease;
+    }
+
+    .picker.complete .picker__contents {
+        display: block;
     }
 
     .transition {
@@ -377,6 +385,7 @@ search
     flex: none;
     height: 48px;
     transition: margin 0.5s ease;
+    position: relative;
 }
 
 @media screen and (max-width: 767px) {
@@ -495,10 +504,11 @@ selected display
 
 .selected-display__carrier,
 .selected-display__plan {
-    font-size: 18px;
-    font-weight: bold;
+    /*font-size: 18px;*/
+    /*font-weight: bold;*/
     line-height: 20px;
     margin-bottom: 4px;
+    display: inline;
 }
 
 .selected-display__carrier:empty + i,
