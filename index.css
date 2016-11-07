@@ -63,6 +63,8 @@ h3 {
     margin-bottom: 8px;
 }
 
+
+
 input:focus {
     outline: none;
 }
@@ -475,8 +477,8 @@ selected display
 --------------------------------------*/
 
 .selected-display {
-    padding: 0 10px;
-    margin: 8px 0;
+    /*padding: 0 16px;*/
+    /*margin: 8px 0;*/
     flex: none;
     display: none;
 }
@@ -493,13 +495,6 @@ selected display
     color: #666;
 }
 
-.selected-display__carrier,
-.selected-display__plan {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 20px;
-    margin-bottom: 4px;
-}
 
 .selected-display__carrier:empty + i,
 .selected-display__plan:empty + i {
@@ -514,7 +509,13 @@ selected display
     display: none;
 }
 
+.selected-display__change {
+    display: none;
+}
 
+.complete .selected-display__change {
+    display: block;
+}
 
 /*------------------------------------
 lists & transitions

@@ -22,10 +22,19 @@
       </div>
       <div class="picker__contents">
         <div class="selected-display">
-          <div class="selected-display__carrier"></div>
-          <!-- <a class="selected-display__clear">change</a> -->
-          <div class="selected-display__plan"></div>
-          <a class="selected-display__clear">change</a>
+          <!-- <h3>current selection</h3> -->
+          <ul class="list">
+            <li class="list__item has-next">
+              <span class="selected-display__carrier"></span>&nbsp;-&nbsp;<span class="selected-display__plan"></span>
+            </li>
+          </ul>
+          <div class="selected-display__change">
+            <hr>
+            <ul class="list">
+              <li class="list__item has-next" data-carrier-id="-999">Choose a different insurance</li>
+            </ul>
+
+          </div>
         </div>
 
 
