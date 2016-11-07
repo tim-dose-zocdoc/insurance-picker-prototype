@@ -14,11 +14,15 @@ const STRINGS = {
     }
 }
 
+require.config({
+    paths: { "text": "lib/text"}    
+});
+
 require([
-    '/jquery.js',
-    '/lodash.js',
-    '/mustache.js',
-    '/lunr.js',
+    '/lib/jquery.js',
+    '/lib/lodash.js',
+    '/lib/mustache.js',
+    '/lib/lunr.js',
 
     'text!templates/carrier-initial.mustache',
     'text!templates/carrier-search.mustache',
