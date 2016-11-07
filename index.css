@@ -204,7 +204,7 @@ picker
     top: 0;
     left: 0;
     transition: width 0.3s ease;
-    width: auto;
+    width: 100%;
 }
 
 .picker__header {
@@ -526,6 +526,9 @@ selected display
     display: none;
 }
 
+.selected-display__carrier:empty .selected-display__separator {
+    display: none;
+}
 
 
 /*------------------------------------
