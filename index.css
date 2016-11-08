@@ -532,6 +532,8 @@ completed display
 
 .completed-display.reengaging {
     top: 100%;
+    transition: top .2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 
 .picker.complete .completed-display {
