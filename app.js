@@ -186,9 +186,8 @@ require([
             $('.all-lists li').removeClass('highlight selected');
         },
         highlightNext: function() {
-            console.log('down arrow')
             var $highlighted = $('.'+currentState+'-container .highlight').eq(0);
-            var $listItems = $('.'+currentState+'-container .list__item');
+            var $listItems = $('.'+currentState+'-container .list__item:visible');
             var position = $listItems.index($highlighted);
             if ( position < $listItems.length ) {
                 $highlighted.removeClass('highlight');
@@ -196,9 +195,8 @@ require([
             }
         },
         highlightPrevious: function() {
-            console.log('up arrow')
             var $highlighted = $('.'+currentState+'-container .highlight').eq(0);
-            var $listItems = $('.'+currentState+'-container .list__item');
+            var $listItems = $('.'+currentState+'-container .list__item:visible');
             var position = $listItems.index($highlighted);
             if ( position > 0 ) {
                 $highlighted.removeClass('highlight');
