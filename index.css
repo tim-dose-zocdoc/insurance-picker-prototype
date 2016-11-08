@@ -37,12 +37,12 @@ body {
     }
 }
 
-body, .search-field, .insurance-field {
+body, .field, .insurance-field {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body.branded,
-body.branded .search-field,
+body.branded .field,
 body.branded .insurance-field  {
     font-family: 'Sharp Sans No1', Arial, sans-serif;
     color: #00234B;
@@ -121,6 +121,35 @@ list interactions
 }
 
 
+/*------------------------------------
+other fields
+--------------------------------------*/
+
+.fields {
+    position: absolute;
+    left: 133px;
+    top: 365px;
+    display: flex;
+    flex-direction: row;
+}
+
+.field {
+    border: none;
+    padding: 10px;
+    height: 48px;
+    font-size: 15px;
+}
+
+.search-field {
+    width: 586px;
+    margin-right: 2px;
+}
+
+.location-field {
+    width: 212px;
+    margin-right: 2px;
+}
+
 
 /*------------------------------------
 picker
@@ -128,9 +157,9 @@ picker
 
 .picker {
     background: #fff;
-    position: absolute;
-    left: 935;
-    top: 365px;
+    /*position: absolute;*/
+    /*left: 935;         */
+    /*top: 365px;*/
     width: 318px;
 }
 
