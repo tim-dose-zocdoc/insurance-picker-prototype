@@ -78,17 +78,40 @@ require([
         }
     }
 
+    completedDisplay = {
+        setCarrier: function(value) {
+            $('.completed-display__carrier').text(value);
+        },
+
+        setPlan: function(value) {
+            $('.completed-display__plan').text(value);
+        }
+    }
+
     display = {
         setCarrier: function(value) {
             $('.selected-display__carrier').text(value);
+            completedDisplay.setCarrier(value);
         },
 
         setPlan: function(value) {
             $('.selected-display__plan').text(value);
+            console.log(value);
+            completedDisplay.setPlan(value);
         },
 
         setVisibility: function(makeVisible) {
             $('.selected-display').toggleClass('active', makeVisible);    
+        }
+    }
+
+    completedDsiplay = {
+        setCarrier: function() {
+            $('.completed-display__carrier').text(value);
+        },
+
+        setPlan: function(value) {
+            $('.completed-display__plan').text(value);
         }
     }
 
@@ -234,7 +257,7 @@ require([
         steps.setComplete('plan');
         search.setComplete();
         picker.setComplete();
-        $('.selected-display__plan').text(selectedPlan);
+        display.setPlan(selectedPlan);
         $('.search').blur();
         hidePicker();
     }
@@ -543,6 +566,25 @@ require([
     // event stuff
     ///////////////////////////////////////////
 
+
+    //----------------
+    // completed display 
+    //----------------
+
+    $('.completed-display').hover(function(){
+        $('.completed-display').toggleClass('active');
+    },function(){
+        $('.completed-display').toggleClass('active');
+    })
+
+    // $('.completed-display').click(function(){
+    //     $('.completed-display').toggleClass('active');
+    // });
+
+    $('.completed-display__clear').click(function() {
+        startOver();
+    });
+
     //----------------
     // clear buttons
     //----------------
@@ -559,6 +601,11 @@ require([
         // $(this).removeClass('active');
         // $('.search').val('').focus();
         // clearSearchList();
+        startOver();
+    });
+
+
+    $('.selected-display__clear').click(function() {
         startOver();
     });
 

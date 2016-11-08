@@ -4,6 +4,8 @@
   <link rel="stylesheet" type="text/css" href="font-awesome-4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="index.css">
 
+  <meta name="viewport" content="width=device-width">
+
 </head>
 <body class="branded option3">
   <div class="wrap">
@@ -20,9 +22,16 @@
         <input class="search" type="text" placeholder="insurance carrier and plan" data-status="" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off"></input>
         <!-- <div class="clear"><i class="fa fa-times-circle" aria-hidden="true"></i></div> -->
       </div>
+
+      <div class="completed-display">
+        <span class="completed-display__carrier"></span>
+        <span class="completed-display__separator"> - </span>
+        <span class="completed-display__plan"></span>
+        <a class="completed-display__clear">change</a>
+      </div>
       <div class="picker__contents">
         <div class="selected-display">
-          <div class="selected-display__carrier"></div>
+          <div class="selected-display__carrier"></div><span class="selected-display__separator"> - </span>
           <!-- <a class="selected-display__clear">change</a> -->
           <div class="selected-display__plan"></div>
           <a class="selected-display__clear">change</a>
