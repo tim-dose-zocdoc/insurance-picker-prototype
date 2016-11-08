@@ -571,11 +571,6 @@ require([
     // completed display 
     //----------------
 
-    $('.completed-display').hover(function(){
-        $('.completed-display').toggleClass('active');
-    },function(){
-        $('.completed-display').toggleClass('active');
-    })
 
     // $('.completed-display').click(function(){
     //     $('.completed-display').toggleClass('active');

@@ -534,15 +534,15 @@ completed display
     display: block;
 }
 
-.completed-display.active {
-    max-height: 500px;
+.completed-display:hover{
+    max-height: 400px;
     white-space: normal;
 }
 
 
 @media screen and (max-width: 767px) {
     .completed-display {
-        max-height: 500px;
+        max-height: 400px;
         white-space: normal;
     }
 }
