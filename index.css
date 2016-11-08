@@ -528,7 +528,10 @@ completed display
     padding: 15px 10px 14px;
     overflow: hidden;
     transition: max-height 1s ease;
-    cursor: default;
+}
+
+.completed-display.reengaging {
+    top: 100%;
 }
 
 .picker.complete .completed-display {
@@ -541,11 +544,33 @@ completed display
     white-space: normal;
 }
 
+.completed-display__clear {
+    display: none;
+}
+
+.completed-display__alternate-actions {
+    display: none;
+}
+
+
+.completed-display ul {
+    margin: 0;
+}
+
+.completed-display hr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 @media screen and (max-width: 767px) {
     .completed-display {
         max-height: 400px;
         white-space: normal;
+    }
+
+    .completed-display__clear {
+        display: inline;
     }
 }
 

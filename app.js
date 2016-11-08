@@ -92,6 +92,12 @@ require([
         },
         setValue: function(value) {
             $('.insurance-field').val(value);
+        },
+        selectAll: function() {
+            $('.insurance-field').focus().get(0).setSelectionRange(0,1000)
+        },
+        clear: function () {
+            $('.insurance-field').focus().val('')
         }
     }
 
@@ -292,7 +298,7 @@ require([
         steps.setEnabled('plan');
         steps.setActive('plan');
 
-        search.setPlaceholder(STRINGS.PLACEHOLDER.PLAN)
+        // search.setPlaceholder(STRINGS.PLACEHOLDER.PLAN)
 
         lists.showList('plan');
 
@@ -302,7 +308,7 @@ require([
     moveToCarrier = function() {
         steps.setActive('carrier');
 
-        search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
+        // search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
 
         lists.showList('carrier');
 
@@ -446,7 +452,7 @@ require([
     moveToBCBS = function() {        
         steps.showBCBS();
 
-        search.setPlaceholder(STRINGS.PLACEHOLDER.BCBS);
+        // search.setPlaceholder(STRINGS.PLACEHOLDER.BCBS);
         
         lists.showList('bcbs');
 
@@ -600,6 +606,13 @@ require([
             return false;
         }
     })
+
+    $('.completed-display').click(function(){
+        $(this).addClass('reengaging');
+        search.setComplete(false);
+        search.clear();
+        // search.selectAll();
+    });
 
     //----------------
     // clear buttons
