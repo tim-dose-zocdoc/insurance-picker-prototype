@@ -56,11 +56,15 @@ require([
         },
         setIncomplete: function(incomplete) {
             if ( incomplete === undefined ) incomplete = true;
+            if ( $('.picker').hasClass('clean') ) return; // don't mark incomplete if the picker has never been opened
             $('.picker').toggleClass('incomplete', incomplete);
         },
         setVisibility: function(makeVisible) {
             if ( makeVisible === undefined ) makeVisible = true;
             $('.picker').toggleClass('active', makeVisible);
+        },
+        dirty: function() {
+            $('.picker').removeClass('clean');
         }
     }
 
@@ -538,6 +542,7 @@ require([
     ///////////////////////////////////////////
     showPicker = function() {
         if ( $('.picker').hasClass('active') ) return;
+        picker.dirty();
         picker.setVisibility(true);
         // if ( $('.insurance-field').val().length > 0 ) {
         //     $('.clear').addClass('active');
