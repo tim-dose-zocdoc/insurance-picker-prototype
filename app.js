@@ -184,7 +184,22 @@ require([
         },
         clearAllHighlights: function() {
             $('.all-lists li').removeClass('highlight selected');
+        },
+        highlightNext: function() {
+            console.log('down arrow')
+            var $highlighted = $('.'+currentState+'-container .highlight').eq(0);
+            var $listItems = $('.'+currentState+'-container .list__item');
+            var position = $listItems.index($highlighted);
+            if ( position < $listItems.length ) {
+                $highlighted.removeClass('highlight');
+                $listItems.eq(position+1).addClass('highlight');
+            }
+            
+            // if ( $next.length > 0 ) {
+            //     $next.addClass('highlight');
+            // }
         }
+
     }
 
     ///////////////////////////////////////////
@@ -282,6 +297,8 @@ require([
         picker.setComplete();
         display.setPlan(selectedPlan);
         $('.insurance-field').blur();
+
+        currentState = 'completed';
         hidePicker();
     }
 
@@ -705,14 +722,11 @@ require([
     //----------------
     $('.picker').get(0).onkeydown = function(e) {
         if (e.keyCode == KEY_DOWN_ARROW ) {
-            var $selected = $('.'+currentState+'-container .highlight');
-            if ( $selected.next().length > 0 ) {
-                $selected.removeClass('highlight');
-                $selected.next().addClass('highlight');
-            }
+            lists.highlightNext();
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
+            console.log('up arrow')
             var $selected = $('.'+currentState+'-container .highlight');
             if ( $selected.prev().length > 0 ) {
                 $selected.removeClass('highlight');

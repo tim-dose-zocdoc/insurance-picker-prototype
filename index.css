@@ -564,12 +564,6 @@ completed display
 }
 
 
-.completed-display hr {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
 @media screen and (max-width: 767px) {
     .completed-display {
         max-height: 400px;
