@@ -528,6 +528,7 @@ completed display
     padding: 15px 10px 14px;
     overflow: hidden;
     transition: max-height 1s ease;
+    cursor: default;
 }
 
 .picker.complete .completed-display {
