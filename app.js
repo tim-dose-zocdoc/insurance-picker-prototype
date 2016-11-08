@@ -202,6 +202,24 @@ require([
                 $highlighted.removeClass('highlight');
                 $listItems.eq(position-1).addClass('highlight');
             }
+        },
+        setInteractions: function(section, highlightID) {
+            $('.'+section+'-container li')
+                .hover(function() {
+                    $('.'+section+'-container li').removeClass('highlight');
+                    $(this).addClass('highlight')
+                })
+                .click(function(){
+                    var functionName = 'set'+section.charAt(0).toUpperCase() + section.slice(1); // figure out the name of the function to call
+                    window[functionName](this); // call that function with itself as an argument
+                                                // ultimately the equivalent of doing setPlan(this) or setCarrier(this);
+                });
+
+            if (highlightID === undefined) {
+                $('.'+section+'-container li').eq(0).addClass('highlight');
+            } else {
+                $('.'+section+'-container li[data-'+section+'-id="'+ highlightID +'"]').addClass('highlight');
+            }
         }
 
     }
@@ -371,7 +389,8 @@ require([
             .append(Mustache.to_html(planTemplate,{popular:popular,all:all}))
 
 
-        setPlanBehavior(highlightID);
+        // setPlanBehavior(highlightID);
+        lists.setInteractions('plan', highlightID);
     }
 
     renderPlanSearch = function(plans, query) {
@@ -391,25 +410,10 @@ require([
         var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
         var all = _.sortBy(plans,'plan')
         $list.append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
-        setPlanBehavior();
+        lists.setInteractions('plan');
     }
 
-    setPlanBehavior = function(highlightID) {
-        $('.plan-container li')
-            .hover(function() {
-                $('.plan-container li').removeClass('highlight');
-                $(this).addClass('highlight')
-            })
-            .click(function(){
-                setPlan(this);
-            });
 
-        if (highlightID === undefined) {
-            $('.plan-container li').eq(0).addClass('highlight');
-        } else {
-            $('.plan-container li[data-plan-id="'+ highlightID +'"]').addClass('highlight');
-        }
-    }
 
 
     renderCarriers = function (carriers, highlightID, mode) {
@@ -421,7 +425,7 @@ require([
             .empty()
             .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,alternates:true,entityType:'carriers'}))
 
-        setCarrierBehavior(highlightID); 
+        lists.setInteractions('carrier', highlightID)
 
         $('.see-all-link').click(function() {
             $('.all-container').toggleClass('hidden');
@@ -446,24 +450,7 @@ require([
         var popular = _.sortBy(carriers,'requests').reverse().slice(0,3);
         var all = _.sortBy(carriers,'carrier')
         $list.append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
-        setCarrierBehavior();
-    }
-
-    setCarrierBehavior = function(highlightID) {
-        $('.carrier-container li')
-            .hover(function() {
-                $('.carrier-container li').removeClass('highlight');
-                $(this).addClass('highlight')
-            })
-            .click(function(){
-                setCarrier(this);
-            });
-
-        if (highlightID === undefined) {
-            $('.carrier-container li').first().addClass('highlight');
-        } else {
-            $('.carrier-container li[data-carrier-id="'+ highlightID +'"]').addClass('highlight');
-        }
+        lists.setInteractions('carrier')
     }
 
     ///////////////////////////////////////////
@@ -489,7 +476,7 @@ require([
             .empty()
             .append(Mustache.to_html(carrierTemplate,{all:all,popular:popular,entityType:'carriers'}))
 
-        setBCBSBehavior(); 
+        lists.setInteractions('bcbs')
 
         $('.see-all-link').click(function() {
             $('.all-container').toggleClass('hidden');
@@ -531,22 +518,6 @@ require([
         moveToPlan();
     }
 
-    setBCBSBehavior = function(highlightID) {
-        $('.bcbs-container li')
-            .hover(function() {
-                $('.bcbs-container li').removeClass('highlight');
-                $(this).addClass('highlight')
-            })
-            .click(function(){
-                setBCBS(this);
-            });
-
-        if (highlightID === undefined) {
-            $('.bcbs-container li').first().addClass('highlight');
-        } else {
-            $('.bcbs-container li[data-bcbs-id="'+ highlightID +'"]').addClass('highlight');
-        }
-    }
 
     ///////////////////////////////////////////
     // misc
