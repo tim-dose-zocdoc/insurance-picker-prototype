@@ -194,10 +194,16 @@ require([
                 $highlighted.removeClass('highlight');
                 $listItems.eq(position+1).addClass('highlight');
             }
-            
-            // if ( $next.length > 0 ) {
-            //     $next.addClass('highlight');
-            // }
+        },
+        highlightPrevious: function() {
+            console.log('up arrow')
+            var $highlighted = $('.'+currentState+'-container .highlight').eq(0);
+            var $listItems = $('.'+currentState+'-container .list__item');
+            var position = $listItems.index($highlighted);
+            if ( position > 0 ) {
+                $highlighted.removeClass('highlight');
+                $listItems.eq(position-1).addClass('highlight');
+            }
         }
 
     }
@@ -726,12 +732,7 @@ require([
         }
 
         if (e.keyCode == KEY_UP_ARROW ) { 
-            console.log('up arrow')
-            var $selected = $('.'+currentState+'-container .highlight');
-            if ( $selected.prev().length > 0 ) {
-                $selected.removeClass('highlight');
-                $selected.prev().addClass('highlight');
-            }
+            lists.highlightPrevious();
         }
 
         if (e.keyCode == KEY_TAB || e.keyCode == KEY_RETURN ) {
