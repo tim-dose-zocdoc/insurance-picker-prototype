@@ -37,12 +37,13 @@ body {
     }
 }
 
-body, .search {
+body, .search-field, .insurance-field {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body.branded,
-body.branded .search {
+body.branded .search-field,
+body.branded .insurance-field  {
     font-family: 'Sharp Sans No1', Arial, sans-serif;
     color: #00234B;
 }
@@ -367,9 +368,9 @@ tooltip
 
 
 /*------------------------------------
-search
+insurance field
 --------------------------------------*/
-.search-wrapper {
+.insurance-field-wrapper {
     /*border: 1px solid #aaa;*/
     padding: 5px;
     display: flex;
@@ -382,13 +383,13 @@ search
 }
 
 @media screen and (max-width: 767px) {
-    .picker.active:not(.complete) .search-wrapper {
+    .picker.active:not(.complete) .insurance-field-wrapper {
         border: 1px solid #aaa;
         margin: 16px;
     }
 }
 
-.search{
+.insurance-field {
     padding: 5px;
     font-size: 15px;
     border: none;
@@ -396,17 +397,17 @@ search
     flex-grow: 1;
 }
 
-.picker.incomplete .search {
+.picker.incomplete .insurance-field  {
     color: purple;
     text-decoration: underline;
 }
 
-.picker.active .search {
+.picker.active .insurance-field  {
     color: inherit;
     text-decoration: none;
 }
 
-.search.prompt {
+.insurance-field .prompt {
     color: red;
 }
 

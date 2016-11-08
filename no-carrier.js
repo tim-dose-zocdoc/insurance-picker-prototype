@@ -67,14 +67,14 @@ require([
     search = {
         setComplete: function(complete) {
             if ( complete === undefined ) complete = true;
-            $('.search-wrapper').toggleClass('complete', complete);
-            $('.search').attr('readonly',complete);
+            $('.insurance-field-wrapper').toggleClass('complete', complete);
+            $('.insurance-field').attr('readonly',complete);
         },
         setPlaceholder: function(text) {
-            $('.search').attr('placeholder',text)
+            $('.insurance-field').attr('placeholder',text)
         },
         setValue: function(value) {
-            $('.search').val(value);
+            $('.insurance-field').val(value);
         }
     }
 
@@ -220,8 +220,8 @@ require([
         $('.list__item').removeClass('selected');
         $(carrierListElement).addClass('selected')
 
-        var $search = $('.search');
-        $('.search')
+        var $search = $('.insurance-field');
+        $('.insurance-field')
             .data('selectedCarrier', selectedCarrier)
             .val('')
             .focus();
@@ -258,7 +258,7 @@ require([
         search.setComplete();
         picker.setComplete();
         display.setPlan(selectedPlan);
-        $('.search').blur();
+        $('.insurance-field').blur();
         hidePicker();
     }
 
@@ -298,13 +298,13 @@ require([
     ///////////////////////////////////////////
 
     payingForMyself = function () {
-        $('.search').val("I'm paying for myself")
+        $('.insurance-field').val("I'm paying for myself")
         payingForSelfOrChoosingLater = true;
         hidePicker();
     }
 
     chooseLater = function () {
-        $('.search').val("I'll choose my insurance later")
+        $('.insurance-field').val("I'll choose my insurance later")
         payingForSelfOrChoosingLater = true;
         hidePicker();
     }
@@ -460,8 +460,8 @@ require([
         $('.bcbs-container .list__item').removeClass('selected');
         $(listElement).addClass('selected')
 
-        var $search = $('.search');
-        $('.search')
+        var $search = $('.insurance-field');
+        $('.insurance-field')
             .val('')
             .focus();
 
@@ -539,7 +539,7 @@ require([
     showPicker = function() {
         if ( $('.picker').hasClass('active') ) return;
         picker.setVisibility(true);
-        // if ( $('.search').val().length > 0 ) {
+        // if ( $('.insurance-field').val().length > 0 ) {
         //     $('.clear').addClass('active');
         // }
     }
@@ -552,7 +552,7 @@ require([
         picker.setIncomplete(!isComplete());
 
         if ( selectedCarrier != '' && selectedPlan != '' ) {
-            $('.search').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
+            $('.insurance-field').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
         }
     }
     
@@ -590,7 +590,7 @@ require([
     //----------------
 
     // toggleClear = function () {
-    //     if ( $('.search').val().length > 0 ) {
+    //     if ( $('.insurance-field').val().length > 0 ) {
     //         $('.clear').addClass('active');
     //     } else {
     //         $('.clear').removeClass('active');
@@ -599,7 +599,7 @@ require([
     
     $('.clear').click(function() {
         // $(this).removeClass('active');
-        // $('.search').val('').focus();
+        // $('.insurance-field').val('').focus();
         // clearSearchList();
         startOver();
     });
@@ -626,10 +626,10 @@ require([
     //----------------
     // search field 
     //----------------
-    // $('.search').change(toggleClear);
-    // $('.search').keyup(toggleClear);
+    // $('.insurance-field').change(toggleClear);
+    // $('.insurance-field').keyup(toggleClear);
 
-    $('.search').focus(function() {
+    $('.insurance-field').focus(function() {
         $(this).removeClass('incomplete')
         showPicker();
     });
@@ -639,7 +639,7 @@ require([
         $('.' + currentState + '-container .browse-list').removeClass('hidden');
     }
 
-    $('.search').bind('keyup', debounce(function (e) {
+    $('.insurance-field').bind('keyup', debounce(function (e) {
         if ([KEY_TAB, KEY_RETURN, KEY_DOWN_ARROW, KEY_UP_ARROW].indexOf(e.keyCode) > -1 ) return;
 
         if ($(this).val() < 1) {
