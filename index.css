@@ -521,7 +521,8 @@ selected display
 }
 
 .selected-display.active {
-    display: block;
+    display: none;
+    /*display: block;*/
 }
 
 .selected-display i {
