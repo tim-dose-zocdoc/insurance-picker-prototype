@@ -75,9 +75,8 @@ require([
             return $('.picker').hasClass('complete');
         },
         focusOnCompleteLink: function() {
-            // $('.completed-display').addClass('active')
-            // console.log('focus pocus!')
-            // $('.completed-display__clear').focus();
+            $('.completed-display').addClass('active')
+            console.log('focus pocus!')
         }
     }
 
@@ -254,6 +253,14 @@ require([
         search.setValue('');
         search.setComplete(false);
         search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
+    }
+
+    reengageCompletedDisplay = function () {
+        if ( picker.isComplete() == false ) return;
+        completedDisplay.setReengaged();
+        search.setComplete(false);
+        search.clear();
+        lists.setInteractions('completed');
     }
 
     setCarrier = function( carrierListElement ) {
@@ -616,11 +623,7 @@ require([
 
     $('.completed-display').click(function(){
         console.log('.completed-display clicked')
-        if ( picker.isComplete() == false ) return;
-        completedDisplay.setReengaged();
-        search.setComplete(false);
-        search.clear();
-        lists.setInteractions('completed');
+        reengageCompletedDisplay();
     });
 
     //----------------
@@ -669,7 +672,7 @@ require([
 
     $('.insurance-field').focus(function() {
         if ( picker.isComplete() ) {
-            picker.focusOnCompleteLink();
+            reengageCompletedDisplay();
         } else {
             picker.setIncomplete(false);
             showPicker();
