@@ -157,9 +157,7 @@ picker
 
 .picker {
     background: #fff;
-    /*position: absolute;*/
-    /*left: 935;         */
-    /*top: 365px;*/
+    position: relative;
     width: 318px;
 }
 
