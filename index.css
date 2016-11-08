@@ -546,9 +546,6 @@ completed display
     white-space: normal;
 }
 
-.completed-display__clear {
-    display: none;
-}
 
 .completed-display__alternate-actions {
     display: none;
