@@ -75,9 +75,9 @@ require([
             return $('.picker').hasClass('complete');
         },
         focusOnCompleteLink: function() {
-            $('.completed-display').addClass('active')
-            console.log('focus pocus!')
-            $('.completed-display__clear').focus();
+            // $('.completed-display').addClass('active')
+            // console.log('focus pocus!')
+            // $('.completed-display__clear').focus();
         }
     }
 
@@ -108,6 +108,15 @@ require([
 
         setPlan: function(value) {
             $('.completed-display__plan').text(value);
+        },
+        setReengaged: function(reengaged) {
+            if ( reengaged === undefined ) reengaged = true;
+            console.log('setReengaged: ' + reengaged );
+            $('.completed-display').toggleClass('reengaged', reengaged);
+        },
+        setActive: function(active) {
+            if ( active === undefined ) active = true;
+            $('.completed-display').toggleClass('active', active);
         }
     }
 
@@ -125,16 +134,6 @@ require([
 
         setVisibility: function(makeVisible) {
             $('.selected-display').toggleClass('active', makeVisible);    
-        }
-    }
-
-    completedDsiplay = {
-        setCarrier: function() {
-            $('.completed-display__carrier').text(value);
-        },
-
-        setPlan: function(value) {
-            $('.completed-display__plan').text(value);
         }
     }
 
@@ -224,6 +223,7 @@ require([
 
     }
 
+
     ///////////////////////////////////////////
     // setting & moving
     ///////////////////////////////////////////
@@ -247,6 +247,9 @@ require([
 
         picker.setComplete(false);
         picker.setVisibility(true);
+
+        completedDisplay.setReengaged(false);
+        completedDisplay.setActive(false);
 
         search.setValue('');
         search.setComplete(false);
@@ -600,6 +603,10 @@ require([
         startOver();
     });
 
+    $('.completed-display__clear--mobile').click(function() {
+        startOver();
+    });
+
     $('.completed-display__clear').keypress(function(e) {
         if (e.keyCode == KEY_SPACE || e.keyCode == KEY_RETURN ) {
             startOver();
@@ -608,12 +615,12 @@ require([
     })
 
     $('.completed-display').click(function(){
-        $(this).addClass('reengaged');
+        console.log('.completed-display clicked')
+        if ( picker.isComplete() == false ) return;
+        completedDisplay.setReengaged();
         search.setComplete(false);
         search.clear();
         lists.setInteractions('completed');
-        // $('.completed-display li').first().addClass('highlight');
-        // search.selectAll();
     });
 
     //----------------
@@ -720,6 +727,15 @@ require([
             }
             if (currentState == 'carrier') {
                 setCarrier($('.carrier-container .highlight').eq(0));
+                return;
+            }
+            if (currentState == 'bcbs') {
+                setBCBS($('.bcbs-container .highlight').eq(0));
+                return;
+            }
+
+            if (currentState == 'completed') {
+                setCompleted($('.completed-container .highlight').eq(0));
                 return;
             }
         }

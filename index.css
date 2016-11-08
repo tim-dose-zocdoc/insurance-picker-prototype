@@ -541,7 +541,7 @@ completed display
 }
 
 .completed-display:hover,
-.completed-display.active {
+.completed-display.reengaged {
     max-height: 400px;
     white-space: normal;
 }
@@ -560,6 +560,10 @@ completed display
     margin: 0;
 }
 
+.completed-display__clear--mobile {
+    display: none;
+}
+
 
 @media screen and (max-width: 767px) {
     .completed-display {
@@ -567,8 +571,9 @@ completed display
         white-space: normal;
     }
 
-    .completed-display__clear {
+    .completed-display__clear--mobile {
         display: inline;
+        /*margin-left: 10px;*/
     }
 }
 
