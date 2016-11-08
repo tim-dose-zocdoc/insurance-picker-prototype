@@ -484,6 +484,7 @@ completed display
     max-height: 48px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background: #fff;
     padding: 15px 10px 14px;
     overflow: hidden;
     transition: max-height 1s ease;
