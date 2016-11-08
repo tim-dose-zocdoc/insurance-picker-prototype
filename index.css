@@ -33,7 +33,7 @@ body {
     }
 
     .other-stuff {
-        height: 300px;
+        height: 120px;
     }
 }
 
@@ -148,6 +148,18 @@ other fields
 .location-field {
     width: 212px;
     margin-right: 2px;
+}
+
+@media screen and (max-width: 767px) {
+    .fields {
+        position: static;
+        flex-direction: column;
+    }
+
+    .field, .insurance-field {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
 
