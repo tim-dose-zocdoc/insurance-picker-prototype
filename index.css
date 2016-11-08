@@ -534,7 +534,8 @@ completed display
     display: block;
 }
 
-.completed-display:hover{
+.completed-display:hover,
+.completed-display.active {
     max-height: 400px;
     white-space: normal;
 }

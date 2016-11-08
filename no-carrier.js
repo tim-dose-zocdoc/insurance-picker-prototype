@@ -4,6 +4,7 @@ const KEY_UP_ARROW = 38;
 const KEY_DOWN_ARROW = 40;
 const KEY_RETURN = 13;
 const KEY_TAB = 9;
+const KEY_SPACE = 32;
 const KEY_DELETE = 8;
 
 const STRINGS = {
@@ -65,6 +66,14 @@ require([
         },
         dirty: function() {
             $('.picker').removeClass('clean');
+        },
+        isComplete: function() {
+            return $('.picker').hasClass('complete');
+        },
+        focusOnCompleteLink: function() {
+            $('.completed-display').addClass('active')
+            console.log('focus pocus!')
+            $('.completed-display__clear').focus();
         }
     }
 
@@ -552,7 +561,7 @@ require([
     hidePicker = function() {
         $picker = $('.picker');
         picker.setVisibility(false);
-        // $('.clear').removeClass('active');
+        $('.completed-display').removeClass('active');
 
         picker.setIncomplete(!isComplete());
 
@@ -577,13 +586,16 @@ require([
     //----------------
 
 
-    // $('.completed-display').click(function(){
-    //     $('.completed-display').toggleClass('active');
-    // });
-
     $('.completed-display__clear').click(function() {
         startOver();
     });
+
+    $('.completed-display__clear').keypress(function(e) {
+        if (e.keyCode == KEY_SPACE || e.keyCode == KEY_RETURN ) {
+            startOver();
+            return false;
+        }
+    })
 
     //----------------
     // clear buttons
@@ -630,8 +642,13 @@ require([
     // $('.insurance-field').keyup(toggleClear);
 
     $('.insurance-field').focus(function() {
-        $(this).removeClass('incomplete')
-        showPicker();
+        if ( picker.isComplete() ) {
+            picker.focusOnCompleteLink();
+        } else {
+            picker.setIncomplete(false);
+            showPicker();
+        }
+        
     });
 
     clearSearchList = function() {
