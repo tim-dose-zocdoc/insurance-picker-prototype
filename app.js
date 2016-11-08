@@ -603,7 +603,8 @@ require([
         $(this).addClass('reengaged');
         search.setComplete(false);
         search.clear();
-        $('.completed-display li').first().addClass('highlight');
+        lists.setInteractions('completed');
+        // $('.completed-display li').first().addClass('highlight');
         // search.selectAll();
     });
 
