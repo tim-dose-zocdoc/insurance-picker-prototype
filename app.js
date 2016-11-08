@@ -608,9 +608,10 @@ require([
     })
 
     $('.completed-display').click(function(){
-        $(this).addClass('reengaging');
+        $(this).addClass('reengaged');
         search.setComplete(false);
         search.clear();
+        $('.completed-display li').first().addClass('highlight');
         // search.selectAll();
     });
 
