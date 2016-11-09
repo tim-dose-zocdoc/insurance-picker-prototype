@@ -588,7 +588,7 @@ require([
         });      
     }
 
-    setBCBS = function( listElement ) {
+    setBcbs = function( listElement ) {
         selectedBCBS = $(listElement).find('.item').text();
         selectedCarrierID = $(listElement).data('carrier-id');
 
@@ -671,9 +671,9 @@ require([
 
         picker.setIncomplete(!isComplete());
 
-        if ( selectedCarrier != '' && selectedPlan != '' ) {
-            $('.insurance-field').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
-        }
+        // if ( selectedCarrier != '' && selectedPlan != '' ) {
+        //     $('.insurance-field').val(truncate(selectedCarrier + ' - ' + selectedPlan, 30));
+        // }
     }
     
     
@@ -830,7 +830,7 @@ require([
                 return;
             }
             if (currentState == 'bcbs') {
-                setBCBS($('.bcbs-container .highlight').eq(0));
+                setBcbs($('.bcbs-container .highlight').eq(0));
                 return;
             }
 
