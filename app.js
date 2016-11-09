@@ -116,6 +116,9 @@ require([
         setActive: function(active) {
             if ( active === undefined ) active = true;
             $('.completed-display').toggleClass('active', active);
+        },
+        isReengaged: function() {
+            return $('.completed-display').hasClass('reengaged');
         }
     }
 
@@ -671,7 +674,7 @@ require([
     // $('.insurance-field').keyup(toggleClear);
 
     $('.insurance-field').focus(function() {
-        if ( picker.isComplete() ) {
+        if ( picker.isComplete() && !completedDisplay.isReengaged() ) {
             reengageCompletedDisplay();
         } else {
             picker.setIncomplete(false);
