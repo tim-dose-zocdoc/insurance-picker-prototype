@@ -464,8 +464,6 @@ require([
     }
 
     renderCarrierSearch = function(carriers, query) {
-        $('.carrier-container .browse-list').addClass('hidden')
-
         var $list = $('.search-results-container .search-list');
 
         $list
