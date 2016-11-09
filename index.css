@@ -681,3 +681,11 @@ lists & transitions
     left: -200%;
 }
 
+.search-results-container {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+

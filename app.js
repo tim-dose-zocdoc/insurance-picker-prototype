@@ -221,6 +221,15 @@ require([
             } else {
                 $('.'+section+'-container li[data-'+section+'-id="'+ highlightID +'"]').addClass('highlight');
             }
+        },
+        setSearchResultsVisible: function(visible) {
+            if ( visible === undefined ) visible = true;
+            $('.search-results-container').toggleClass('hidden', !visible)
+        },
+        clearSearchList: function() {
+            lists.setSearchResultsVisible(false);
+            $('.' + currentState + '-container .search-list').addClass('hidden');
+            $('.' + currentState + '-container .browse-list').removeClass('hidden');
         }
 
     }
@@ -457,11 +466,13 @@ require([
     renderCarrierSearch = function(carriers, query) {
         $('.carrier-container .browse-list').addClass('hidden')
 
-        var $list = $('.carrier-container .search-list');
+        var $list = $('.search-results-container .search-list');
 
         $list
             .removeClass('hidden')
             .empty()
+
+        lists.setSearchResultsVisible();
 
         if ( carriers.length == 0 ) {
             $list.append(Mustache.to_html(noResultsTemplate,{type:'carriers',query:query}))
@@ -473,6 +484,7 @@ require([
         $list.append(Mustache.to_html(carrierSearchTemplate,{all:all, popular:popular, query:query}))
         lists.setInteractions('carrier')
     }
+
 
     ///////////////////////////////////////////
     // BCBS
@@ -683,35 +695,37 @@ require([
         
     });
 
-    clearSearchList = function() {
-        $('.' + currentState + '-container .search-list').addClass('hidden');
-        $('.' + currentState + '-container .browse-list').removeClass('hidden');
-    }
+    // clearSearchList = function() {
+    //     $('.' + currentState + '-container .search-list').addClass('hidden');
+    //     $('.' + currentState + '-container .browse-list').removeClass('hidden');
+    // }
 
     $('.insurance-field').bind('keyup', debounce(function (e) {
         if ([KEY_TAB, KEY_RETURN, KEY_DOWN_ARROW, KEY_UP_ARROW].indexOf(e.keyCode) > -1 ) return;
 
+        picker.setComplete(false);
+
         if ($(this).val() < 1) {
-            clearSearchList();
+            lists.clearSearchList();
             return
         }
         var query = $(this).val()
 
-        if ( currentState == 'carrier' ) {
+        // if ( currentState == 'carrier' ) {
             var results = carriersIndex.search(query).map(function (result) {
                 return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
             })
 
             renderCarrierSearch(results, query);
-        }
+        // }
         
-        if ( currentState == 'plan' ) {
-            var results = planIndex.search(query).map(function (result) {
-                return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
-            })
+        // if ( currentState == 'plan' ) {
+        //     var results = planIndex.search(query).map(function (result) {
+        //         return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+        //     })
 
-            renderPlanSearch(results, query);
-        }
+        //     renderPlanSearch(results, query);
+        // }
     }))
 
     //----------------
