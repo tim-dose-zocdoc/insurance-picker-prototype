@@ -385,7 +385,6 @@ require([
         $('.insurance-field').blur();
 
         currentState = 'completed';
-        completedDisplay.setReengaged(false);
         hidePicker();
     }
 
@@ -654,9 +653,13 @@ require([
         }
     })
 
-    $('.completed-display').click(function(){
-        console.log('.completed-display clicked')
-        reengageCompletedDisplay();
+    $('.completed-display').click(function(e){
+        // console.log('.completed-display clicked ' + completedDisplay.isReengaged() )
+        if ( completedDisplay.isReengaged() ) {
+            completedDisplay.setReengaged(false);
+        } else {
+            reengageCompletedDisplay();
+        }
     });
 
     //----------------
