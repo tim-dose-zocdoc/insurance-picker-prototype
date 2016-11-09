@@ -7,13 +7,7 @@
             {{/carriers}}
 
             {{#plans}}
-                <li class="list__item has-next" data-carrier="{{carrier}}" data-plan="{{plan}}" data-plan-id="{{id}}">
-                    <span class="item">{{carrier}} - {{plan}}</span>
-                    <div class="icons">
-                        <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
-                        <span class="icon icon-selected"><i class="fa fa-check"></i></span>
-                    </div>
-                </li>
+                {{> planListItem}}
             {{/plans}}
             
         {{/popular}}
@@ -22,26 +16,14 @@
     <h3>matching carriers</span></h3>
     <ul class="list">
         {{#carriers}}
-            <li class="list__item has-next" data-carrier-id="{{id}}" data-carrier="{{carrier}}">
-                <span class="item">{{carrier}}</span>
-                <div class="icons">
-                    <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
-                    <span class="icon icon-selected"><i class="fa fa-check"></i></span>
-                </div>
-            </li>
+            {{> carrierListItem}}
         {{/carriers}}
     </ul>
 
     <h3>matching plans</span></h3>
     <ul class="list">
         {{#plans}}
-            <li class="list__item has-next" data-carrier="{{carrier}}" data-plan="{{plan}}" data-plan-id="{{id}}">
-                <span class="item">{{carrier}} - {{plan}}</span>
-                <div class="icons">
-                    <span class="icon icon-next"><i class="fa fa-chevron-right"></i></span>
-                    <span class="icon icon-selected"><i class="fa fa-check"></i></span>
-                </div>
-            </li>
+            {{> planListItem}}
         {{/plans}}
     </ul>
 </div>

@@ -509,7 +509,7 @@ require([
 
 
 
-    renderGeneralSearch = function(carriers, query) {
+    renderGeneralSearch = function(carriers, plans, query) {
         var $list = $('.search-results-container .search-list');
 
         $list
@@ -518,17 +518,21 @@ require([
 
         lists.setSearchResultsVisible();
 
-        if ( carriers.length == 0 ) {
-            $list.append(Mustache.to_html(noResultsTemplate,{type:'carriers',query:query}))
+        if ( carriers.length == 0 && plans.length == 0 ) {
+            $list.append(Mustache.to_html(noResultsTemplate,{type:'matches',query:query}))
             return;
         }
 
         var popular = {
             carriers: _.sortBy(carriers,'requests').reverse().slice(0,2),
+            plans: _.sortBy(plans,'requests').reverse().slice(0,2),
         }
-        var all = _.sortBy(carriers,'carrier')
-        $list.append(Mustache.to_html(generalSearchTemplate,{all:all, popular:popular, query:query}, {carrierListItem: carrierPartial, planListItem: planPartial}))
-        lists.setInteractions('carrier')
+        var carriers = _.sortBy(carriers,'carrier')
+        var plans = _.sortBy(plans,'plan')
+        var partials = {carrierListItem: carrierPartial, planListItem: planPartial};
+        $list.append(Mustache.to_html(generalSearchTemplate,{carriers:carriers, plans:plans, popular:popular, query:query}, partials))
+        currentState = 'search';
+        lists.setInteractions('search')
     }
 
 
@@ -762,11 +766,15 @@ require([
         var query = $(this).val()
 
         // if ( currentState == 'carrier' ) {
-            var results = carriersIndex.search(query).map(function (result) {
+            var carrierResults = carriersIndex.search(query).map(function (result) {
                 return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
             })
 
-            renderGeneralSearch(results, query);
+            var planResults = insurancesIndex.search(query).map(function (result) {
+                return plans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+            })
+
+            renderGeneralSearch(carrierResults, planResults, query);
             // renderCarrierSearch(results, query);
         // }
         
