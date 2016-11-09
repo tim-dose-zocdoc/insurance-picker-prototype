@@ -31,6 +31,10 @@ require([
     'text!templates/plan-initial.mustache',
     'text!templates/plan-search.mustache',
 
+    'text!templates/general-search.mustache',
+    'text!templates/carrier-list-item.mustache',
+    'text!templates/plan-list-item.mustache',
+
     'text!templates/no-results.mustache',
 
     'text!data/insurance_data.json',
@@ -39,6 +43,7 @@ require([
     jquery, _, Mustache, lunr, 
     carrierTemplate, carrierSearchTemplate, 
     planTemplate, planSearchTemplate, 
+    generalSearchTemplate, carrierPartial, planPartial,
     noResultsTemplate,
     insuranceData, carrierData ) {
     var selectedCarrier = ''
@@ -503,6 +508,30 @@ require([
     }
 
 
+
+    renderGeneralSearch = function(carriers, query) {
+        var $list = $('.search-results-container .search-list');
+
+        $list
+            .removeClass('hidden')
+            .empty()
+
+        lists.setSearchResultsVisible();
+
+        if ( carriers.length == 0 ) {
+            $list.append(Mustache.to_html(noResultsTemplate,{type:'carriers',query:query}))
+            return;
+        }
+
+        var popular = {
+            carriers: _.sortBy(carriers,'requests').reverse().slice(0,2),
+        }
+        var all = _.sortBy(carriers,'carrier')
+        $list.append(Mustache.to_html(generalSearchTemplate,{all:all, popular:popular, query:query}, {carrierListItem: carrierPartial, planListItem: planPartial}))
+        lists.setInteractions('carrier')
+    }
+
+
     ///////////////////////////////////////////
     // BCBS
     ///////////////////////////////////////////
@@ -737,7 +766,8 @@ require([
                 return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
             })
 
-            renderCarrierSearch(results, query);
+            renderGeneralSearch(results, query);
+            // renderCarrierSearch(results, query);
         // }
         
         // if ( currentState == 'plan' ) {
@@ -898,4 +928,5 @@ require([
 
     renderCarriers(initialCarriers);
     highlightListItem();
+
 })
