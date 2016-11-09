@@ -377,16 +377,36 @@ require([
     }
 
 
+    completePicker = function() {
+        search.setComplete();
+        picker.setComplete();
+        display.setCarrier(selectedCarrier);
+        display.setPlan(selectedPlan);
+        $('.insurance-field').blur();
+
+        currentState = 'completed';
+        completedDisplay.setReengaged(false);
+        hidePicker();
+    }
+
     ///////////////////////////////////////////
     // completed state
     ///////////////////////////////////////////
 
     setCompleted = function(listElement) {
         console.log('setCompleted(' + listElement)
+        if ( $(listElement).data('option-id') == '-4' ) {
+            startOver();
+            return false;
+        }
+        selectedCarrier = $(listElement).find('.completed-display__carrier').text();
+        selectedPlan = $(listElement).find('.completed-display__plan').text();
+
+        completePicker();        
     }
 
     ///////////////////////////////////////////
-    // not using insurance 
+    // not using insurance
     ///////////////////////////////////////////
 
     payingForMyself = function () {
