@@ -754,7 +754,11 @@ require([
         var $target = $(e.target);
         var $picker = $('.picker');
         if ( $target != $picker && $picker.find($target).length === 0 ) {
-            hidePicker();
+            if ( picker.isComplete() ) {
+                completedDisplay.setReengaged(false);
+            } else {
+                hidePicker();
+            }
         }
     });
 

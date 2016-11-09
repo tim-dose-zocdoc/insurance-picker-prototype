@@ -564,6 +564,10 @@ completed display
     display: none;
 }
 
+.completed-display:not(.reengaged) .list__item.highlight {
+    background: none;
+}
+
 
 @media screen and (max-width: 767px) {
     .completed-display {
