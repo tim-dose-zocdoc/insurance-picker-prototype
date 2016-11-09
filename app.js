@@ -229,7 +229,7 @@ require([
         },
         setSearchResultsVisible: function(visible) {
             if ( visible === undefined ) visible = true;
-            $('.search-results-container').toggleClass('hidden', !visible)
+            $('.search-container').toggleClass('hidden', !visible)
         },
         clearSearchList: function() {
             lists.setSearchResultsVisible(false);
@@ -281,7 +281,12 @@ require([
     }
 
     setCarrier = function( carrierListElement ) {
-        selectedCarrier = $(carrierListElement).find('.item').text();
+        if ( $(carrierListElement).data('type') === undefined ) {
+            selectedCarrier = $(carrierListElement).find('.item').text();
+        } else {
+            selectedCarrier = $(carrierListElement).data('carrier')
+        }
+        
         selectedCarrierID = $(carrierListElement).data('carrier-id');
 
         steps.setComplete('carrier')
@@ -336,7 +341,11 @@ require([
     }
 
     setPlan = function( planListElement ) {
-        selectedPlan = $(planListElement).find('.item').text();
+        if ( $(planListElement).data('type') === undefined ) {
+            selectedPlan = $(planListElement).find('.item').text();
+        } else {
+            selectedPlan = $(planListElement).data('plan')
+        }
 
         $('.plan-container .list__item').removeClass('selected');
         $(planListElement).addClass('selected')
@@ -488,7 +497,7 @@ require([
     }
 
     renderCarrierSearch = function(carriers, query) {
-        var $list = $('.search-results-container .search-list');
+        var $list = $('.search-container .search-list');
 
         $list
             .removeClass('hidden')
@@ -510,7 +519,7 @@ require([
 
 
     renderGeneralSearch = function(carriers, plans, query) {
-        var $list = $('.search-results-container .search-list');
+        var $list = $('.search-container .search-list');
 
         $list
             .removeClass('hidden')
@@ -533,6 +542,18 @@ require([
         $list.append(Mustache.to_html(generalSearchTemplate,{carriers:carriers, plans:plans, popular:popular, query:query}, partials))
         currentState = 'search';
         lists.setInteractions('search')
+    }
+
+    setSearch = function(listItem) {
+        console.log('setSearch');
+        if ( $(listItem).data('type') == 'carrier' ) {
+            lists.clearSearchList();
+            setCarrier(listItem);
+        } else {
+            lists.clearSearchList();
+            setCarrier(listItem);
+            setPlan(listItem);
+        }
     }
 
 
@@ -815,6 +836,11 @@ require([
 
             if (currentState == 'completed') {
                 setCompleted($('.completed-container .highlight').eq(0));
+                return;
+            }
+
+            if (currentState == 'search') {
+                setSearch($('.search-container .highlight').eq(0));
                 return;
             }
         }
