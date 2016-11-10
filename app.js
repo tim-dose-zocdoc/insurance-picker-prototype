@@ -114,10 +114,12 @@ require([
             $('.completed-display__plan').text(value);
         },
         setInsurance: function(carrier, plan, planID ) {
-            var $link = $('.completed-display__clear--mobile').remove();
-            var $item = $(Mustache.render(planPartial, {carrier:carrier, plan:plan, id:planID})).append($link);
+            var $link = $('.completed-display__clear--mobile').clone(true);
+            $('.completed-display__clear--mobile').remove();
+            var $item = $(Mustache.render(planPartial, {carrier:carrier, plan:plan, id:planID}));
             // $('.completed-display__list').prepend($item).find('.list__item--initial').remove()
             $('.completed-display__list').empty().prepend($item)
+            $item.find('.item').append($link)
         },
         setReengaged: function(reengaged) {
             if ( reengaged === undefined ) reengaged = true;
@@ -414,7 +416,7 @@ require([
     ///////////////////////////////////////////
 
     setCompleted = function(listElement) {
-        console.log('setCompleted(' + listElement)
+        console.log('setCompleted')
         if ( $(listElement).data('option-id') == '-4' ) {
             startOver();
             return false;
@@ -703,7 +705,9 @@ require([
         startOver();
     });
 
-    $('.completed-display__clear--mobile').click(function() {
+    $('.completed-display__clear--mobile').click(function(e) {
+        console.log('mobile clear clicked')
+        // e.stopPropagation();
         startOver();
     });
 
