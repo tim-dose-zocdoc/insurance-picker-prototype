@@ -113,6 +113,12 @@ require([
         setPlan: function(value) {
             $('.completed-display__plan').text(value);
         },
+        setInsurance: function(carrier, plan, planID ) {
+            var $link = $('.completed-display__clear--mobile').remove();
+            var $item = $(Mustache.render(planPartial, {carrier:carrier, plan:plan, id:planID})).append($link);
+            // $('.completed-display__list').prepend($item).find('.list__item--initial').remove()
+            $('.completed-display__list').empty().prepend($item)
+        },
         setReengaged: function(reengaged) {
             if ( reengaged === undefined ) reengaged = true;
             console.log('setReengaged: ' + reengaged );
@@ -353,7 +359,8 @@ require([
         steps.setComplete('plan');
         search.setComplete();
         picker.setComplete();
-        display.setPlan(selectedPlan);
+        // display.setPlan(selectedPlan);
+        completedDisplay.setInsurance(selectedCarrier, selectedPlan, '111' )
         $('.insurance-field').blur();
 
         currentState = 'completed';
