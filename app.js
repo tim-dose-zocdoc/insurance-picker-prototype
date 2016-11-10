@@ -82,6 +82,14 @@ require([
         focusOnCompleteLink: function() {
             $('.completed-display').addClass('active')
             console.log('focus pocus!')
+        },
+        setReengaged: function(reengaged) {
+            if ( reengaged === undefined ) reengaged = true;
+            console.log('setReengaged: ' + reengaged );
+            $('.picker').toggleClass('reengaged', reengaged);
+        },
+        isReengaged: function() {
+            return $('.picker').hasClass('reengaged');
         }
     }
 
@@ -122,16 +130,18 @@ require([
             $item.find('.item').append($link)
         },
         setReengaged: function(reengaged) {
-            if ( reengaged === undefined ) reengaged = true;
-            console.log('setReengaged: ' + reengaged );
-            $('.completed-display').toggleClass('reengaged', reengaged);
+            picker.setReengaged(reengaged);
+            // if ( reengaged === undefined ) reengaged = true;
+            // console.log('setReengaged: ' + reengaged );
+            // $('.completed-display').toggleClass('reengaged', reengaged);
         },
         setActive: function(active) {
             if ( active === undefined ) active = true;
             $('.completed-display').toggleClass('active', active);
         },
         isReengaged: function() {
-            return $('.completed-display').hasClass('reengaged');
+            return picker.isReengaged();
+            // return $('.completed-display').hasClass('reengaged');
         }
     }
 
@@ -423,6 +433,8 @@ require([
         }
         selectedCarrier = $(listElement).find('.completed-display__carrier').text();
         selectedPlan = $(listElement).find('.completed-display__plan').text();
+
+        lists.clearAllHighlights();
 
         completePicker();        
     }
@@ -865,6 +877,7 @@ require([
         var $picker = $('.picker');
         if ( $target != $picker && $picker.find($target).length === 0 ) {
             if ( picker.isComplete() ) {
+                picker.setVisibility(false);
                 completedDisplay.setReengaged(false);
             } else {
                 hidePicker();

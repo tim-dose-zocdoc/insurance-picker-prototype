@@ -215,6 +215,14 @@ picker
     height: 480px;
 }
 
+.picker.complete.active .picker__contents {
+    transition: top 0.3s ease;
+    display: block;
+    height: auto;
+    top: 100%;
+    padding: 0;
+}
+
 @media screen and (max-width: 767px) {
     .picker__contents {
         width: 100%;
@@ -238,7 +246,11 @@ picker
 }
 
 .picker.complete .picker__contents {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .picker__header {
@@ -530,7 +542,7 @@ completed display
     transition: max-height 1s ease;
 }
 
-.completed-display.reengaged {
+.picker.reengaged .completed-display {
     top: 100%;
     transition: top .2s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
@@ -538,10 +550,11 @@ completed display
 
 .picker.complete .completed-display {
     display: block;
+    padding-top: 4px;
 }
 
 .completed-display:hover,
-.completed-display.reengaged {
+.picker.reengaged .completed-display {
     max-height: 400px;
     white-space: normal;
 }
@@ -551,7 +564,7 @@ completed display
     display: none;
 }
 
-.completed-display.reengaged .completed-display__alternate-actions {
+.picker.reengaged .completed-display__alternate-actions {
     display: block;
 }
 
@@ -564,7 +577,7 @@ completed display
     display: none;
 }
 
-.completed-display:not(.reengaged) .list__item.highlight {
+.picker:not(.reengaged) .completed-display .list__item.highlight {
     background: none;
 }
 
