@@ -813,24 +813,24 @@ require([
         }
         var query = $(this).val()
 
+        console.log('currentState: ' + currentState );
 
-        if ( currentState == 'carrier' ) {
-            var carrierResults = carriersIndex.search(query).map(function (result) {
-                return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
-            })
-
-            var planResults = insurancesIndex.search(query).map(function (result) {
-                return plans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
-            })
-
-            renderGeneralSearch(carrierResults, planResults, query);
-            // renderCarrierSearch(results, query);
-        } else if ( currentState == 'plan' ) {
+        if ( currentState == 'plan' ) {
             var results = planIndex.search(query).map(function (result) {
                 return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
             })
 
             renderPlanSearch(results, query);
+        } else {
+                var carrierResults = carriersIndex.search(query).map(function (result) {
+                    return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+                })
+
+                var planResults = insurancesIndex.search(query).map(function (result) {
+                    return plans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+                })
+
+                renderGeneralSearch(carrierResults, planResults, query);
         }
     }))
 
