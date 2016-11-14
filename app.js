@@ -263,6 +263,7 @@ require([
     ///////////////////////////////////////////
 
     startOver = function() {
+        console.log('starting over...');
         selectedCarrier = '';
         selectedCarrierID = '';
 
@@ -288,6 +289,7 @@ require([
         search.setValue('');
         search.setComplete(false);
         search.setPlaceholder(STRINGS.PLACEHOLDER.CARRIER);
+        console.log('finished starting over');
     }
 
     reengageCompletedDisplay = function () {
@@ -428,6 +430,7 @@ require([
     setCompleted = function(listElement) {
         console.log('setCompleted')
         if ( $(listElement).data('option-id') == '-4' ) {
+            console.log('start over!!')
             startOver();
             return false;
         }
