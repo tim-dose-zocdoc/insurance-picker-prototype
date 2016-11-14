@@ -233,10 +233,12 @@ require([
                     $('.'+section+'-container li').removeClass('highlight');
                     $(this).addClass('highlight')
                 })
-                .click(function(){
+                .click(function(e){
                     var functionName = 'set'+section.charAt(0).toUpperCase() + section.slice(1); // figure out the name of the function to call
                     window[functionName](this); // call that function with itself as an argument
                                                 // ultimately the equivalent of doing setPlan(this) or setCarrier(this);
+
+                    e.preventDefault();
                 });
 
             if (highlightID === undefined) {
@@ -521,6 +523,7 @@ require([
         $('.see-all-link').click(function() {
             $('.all-container').toggleClass('hidden');
             $(this).text($('.all-container').hasClass('hidden')? $(this).data('off-text'):$(this).data('on-text'));
+            return false;
         });      
     }
 
@@ -613,6 +616,7 @@ require([
         $('.see-all-link').click(function() {
             $('.all-container').toggleClass('hidden');
             $(this).text($('.all-container').hasClass('hidden')? $(this).data('off-text'):$(this).data('on-text'));
+            return false;
         });      
     }
 
@@ -722,12 +726,14 @@ require([
 
     $('.completed-display__clear').click(function() {
         startOver();
+        return false;
     });
 
     $('.completed-display__clear--mobile').click(function(e) {
         console.log('mobile clear clicked')
         // e.stopPropagation();
         startOver();
+        return false;
     });
 
     $('.completed-display__clear').keypress(function(e) {
@@ -741,8 +747,10 @@ require([
         // console.log('.completed-display clicked ' + completedDisplay.isReengaged() )
         if ( completedDisplay.isReengaged() ) {
             completedDisplay.setReengaged(false);
+            return false;
         } else {
             reengageCompletedDisplay();
+            return false;
         }
     });
 
@@ -763,16 +771,19 @@ require([
         // $('.insurance-field').val('').focus();
         // clearSearchList();
         startOver();
+        return false;
     });
 
 
     $('.selected-display__clear').click(function() {
         startOver();
+        return false;
     });
 
 
     $('.selected-display__clear').click(function() {
         startOver();
+        return false;
     });
 
     $('.selected-display i').click(function() {
@@ -782,6 +793,7 @@ require([
         } else {
             clearPlan();
         }
+        return false;
     });
 
     //----------------
@@ -889,10 +901,12 @@ require([
                 hidePicker();
             }
         }
+        return false;
     });
 
     $('.picker__close').click(function(){
         hidePicker();
+        return false;
     });
 
 
