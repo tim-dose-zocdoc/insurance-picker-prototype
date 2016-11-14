@@ -75,6 +75,13 @@ hr {
     border-top: 1px solid #ddd;
 }
 
+@media screen and (max-width: 767px) {
+    .picker__header h4 {
+        margin: 16px 0 0;
+    }
+
+}
+
 /*------------------------------------
 utilities
 --------------------------------------*/
@@ -205,7 +212,7 @@ picker
         left: -214px;
         position: relative;
         background: #fff;
-        padding: 8px 0 0;
+        padding: 16px 0 0;
         box-shadow: 0 2px 8px rgba(0,0,0,.2);
         flex: 1 0;
 }
@@ -230,6 +237,7 @@ picker
         left: 0;
         /*transition: 0.3s;*/
         animation: fadein 0.5s;
+        padding-top: 4px;
     }
 
     .picker:not(.complete) .picker__contents {
@@ -274,7 +282,7 @@ picker
 .picker__header i {
     position: absolute;
     right: 16px;
-    top: 0;
+    top: 12px;
     font-size: 20px;
     color: #aaa;
 }
@@ -444,7 +452,7 @@ insurance field
 @media screen and (max-width: 767px) {
     .picker.active:not(.complete) .insurance-field-wrapper {
         border: 1px solid #aaa;
-        margin: 16px;
+        margin: 16px 16px 4px;
     }
 
     .picker.active.reengaged.complete .insurance-field-wrapper {
@@ -619,15 +627,19 @@ selected display
 --------------------------------------*/
 
 .selected-display {
-    padding: 0 10px;
-    margin: 8px 0;
+    /*padding: 0 10px;*/
+    margin: 8px 16px 0;
     flex: none;
-    /*display: none;*/
+    display: none;
 }
 
 .selected-display.active {
+    /*display: none;*/
+    display: block;
+}
+
+.picker.complete .selected-display {
     display: none;
-    /*display: block;*/
 }
 
 .selected-display i {
@@ -640,8 +652,8 @@ selected display
 
 .selected-display__carrier,
 .selected-display__plan {
-    /*font-size: 18px;*/
-    /*font-weight: bold;*/
+    font-size: 18px;
+    font-weight: bold;
     line-height: 20px;
     margin-bottom: 4px;
     display: inline;
