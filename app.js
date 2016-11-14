@@ -478,13 +478,16 @@ require([
     }
 
     renderPlanSearch = function(plans, query) {
-        $('.plan-container .browse-list').addClass('hidden')
+        // $('.plan-container .browse-list').addClass('hidden')
 
-        var $list = $('.plan-container .search-list');
+        // var $list = $('.plan-container .search-list');
+        var $list = $('.search-container .search-list');
 
         $list
             .removeClass('hidden')
             .empty()
+
+        lists.setSearchResultsVisible();
 
         if ( plans.length == 0 ) {
             $list.append(Mustache.to_html(noResultsTemplate,{type:'plans',query:query}))
@@ -493,8 +496,9 @@ require([
         
         var popular = _.sortBy(plans,'requests').reverse().slice(0,3);
         var all = _.sortBy(plans,'plan')
-        $list.append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}))
-        lists.setInteractions('plan');
+        var partials = {planListItem: planPartial};
+        $list.append(Mustache.to_html(planSearchTemplate,{popular:popular,all:all,query:query}, partials))
+        lists.setInteractions('search');
     }
 
 
@@ -809,7 +813,8 @@ require([
         }
         var query = $(this).val()
 
-        // if ( currentState == 'carrier' ) {
+
+        if ( currentState == 'carrier' ) {
             var carrierResults = carriersIndex.search(query).map(function (result) {
                 return carriers.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
             })
@@ -820,15 +825,13 @@ require([
 
             renderGeneralSearch(carrierResults, planResults, query);
             // renderCarrierSearch(results, query);
-        // }
-        
-        // if ( currentState == 'plan' ) {
-        //     var results = planIndex.search(query).map(function (result) {
-        //         return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
-        //     })
+        } else if ( currentState == 'plan' ) {
+            var results = planIndex.search(query).map(function (result) {
+                return currentPlans.filter(function (i) { return i.id === parseInt(result.ref, 10) })[0]
+            })
 
-        //     renderPlanSearch(results, query);
-        // }
+            renderPlanSearch(results, query);
+        }
     }))
 
     //----------------
