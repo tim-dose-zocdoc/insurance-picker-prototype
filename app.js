@@ -166,7 +166,7 @@ require([
         setComplete: function(stepName, complete) {
             if ( complete === undefined ) complete = true;
 
-            $('.step-'+stepName).toggleClass('complete');
+            $('.step-'+stepName).toggleClass('complete', complete);
         },
         setActive: function(stepName) {
             $('.step').removeClass('active');
